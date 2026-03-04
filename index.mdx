@@ -5,9 +5,11 @@ mode: custom
 ---
 
 <style>{`
+  @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&family=Playfair+Display:wght@700;800;900&display=swap');
+
   #px-sidebar {
-    width: 280px;
-    min-width: 280px;
+    width: 260px;
+    min-width: 260px;
     background: #0a0920;
     position: relative;
     z-index: 10;
@@ -41,6 +43,9 @@ mode: custom
 <div style={{ display: 'none' }} dangerouslySetInnerHTML={{ __html: `
 <textarea id="px-code" style="display:none">
 (function(){
+  var fP="'Playfair Display',Georgia,serif";
+  var fA="'Anton',sans-serif";
+  var fI="'Inter',-apple-system,sans-serif";
   var root = document.getElementById('slider-root');
   if(!root) return;
 
@@ -82,7 +87,7 @@ mode: custom
   var N=DATA.length, BUF=4, LERP=0.05, SPD=0.75, MAXV=150, SNAP=500;
   var curY=0, tgtY=0, isDrag=false, isSnap=false;
   var ss={t:0,y:0,g:0}, lastT=Date.now(), ds={y:0,s:0};
-  var mH=180;
+  var mH=160;
   var vMin=-BUF, vMax=BUF;
 
   function gd(i){ return DATA[((i%N)+N)%N]; }
@@ -109,7 +114,7 @@ mode: custom
 
   var hint=document.createElement('div');
   hint.style.cssText='position:absolute;bottom:28px;left:50%;z-index:20;text-align:center;pointer-events:none;animation:bounceHint 2s ease infinite;';
-  hint.innerHTML='<p style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin:0 0 6px;">Scroll</p><div style="width:1px;height:20px;background:rgba(255,255,255,0.2);margin:0 auto;"></div>';
+  hint.innerHTML='<p style="font-family:'+fI+';font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin:0 0 6px;">Scroll</p><div style="width:1px;height:20px;background:rgba(255,255,255,0.2);margin:0 auto;"></div>';
   mainEl.appendChild(hint);
 
   var sEls={},mEls={},iEls={},pxS={};
@@ -140,29 +145,29 @@ mode: custom
 
     var nm=document.createElement('div');
     nm.textContent=gn(i);
-    nm.style.cssText='position:absolute;bottom:36px;left:40px;font-size:110px;font-weight:900;color:rgba(255,255,255,0.04);line-height:1;pointer-events:none;';
+    nm.style.cssText='position:absolute;bottom:36px;left:40px;font-family:'+fP+';font-size:100px;font-weight:800;color:rgba(255,255,255,0.025);line-height:1;pointer-events:none;';
     el.appendChild(nm);
 
     if(d.type==='text'){
       var w=document.createElement('div');
-      w.style.cssText='position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2;padding:40px;text-align:center;';
+      w.style.cssText='position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2;padding:48px 56px;text-align:center;';
       w.innerHTML=
-        '<p style="font-size:12px;font-weight:500;letter-spacing:0.14em;color:rgba(255,255,255,0.35);margin:0 0 22px;text-transform:uppercase;">'+(d.over||'')+'</p>'+
-        '<h2 style="font-size:clamp(48px,8vw,92px);font-weight:800;color:white;letter-spacing:-0.04em;line-height:0.95;text-shadow:0 4px 40px rgba(0,0,0,0.3);margin:0 0 18px;">'+d.main+'</h2>'+
-        '<div style="width:50px;height:2px;background:rgba(255,255,255,0.2);margin:0 auto 18px;"></div>'+
-        '<p style="font-size:17px;font-style:italic;color:rgba(255,255,255,0.5);margin:0;max-width:420px;line-height:1.5;">'+(d.tag||'')+'</p>';
+        '<p style="font-family:'+fI+';font-size:11px;font-weight:500;letter-spacing:0.18em;color:rgba(255,255,255,0.35);margin:0 0 20px;text-transform:uppercase;">'+(d.over||'')+'</p>'+
+        '<h2 style="font-family:'+fP+';font-size:clamp(44px,7vw,82px);font-weight:800;color:white;letter-spacing:-0.02em;line-height:1.0;text-shadow:0 2px 20px rgba(0,0,0,0.2);margin:0 0 16px;">'+d.main+'</h2>'+
+        '<div style="width:40px;height:1px;background:rgba(255,255,255,0.15);margin:0 auto 16px;"></div>'+
+        '<p style="font-family:'+fA+';font-size:15px;color:rgba(255,255,255,0.5);margin:0;max-width:420px;line-height:1.5;text-transform:uppercase;letter-spacing:0.02em;">'+(d.tag||'')+'</p>';
       el.appendChild(w);
     }
     else if(d.type==='cta'){
       var w=document.createElement('div');
-      w.style.cssText='position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:3;padding:40px;text-align:center;';
+      w.style.cssText='position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:3;padding:48px 56px;text-align:center;';
       var ctaId='px-cta-'+i;
       w.innerHTML=
-        '<p style="font-size:12px;font-weight:500;letter-spacing:0.14em;color:rgba(255,255,255,0.38);margin:0 0 22px;text-transform:uppercase;">'+(d.over||'')+'</p>'+
-        '<h2 style="font-size:clamp(40px,7vw,72px);font-weight:800;color:white;letter-spacing:-0.03em;line-height:1;text-shadow:0 2px 30px rgba(0,0,0,0.3);margin:0 0 14px;">'+d.main+'</h2>'+
-        '<p style="font-size:16px;color:rgba(255,255,255,0.5);margin:0 0 36px;">'+(d.tag||'')+'</p>'+
+        '<p style="font-family:'+fI+';font-size:11px;font-weight:500;letter-spacing:0.18em;color:rgba(255,255,255,0.38);margin:0 0 20px;text-transform:uppercase;">'+(d.over||'')+'</p>'+
+        '<h2 style="font-family:'+fP+';font-size:clamp(40px,7vw,72px);font-weight:800;color:white;letter-spacing:-0.02em;line-height:1.0;text-shadow:0 2px 20px rgba(0,0,0,0.2);margin:0 0 14px;">'+d.main+'</h2>'+
+        '<p style="font-family:'+fA+';font-size:15px;color:rgba(255,255,255,0.5);margin:0 0 34px;text-transform:uppercase;letter-spacing:0.02em;">'+(d.tag||'')+'</p>'+
         '<a id="'+ctaId+'" href="https://events.humanitix.com/she-sharp-ministry-of-social-development-academyex-her-waka" '+
-          'style="display:inline-block;background:white;color:#9b2e83;padding:16px 44px;border-radius:8px;font-weight:700;font-size:16px;text-decoration:none;box-shadow:0 4px 30px rgba(200,70,171,0.3);cursor:pointer;transition:transform 0.3s;"'+
+          'style="font-family:'+fI+';display:inline-block;background:white;color:#9b2e83;padding:14px 40px;border-radius:6px;font-weight:600;font-size:15px;text-decoration:none;box-shadow:0 2px 20px rgba(200,70,171,0.25);cursor:pointer;transition:transform 0.3s;"'+
         '>Register on Humanitix</a>';
       el.appendChild(w);
       var btn=w.querySelector('#'+ctaId);
@@ -197,14 +202,14 @@ mode: custom
     var d=gd(i), el=document.createElement('div');
     el.style.cssText='position:absolute;top:0;left:0;width:100%;height:'+mH+'px;will-change:transform;display:flex;flex-direction:column;justify-content:center;';
     el.innerHTML=
-      '<p style="font-size:13px;font-weight:600;letter-spacing:0.15em;color:rgba(255,255,255,0.25);margin:0 0 6px;font-family:monospace;">'+gn(i)+'</p>'+
-      '<p style="font-size:17px;font-weight:700;color:white;margin:0 0 10px;letter-spacing:-0.01em;">'+d.title+'</p>'+
-      '<div style="width:36px;height:1px;background:rgba(255,255,255,0.1);margin:0 0 10px;"></div>'+
-      '<div style="display:flex;justify-content:space-between;margin:0 0 6px;">'+
-        '<p style="font-size:11px;color:rgba(255,255,255,0.28);letter-spacing:0.06em;text-transform:uppercase;margin:0;">'+d.sub+'</p>'+
-        '<p style="font-size:11px;color:rgba(255,255,255,0.28);letter-spacing:0.06em;margin:0;">'+d.yr+'</p>'+
+      '<p style="font-family:'+fI+';font-size:12px;font-weight:500;letter-spacing:0.15em;color:rgba(255,255,255,0.25);margin:0 0 4px;font-variant-numeric:tabular-nums;">'+gn(i)+'</p>'+
+      '<p style="font-family:'+fP+';font-size:16px;font-weight:700;color:white;margin:0 0 8px;letter-spacing:-0.01em;">'+d.title+'</p>'+
+      '<div style="width:36px;height:1px;background:rgba(255,255,255,0.1);margin:0 0 8px;"></div>'+
+      '<div style="display:flex;justify-content:space-between;margin:0 0 4px;">'+
+        '<p style="font-family:'+fI+';font-size:10px;font-weight:500;color:rgba(255,255,255,0.28);letter-spacing:0.1em;text-transform:uppercase;margin:0;">'+d.sub+'</p>'+
+        '<p style="font-family:'+fI+';font-size:10px;font-weight:500;color:rgba(255,255,255,0.28);letter-spacing:0.1em;margin:0;">'+d.yr+'</p>'+
       '</div>'+
-      '<p style="font-size:12px;color:rgba(255,255,255,0.38);line-height:1.5;margin:0;">'+d.desc+'</p>';
+      '<p style="font-family:'+fI+';font-size:11px;font-weight:400;color:rgba(255,255,255,0.38);line-height:1.5;margin:0;">'+d.desc+'</p>';
     return el;
   }
 
