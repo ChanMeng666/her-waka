@@ -4,200 +4,295 @@ description: "HER WAKA — Navigating pathways into sustainable employment. Empl
 mode: custom
 ---
 
-<div style={{ background: 'linear-gradient(135deg, #1f1e44 0%, #3d2a5c 40%, #9b2e83 100%)', color: 'white' }}>
+<style>{`
+  #px-sidebar {
+    width: 280px;
+    min-width: 280px;
+    background: #0a0920;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 24px;
+    border-left: 1px solid rgba(255,255,255,0.06);
+  }
+  #px-sidebar a { cursor: pointer !important; }
 
-  {/* Hero Section */}
-  <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '80px 24px 40px', textAlign: 'center' }}>
-    <div style={{ marginBottom: '24px' }}>
-      <span style={{ display: 'inline-block', background: 'rgba(200, 70, 171, 0.3)', border: '1px solid rgba(200, 70, 171, 0.6)', borderRadius: '9999px', padding: '6px 20px', fontSize: '14px', fontWeight: '500', letterSpacing: '0.05em' }}>
-        MARCH – JUNE 2026 &nbsp;|&nbsp; AUCKLAND
-      </span>
-    </div>
-    <h1 style={{ fontSize: '56px', fontWeight: '800', lineHeight: '1.1', margin: '0 0 16px', letterSpacing: '-0.02em' }}>
-      HER WAKA
-    </h1>
-    <p style={{ fontSize: '22px', fontWeight: '300', opacity: '0.9', margin: '0 0 12px', fontStyle: 'italic' }}>
-      Navigating pathways into sustainable employment
-    </p>
-    <p style={{ fontSize: '17px', opacity: '0.75', maxWidth: '680px', margin: '0 auto 40px', lineHeight: '1.7' }}>
-      A dynamic, employment-focused programme delivered by SheSharp for Ministry of Social Development clients. Build job readiness, confidence, and practical understanding of the New Zealand labour market.
-    </p>
-    <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-      <a href="https://events.humanitix.com/she-sharp-ministry-of-social-development-academyex-her-waka" style={{ display: 'inline-block', background: '#c846ab', color: 'white', padding: '14px 32px', borderRadius: '8px', fontWeight: '600', fontSize: '16px', textDecoration: 'none', transition: 'background 0.2s' }}>
-        Register Now
-      </a>
-      <a href="/programme/about-her-waka" style={{ display: 'inline-block', background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.25)', color: 'white', padding: '14px 32px', borderRadius: '8px', fontWeight: '600', fontSize: '16px', textDecoration: 'none' }}>
-        Learn More
-      </a>
-    </div>
-  </div>
+  @keyframes bounceHint {
+    0%,100% { transform: translateX(-50%) translateY(0); opacity: 0.4; }
+    50%     { transform: translateX(-50%) translateY(8px); opacity: 0.8; }
+  }
 
-  {/* Banner Image */}
-  <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '20px 24px 60px' }}>
-    <img src="/images/banners/her-waka-banner-landscape.png" alt="HER WAKA — Your Journey. Your Pace. Your Path." style={{ width: '100%', borderRadius: '16px', boxShadow: '0 25px 60px rgba(0,0,0,0.4)' }} />
-  </div>
+  @media (max-width: 768px) {
+    #px-sidebar { display: none !important; }
+  }
 
-</div>
+  /* Hide Mintlify default content wrapper padding */
+  .px-content-wrapper { padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
+`}</style>
 
-{/* Next Session Highlight */}
-<div style={{ background: 'linear-gradient(135deg, #f7e5f3 0%, #f4f4fa 100%)', padding: '60px 24px' }}>
-  <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
-    <span style={{ display: 'inline-block', background: '#c846ab', color: 'white', borderRadius: '9999px', padding: '6px 18px', fontSize: '13px', fontWeight: '600', letterSpacing: '0.05em', marginBottom: '20px' }}>
-      NEXT SESSION
-    </span>
-    <h2 style={{ fontSize: '36px', fontWeight: '700', color: '#1f1e44', margin: '0 0 8px' }}>
-      AI & The Future of Work
-    </h2>
-    <p style={{ fontSize: '18px', color: '#9b2e83', fontWeight: '600', margin: '0 0 20px' }}>
-      Wednesday 25 March 2026 &nbsp;·&nbsp; 12:00 pm – 2:00 pm &nbsp;·&nbsp; academyEX Pikopiko, Auckland
-    </p>
-    <p style={{ fontSize: '16px', color: '#454180', maxWidth: '700px', margin: '0 auto 28px', lineHeight: '1.7' }}>
-      Join us for a dynamic AI panel discussion with industry professionals, a hands-on workshop exploring practical AI tools, and insights from RCSA into the 2026 tech hiring landscape. All attendees must bring their own laptop.
-    </p>
-    <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
-      <a href="https://events.humanitix.com/she-sharp-ministry-of-social-development-academyex-her-waka" style={{ display: 'inline-block', background: '#9b2e83', color: 'white', padding: '12px 28px', borderRadius: '8px', fontWeight: '600', fontSize: '15px', textDecoration: 'none' }}>
-        Register on Humanitix
-      </a>
-      <a href="/workshop/march-2026/overview" style={{ display: 'inline-block', background: 'white', color: '#9b2e83', border: '2px solid #9b2e83', padding: '12px 28px', borderRadius: '8px', fontWeight: '600', fontSize: '15px', textDecoration: 'none' }}>
-        View Full Agenda
-      </a>
-    </div>
-  </div>
-</div>
+<h1 style={{ position: 'absolute', width: '1px', height: '1px', overflow: 'hidden', clip: 'rect(0,0,0,0)', whiteSpace: 'nowrap' }}>
+  HER WAKA — Navigating pathways into sustainable employment
+</h1>
 
-{/* What to Expect */}
-<div style={{ maxWidth: '1100px', margin: '0 auto', padding: '70px 24px' }}>
-  <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-    <h2 style={{ fontSize: '34px', fontWeight: '700', color: '#1f1e44', margin: '0 0 12px' }}>
-      What to Expect
-    </h2>
-    <p style={{ fontSize: '17px', color: '#666', maxWidth: '600px', margin: '0 auto' }}>
-      Each two-hour session blends inspiration, practical skills, and direct employer insight.
-    </p>
-  </div>
+<div id="slider-root" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', overflow: 'hidden', background: '#0a0920', position: 'relative' }}></div>
 
-  <CardGroup cols={3}>
-    <Card title="Inspirational Speakers" icon="microphone-stand">
-      Authentic employment journeys and practical lessons from professionals navigating the New Zealand workforce.
-    </Card>
-    <Card title="Employer & Recruiter Panels" icon="users">
-      Direct insight into current hiring expectations from those making recruitment decisions.
-    </Card>
-    <Card title="Hands-On Workshops" icon="laptop-code">
-      Interactive sessions with practical tools — you will build something on your own computer.
-    </Card>
-    <Card title="Job Readiness Skills" icon="file-lines">
-      Professional presentation, interview confidence, CV writing, and effective employer engagement.
-    </Card>
-    <Card title="Employment Rights" icon="scale-balanced">
-      Clear and accessible guidance on your rights as an employee in Aotearoa New Zealand.
-    </Card>
-    <Card title="Networking" icon="handshake">
-      Structured opportunities to connect with employers, recruiters, and industry representatives.
-    </Card>
-  </CardGroup>
-</div>
+<div style={{ display: 'none' }} dangerouslySetInnerHTML={{ __html: `
+<textarea id="px-code" style="display:none">
+(function(){
+  var root = document.getElementById('slider-root');
+  if(!root) return;
 
-{/* Explore the Programme */}
-<div style={{ background: '#f9f9fc', padding: '70px 24px' }}>
-  <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-    <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-      <h2 style={{ fontSize: '34px', fontWeight: '700', color: '#1f1e44', margin: '0 0 12px' }}>
-        Explore the Programme
-      </h2>
-      <p style={{ fontSize: '17px', color: '#666', maxWidth: '550px', margin: '0 auto' }}>
-        Everything you need to prepare, participate, and succeed.
-      </p>
-    </div>
+  var rect = root.getBoundingClientRect();
+  var topOffset = rect.top;
+  var sH = window.innerHeight - topOffset;
+  root.style.height = sH + 'px';
 
-    <CardGroup cols={2}>
-      <Card title="About HER WAKA" icon="circle-info" href="/programme/about-her-waka">
-        Programme mission, five key components, expected outcomes, and partner organisations.
-      </Card>
-      <Card title="Full Schedule" icon="calendar" href="/programme/schedule">
-        All four session dates (March–June), venue details, event format, and what to bring.
-      </Card>
-      <Card title="March Workshop Details" icon="robot" href="/workshop/march-2026/overview">
-        AI & The Future of Work — complete agenda, speaker bios, and hands-on activity overview.
-      </Card>
-      <Card title="Career Resources" icon="briefcase" href="/resources/job-readiness">
-        CV tips, interview preparation, LinkedIn optimisation, and upskilling links.
-      </Card>
-      <Card title="Employment Rights" icon="scale-balanced" href="/resources/employment-rights">
-        Know your rights — employment agreements, minimum wage, leave, and where to get help.
-      </Card>
-      <Card title="Networking Guide" icon="handshake" href="/resources/networking-guide">
-        Elevator pitch tips, following up, and connecting with the SheSharp community.
-      </Card>
-    </CardGroup>
-  </div>
-</div>
+  var DATA = [
+    { type:'text', title:'HER WAKA', sub:'Programme', yr:'2026',
+      desc:'Navigating pathways into sustainable employment',
+      bg:'linear-gradient(135deg, #1f1e44 0%, #2d1b4e 40%, #9b2e83 100%)',
+      img:null,
+      over:'March \\u2013 June 2026 \\u00b7 Auckland',
+      main:'HER WAKA', tag:'Navigating pathways into sustainable employment' },
+    { type:'text', title:'AI & Future of Work', sub:'Next Session', yr:'25 MAR',
+      desc:'Panel discussion, hands-on AI workshop, hiring insights',
+      bg:'linear-gradient(135deg, #0c1c26 0%, #1f1e44 50%, #3d1f5c 100%)',
+      img:null,
+      over:'Next Session \\u00b7 25 March 2026',
+      main:'AI & Future of Work', tag:'Panel, hands-on workshop, tech hiring insights' },
+    { type:'photo', title:'Chan Meng', sub:'Featured Speaker', yr:'Gavigo',
+      desc:'Senior AI/ML Engineer \\u00b7 UN CSW 69 speaker',
+      bg:'#0a0920',
+      img:'/images/speakers/chan-meng.jpg', pos:'center center',
+      ov:'rgba(31,30,68,0.25)' },
+    { type:'text', title:'SheSharp', sub:'Delivered By', yr:'Est. 2014',
+      desc:'Supporting women in technology across Aotearoa',
+      bg:'linear-gradient(135deg, #2d1b4e 0%, #c846ab 60%, #8982ff 100%)',
+      img:null,
+      over:'Delivered By', main:'SheSharp',
+      tag:'Supporting women in technology across Aotearoa New Zealand' },
+    { type:'cta', title:'Register', sub:'Join Us', yr:'Auckland',
+      desc:'25 March 2026 \\u00b7 12\\u20132 pm \\u00b7 academyEX Pikopiko',
+      bg:'linear-gradient(135deg, #9b2e83 0%, #c846ab 40%, #1f1e44 100%)',
+      img:null,
+      over:'25 March 2026 \\u00b7 Auckland',
+      main:'Register Now', tag:'academyEX Pikopiko \\u00b7 12\\u20132 pm' }
+  ];
+  var N=DATA.length, BUF=4, LERP=0.05, SPD=0.75, MAXV=150, SNAP=500;
+  var curY=0, tgtY=0, isDrag=false, isSnap=false;
+  var ss={t:0,y:0,g:0}, lastT=Date.now(), ds={y:0,s:0};
+  var mH=180;
+  var vMin=-BUF, vMax=BUF;
 
-{/* Speakers Preview */}
-<div style={{ maxWidth: '1100px', margin: '0 auto', padding: '70px 24px' }}>
-  <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-    <h2 style={{ fontSize: '34px', fontWeight: '700', color: '#1f1e44', margin: '0 0 12px' }}>
-      March Panel Speakers
-    </h2>
-    <p style={{ fontSize: '17px', color: '#666', maxWidth: '550px', margin: '0 auto' }}>
-      Industry leaders sharing insights on AI, technology, and the future of work.
-    </p>
-  </div>
+  function gd(i){ return DATA[((i%N)+N)%N]; }
+  function gn(i){ return String(((Math.abs(i)%N)+N)%N+1).padStart(2,'0'); }
 
-  <CardGroup cols={4}>
-    <Card title="Chan Meng" href="/workshop/march-2026/overview#chan-meng">
-      <img src="/images/speakers/chan-meng.jpg" alt="Chan Meng" style={{ borderRadius: '12px', marginBottom: '8px' }} />
-      Senior AI/ML Engineer. Founding Engineer at Gavigo, CTO at Sanicle. UN CSW 69 speaker.
-    </Card>
-    <Card title="Dr. Mahsa McCauley" href="/workshop/march-2026/overview#dr-mahsa-mccauley">
-      Chair of AI Forum NZ. Associate Professor at AUT. Founder of SheSharp. UNESCO Commissioner.
-    </Card>
-    <Card title="Nikita Kumari" href="/workshop/march-2026/overview#nikita-kumari">
-      PMP-certified Product Manager. 6+ years in AI/digital products. Cross-functional leadership.
-    </Card>
-    <Card title="Meeta" href="/workshop/march-2026/overview#meeta">
-      Speaker details coming soon.
-    </Card>
-  </CardGroup>
-</div>
+  root.innerHTML='';
+  root.style.cssText='height:'+sH+'px;overflow:hidden;position:relative;background:#0a0920;display:flex;cursor:grab;user-select:none;-webkit-user-select:none;width:100vw;';
 
-{/* Partners */}
-<div style={{ background: '#f9f9fc', padding: '60px 24px' }}>
-  <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
-    <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1f1e44', margin: '0 0 36px' }}>
-      Our Partners
-    </h2>
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '48px', flexWrap: 'wrap' }}>
-      <img src="/images/partners/msd-logo.png" alt="Ministry of Social Development" style={{ height: '60px', objectFit: 'contain' }} />
-      <img src="/images/partners/rcsa-logo.png" alt="RCSA" style={{ height: '45px', objectFit: 'contain' }} />
-      <img src="/logo/light.svg" alt="SheSharp" style={{ height: '40px', objectFit: 'contain' }} />
-      <img src="/images/partners/academyex-logo.svg" alt="academyEX" style={{ height: '36px', objectFit: 'contain' }} />
-    </div>
-  </div>
-</div>
+  var mainEl=document.createElement('div');
+  mainEl.style.cssText='flex:1;position:relative;overflow:hidden;';
+  root.appendChild(mainEl);
 
-{/* About SheSharp */}
-<div style={{ maxWidth: '800px', margin: '0 auto', padding: '60px 24px', textAlign: 'center' }}>
-  <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1f1e44', margin: '0 0 16px' }}>
-    About SheSharp
-  </h2>
-  <p style={{ fontSize: '16px', color: '#555', lineHeight: '1.8', margin: '0 0 24px' }}>
-    SheSharp is a not-for-profit charitable trust (CC57025) founded in 2014, dedicated to supporting women in technology and digital careers across Aotearoa New Zealand. Through mentorship, events, and community initiatives, SheSharp inspires, educates, and connects women in tech.
-  </p>
-  <a href="/programme/about-shesharp" style={{ display: 'inline-block', color: '#9b2e83', fontWeight: '600', fontSize: '16px', textDecoration: 'none', borderBottom: '2px solid #c846ab' }}>
-    Learn more about SheSharp →
-  </a>
-</div>
+  var side=document.createElement('div');
+  side.id='px-sidebar';
+  root.appendChild(side);
 
-{/* Final CTA */}
-<div style={{ background: 'linear-gradient(135deg, #1f1e44 0%, #9b2e83 100%)', padding: '70px 24px', textAlign: 'center', color: 'white' }}>
-  <h2 style={{ fontSize: '36px', fontWeight: '700', margin: '0 0 12px' }}>
-    Join us and take your next step forward
-  </h2>
-  <p style={{ fontSize: '18px', opacity: '0.85', margin: '0 0 32px', maxWidth: '500px', marginLeft: 'auto', marginRight: 'auto' }}>
-    Your Journey. Your Pace. Your Path.
-  </p>
-  <a href="https://events.humanitix.com/she-sharp-ministry-of-social-development-academyex-her-waka" style={{ display: 'inline-block', background: 'white', color: '#9b2e83', padding: '16px 40px', borderRadius: '8px', fontWeight: '700', fontSize: '17px', textDecoration: 'none' }}>
-    Register for March 25
-  </a>
-</div>
+  var mmBox=document.createElement('div');
+  mmBox.style.cssText='width:100%;height:'+mH+'px;overflow:hidden;border-radius:6px;position:relative;margin-bottom:20px;';
+  side.appendChild(mmBox);
+
+  var infoBox=document.createElement('div');
+  infoBox.style.cssText='position:relative;height:'+mH+'px;overflow:hidden;';
+  side.appendChild(infoBox);
+
+  var hint=document.createElement('div');
+  hint.style.cssText='position:absolute;bottom:28px;left:50%;z-index:20;text-align:center;pointer-events:none;animation:bounceHint 2s ease infinite;';
+  hint.innerHTML='<p style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin:0 0 6px;">Scroll</p><div style="width:1px;height:20px;background:rgba(255,255,255,0.2);margin:0 auto;"></div>';
+  mainEl.appendChild(hint);
+
+  var sEls={},mEls={},iEls={},pxS={};
+
+  function mkSlide(i){
+    var d=gd(i), el=document.createElement('div');
+    el.style.cssText='position:absolute;top:0;left:0;width:100%;height:'+sH+'px;overflow:hidden;';
+
+    var bg=document.createElement('div');
+    bg.style.cssText='position:absolute;inset:-20%;will-change:transform;';
+
+    if(d.img){
+      var im=document.createElement('img');
+      im.src=d.img; im.alt=d.title; im.draggable=false;
+      im.style.cssText='width:100%;height:100%;object-fit:cover;object-position:'+(d.pos||'center center')+';display:block;';
+      bg.appendChild(im);
+      el.appendChild(bg); el._bg=bg;
+
+      if(d.ov){
+        var ov=document.createElement('div');
+        ov.style.cssText='position:absolute;inset:0;background:'+d.ov+';';
+        el.appendChild(ov);
+      }
+    } else {
+      bg.style.cssText='position:absolute;inset:-20%;will-change:transform;background:'+d.bg+';background-size:200% 200%;';
+      el.appendChild(bg); el._bg=bg;
+    }
+
+    var nm=document.createElement('div');
+    nm.textContent=gn(i);
+    nm.style.cssText='position:absolute;bottom:36px;left:40px;font-size:110px;font-weight:900;color:rgba(255,255,255,0.04);line-height:1;pointer-events:none;';
+    el.appendChild(nm);
+
+    if(d.type==='text'){
+      var w=document.createElement('div');
+      w.style.cssText='position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2;padding:40px;text-align:center;';
+      w.innerHTML=
+        '<p style="font-size:12px;font-weight:500;letter-spacing:0.14em;color:rgba(255,255,255,0.35);margin:0 0 22px;text-transform:uppercase;">'+(d.over||'')+'</p>'+
+        '<h2 style="font-size:clamp(48px,8vw,92px);font-weight:800;color:white;letter-spacing:-0.04em;line-height:0.95;text-shadow:0 4px 40px rgba(0,0,0,0.3);margin:0 0 18px;">'+d.main+'</h2>'+
+        '<div style="width:50px;height:2px;background:rgba(255,255,255,0.2);margin:0 auto 18px;"></div>'+
+        '<p style="font-size:17px;font-style:italic;color:rgba(255,255,255,0.5);margin:0;max-width:420px;line-height:1.5;">'+(d.tag||'')+'</p>';
+      el.appendChild(w);
+    }
+    else if(d.type==='cta'){
+      var w=document.createElement('div');
+      w.style.cssText='position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:3;padding:40px;text-align:center;';
+      var ctaId='px-cta-'+i;
+      w.innerHTML=
+        '<p style="font-size:12px;font-weight:500;letter-spacing:0.14em;color:rgba(255,255,255,0.38);margin:0 0 22px;text-transform:uppercase;">'+(d.over||'')+'</p>'+
+        '<h2 style="font-size:clamp(40px,7vw,72px);font-weight:800;color:white;letter-spacing:-0.03em;line-height:1;text-shadow:0 2px 30px rgba(0,0,0,0.3);margin:0 0 14px;">'+d.main+'</h2>'+
+        '<p style="font-size:16px;color:rgba(255,255,255,0.5);margin:0 0 36px;">'+(d.tag||'')+'</p>'+
+        '<a id="'+ctaId+'" href="https://events.humanitix.com/she-sharp-ministry-of-social-development-academyex-her-waka" '+
+          'style="display:inline-block;background:white;color:#9b2e83;padding:16px 44px;border-radius:8px;font-weight:700;font-size:16px;text-decoration:none;box-shadow:0 4px 30px rgba(200,70,171,0.3);cursor:pointer;transition:transform 0.3s;"'+
+        '>Register on Humanitix</a>';
+      el.appendChild(w);
+      var btn=w.querySelector('#'+ctaId);
+      if(btn){
+        btn.addEventListener('mouseover',function(){ this.style.transform='scale(1.05)'; });
+        btn.addEventListener('mouseout',function(){ this.style.transform='scale(1)'; });
+      }
+    }
+    return el;
+  }
+
+  function mkMm(i){
+    var d=gd(i), el=document.createElement('div');
+    el.style.cssText='position:absolute;top:0;left:0;width:100%;height:'+mH+'px;overflow:hidden;will-change:transform;border-radius:4px;';
+    if(d.img){
+      var im=document.createElement('img');
+      im.src=d.img; im.alt=''; im.draggable=false;
+      im.style.cssText='width:100%;height:100%;object-fit:cover;object-position:'+(d.pos||'center center')+';display:block;';
+      el.appendChild(im);
+      if(d.ov){
+        var ov=document.createElement('div');
+        ov.style.cssText='position:absolute;inset:0;background:'+d.ov+';opacity:0.4;';
+        el.appendChild(ov);
+      }
+    } else {
+      el.style.background=d.bg;
+    }
+    return el;
+  }
+
+  function mkInfo(i){
+    var d=gd(i), el=document.createElement('div');
+    el.style.cssText='position:absolute;top:0;left:0;width:100%;height:'+mH+'px;will-change:transform;display:flex;flex-direction:column;justify-content:center;';
+    el.innerHTML=
+      '<p style="font-size:13px;font-weight:600;letter-spacing:0.15em;color:rgba(255,255,255,0.25);margin:0 0 6px;font-family:monospace;">'+gn(i)+'</p>'+
+      '<p style="font-size:17px;font-weight:700;color:white;margin:0 0 10px;letter-spacing:-0.01em;">'+d.title+'</p>'+
+      '<div style="width:36px;height:1px;background:rgba(255,255,255,0.1);margin:0 0 10px;"></div>'+
+      '<div style="display:flex;justify-content:space-between;margin:0 0 6px;">'+
+        '<p style="font-size:11px;color:rgba(255,255,255,0.28);letter-spacing:0.06em;text-transform:uppercase;margin:0;">'+d.sub+'</p>'+
+        '<p style="font-size:11px;color:rgba(255,255,255,0.28);letter-spacing:0.06em;margin:0;">'+d.yr+'</p>'+
+      '</div>'+
+      '<p style="font-size:12px;color:rgba(255,255,255,0.38);line-height:1.5;margin:0;">'+d.desc+'</p>';
+    return el;
+  }
+
+  function syncRange(mn,mx){
+    var k;
+    for(k in sEls) if(+k<mn||+k>mx){ sEls[k].parentNode&&sEls[k].parentNode.removeChild(sEls[k]); delete sEls[k]; delete pxS[k]; }
+    for(k in mEls) if(+k<mn||+k>mx){ mEls[k].parentNode&&mEls[k].parentNode.removeChild(mEls[k]); delete mEls[k]; }
+    for(k in iEls) if(+k<mn||+k>mx){ iEls[k].parentNode&&iEls[k].parentNode.removeChild(iEls[k]); delete iEls[k]; }
+    for(var i=mn;i<=mx;i++){
+      if(!sEls[i]){ sEls[i]=mkSlide(i); mainEl.appendChild(sEls[i]); pxS[i]=0; }
+      if(!mEls[i]){ mEls[i]=mkMm(i); mmBox.appendChild(mEls[i]); }
+      if(!iEls[i]){ iEls[i]=mkInfo(i); infoBox.appendChild(iEls[i]); }
+    }
+  }
+
+  function updatePos(){
+    var mmY=(curY*mH)/sH, k,i,el,bg,y,t;
+    for(k in sEls){
+      i=+k; el=sEls[k]; bg=el._bg;
+      y=i*sH+curY;
+      el.style.transform='translateY('+y+'px)';
+      if(bg){
+        t=(-curY-i*sH)*0.15;
+        pxS[i]=(pxS[i]||0)+(t-(pxS[i]||0))*0.1;
+        bg.style.transform='translateY('+pxS[i].toFixed(1)+'px) scale(1.3)';
+      }
+    }
+    for(k in mEls){ mEls[k].style.transform='translateY('+(+k*mH+mmY)+'px)'; }
+    for(k in iEls){ iEls[k].style.transform='translateY('+(+k*mH+mmY)+'px)'; }
+  }
+
+  function doSnap(){
+    isSnap=true;
+    ss={t:Date.now(),y:tgtY,g:-Math.round(-tgtY/sH)*sH};
+  }
+  function tickSnap(){
+    var p=Math.min((Date.now()-ss.t)/SNAP,1);
+    tgtY=ss.y+(ss.g-ss.y)*(1-Math.pow(1-p,3));
+    if(p>=1) isSnap=false;
+  }
+
+  var hintGone=false;
+  function animate(){
+    var now=Date.now();
+    if(!isSnap&&!isDrag&&now-lastT>100){
+      var sp=-Math.round(-tgtY/sH)*sH;
+      if(Math.abs(tgtY-sp)>1) doSnap();
+    }
+    if(isSnap) tickSnap();
+    if(!isDrag) curY+=(tgtY-curY)*LERP;
+
+    var ci=Math.round(-tgtY/sH);
+    var mn=ci-BUF, mx=ci+BUF;
+    if(mn!==vMin||mx!==vMax){ vMin=mn; vMax=mx; syncRange(mn,mx); }
+    updatePos();
+
+    if(!hintGone&&Math.abs(tgtY)>10){
+      hintGone=true;
+      hint.style.opacity='0'; hint.style.transition='opacity 0.5s';
+      setTimeout(function(){ hint.parentNode&&hint.parentNode.removeChild(hint); },600);
+    }
+    requestAnimationFrame(animate);
+  }
+
+  root.addEventListener('wheel',function(e){
+    e.preventDefault(); isSnap=false; lastT=Date.now();
+    tgtY-=Math.max(Math.min(e.deltaY*SPD,MAXV),-MAXV);
+  },{passive:false});
+
+  root.addEventListener('touchstart',function(e){
+    isDrag=true; isSnap=false;
+    ds={y:e.touches[0].clientY,s:tgtY}; lastT=Date.now();
+  });
+  root.addEventListener('touchmove',function(e){
+    if(!isDrag)return;
+    tgtY=ds.s+(e.touches[0].clientY-ds.y)*1.5; lastT=Date.now();
+  });
+  root.addEventListener('touchend',function(){ isDrag=false; });
+  window.addEventListener('resize',function(){
+    var r=root.getBoundingClientRect();
+    sH=window.innerHeight-r.top;
+    root.style.height=sH+'px';
+  });
+
+  syncRange(vMin,vMax);
+  requestAnimationFrame(animate);
+})();
+</textarea>
+<img src="data:," onerror="new Function(document.getElementById('px-code').value)()" />
+`}} />
