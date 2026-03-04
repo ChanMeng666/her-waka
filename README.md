@@ -1,55 +1,62 @@
-# Mintlify Starter Kit
+<div align="center">
 
-Use the starter kit to get your docs deployed and ready to customize.
+# HER WAKA — Programme Documentation
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+**Employment-focused workshops for women in Auckland, delivered by [SheSharp](https://www.shesharp.org.nz) for MSD clients.**
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+[Live Site](https://herwaka.shesharp.org.nz/) | [SheSharp Website](https://www.shesharp.org.nz)
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
+</div>
 
-## AI-assisted writing
+---
 
-Set up your AI coding tool to work with Mintlify:
+## About
 
-```bash
-npx skills add https://mintlify.com/docs
-```
+HER WAKA is a four-session employment programme running March–June 2026 at academyEX Auckland. The programme supports women re-entering the workforce through hands-on workshops covering AI skills, job readiness, employment rights, and professional networking.
 
-This command installs Mintlify's documentation skill for your configured AI tools like Claude Code, Cursor, Windsurf, and others. The skill includes component reference, writing standards, and workflow guidance.
+This repository contains the documentation site that serves as the workshop hub — storing teaching content, resources, and programme information for participants.
 
-See the [AI tools guides](/ai-tools) for tool-specific setup.
+## Site Structure
+
+| Section | Content |
+|---------|---------|
+| **Programme** | About HER WAKA, session schedule, about SheSharp |
+| **March 2026 Workshop** | AI & Future of Work — overview, tools intro, hands-on exercises, resources |
+| **Resources** | Employment rights (NZ), job readiness, networking guide |
+
+## Tech Stack
+
+- [Mintlify](https://mintlify.com) — documentation framework (almond theme)
+- MDX pages with YAML frontmatter
+- SheSharp brand design system (`#c846ab` / `#9b2e83` / `#8982ff`)
 
 ## Development
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
-
-```
+```bash
+# Install Mintlify CLI
 npm i -g mint
+
+# Preview locally
+npx mint dev
+
+# Check for broken links
+npx mint broken-links
 ```
 
-Run the following command at the root of your documentation, where your `docs.json` is located:
+Local preview runs at `http://localhost:3000`.
 
-```
-mint dev
-```
+## Deployment
 
-View your local preview at `http://localhost:3000`.
+Connected to Mintlify via GitHub app. Changes pushed to `main` are deployed automatically to [herwaka.shesharp.org.nz](https://herwaka.shesharp.org.nz/).
 
-## Publishing changes
+## Licence
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+This project is licensed under the [MIT Licence](./LICENSE).
 
-## Need help?
+---
 
-### Troubleshooting
+<div align="center">
 
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
+Built with care by [SheSharp](https://www.shesharp.org.nz) | NZ Registered Charity [CC57025](https://register.charities.govt.nz/Charity/CC57025)
 
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+</div>
