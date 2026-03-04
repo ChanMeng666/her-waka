@@ -1,87 +1,61 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
+  "theme": "almond",
+  "name": "SheSharp - HER WAKA",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#c846ab",
+    "light": "#8982ff",
+    "dark": "#9b2e83"
   },
   "favicon": "/favicon.svg",
+  "banner": {
+    "content": "Next workshop: March 25 — AI & Future of Work. [View details](/workshop/march-2026/overview)",
+    "dismissible": true
+  },
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Programme",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Welcome",
             "pages": [
               "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "programme/about-her-waka",
+              "programme/schedule",
+              "programme/about-shesharp"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "March 2026 Workshop",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "AI & Future of Work",
             "pages": [
-              "api-reference/introduction"
+              "workshop/march-2026/overview",
+              "workshop/march-2026/ai-tools-intro",
+              "workshop/march-2026/hands-on-exercises",
+              "workshop/march-2026/resources"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "tab": "Resources",
+        "groups": [
           {
-            "group": "Endpoint examples",
+            "group": "Career Resources",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "resources/employment-rights",
+              "resources/job-readiness",
+              "resources/networking-guide"
             ]
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
@@ -90,33 +64,24 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "SheSharp",
+        "href": "https://www.shesharp.org.nz"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Register",
+      "href": "https://www.shesharp.org.nz/events"
     }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "linkedin": "https://www.linkedin.com/company/shesharpnz/posts/?feedView=all",
+      "instagram": "https://www.instagram.com/shesharpnz/",
+      "facebook": "https://www.facebook.com/shesharpnz/",
+      "x": "https://x.com/shesharpnz",
+      "youtube": "https://www.youtube.com/channel/UCfNDV1btAhwWwEXSyxNd5_Q",
+      "website": "https://www.shesharp.org.nz"
     }
   }
 }
