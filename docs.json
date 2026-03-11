@@ -42,6 +42,21 @@
         ]
       },
       {
+        "tab": "Vibe Coding Tutorial",
+        "groups": [
+          {
+            "group": "Build a daily report bot",
+            "pages": [
+              "workshop/vibe-coding/overview",
+              "workshop/vibe-coding/setup",
+              "workshop/vibe-coding/build-with-claude",
+              "workshop/vibe-coding/deploy-and-test",
+              "workshop/vibe-coding/whats-next"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "Resources",
         "groups": [
           {
