@@ -298,14 +298,17 @@ mode: custom
   syncRange(vMin,vMax);
   requestAnimationFrame(animate);
 
-  // Deactivate Programme tab highlight on homepage
+})();
+
+// Deactivate Programme tab highlight on homepage
+setTimeout(function(){
   var tabs=document.querySelectorAll('.nav-tabs-item');
   tabs.forEach(function(t){
-    t.style.setProperty('color','','');
+    t.classList.remove('text-gray-800','dark:text-gray-200','[text-shadow:-0.2px_0_0_currentColor,0.2px_0_0_currentColor]');
+    t.classList.add('text-gray-600','dark:text-gray-400');
     t.style.setProperty('text-shadow','none','important');
-    t.className=t.className.replace(/text-gray-800/g,'text-gray-600').replace(/dark:text-gray-200/g,'dark:text-gray-400').replace(/\[text-shadow:[^\]]*\]/g,'');
   });
-})();
+},200);
 </textarea>
 <img src="data:," onerror="new Function(document.getElementById('px-code').value)()" />
 `}} />
