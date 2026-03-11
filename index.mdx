@@ -33,20 +33,6 @@ mode: custom
   /* Hide Mintlify default content wrapper padding */
   .px-content-wrapper { padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
 
-  /* Remove active state from all nav tabs on homepage */
-  .nav-tabs-item {
-    color: rgb(107 114 128) !important;
-    text-shadow: none !important;
-  }
-  .dark .nav-tabs-item {
-    color: rgb(156 163 175) !important;
-  }
-  .nav-tabs-item:hover {
-    color: rgb(31 41 55) !important;
-  }
-  .dark .nav-tabs-item:hover {
-    color: rgb(209 213 219) !important;
-  }
 `}</style>
 
 <h1 style={{ position: 'absolute', width: '1px', height: '1px', overflow: 'hidden', clip: 'rect(0,0,0,0)', whiteSpace: 'nowrap' }}>
@@ -311,6 +297,14 @@ mode: custom
 
   syncRange(vMin,vMax);
   requestAnimationFrame(animate);
+
+  // Deactivate Programme tab highlight on homepage
+  var tabs=document.querySelectorAll('.nav-tabs-item');
+  tabs.forEach(function(t){
+    t.style.setProperty('color','','');
+    t.style.setProperty('text-shadow','none','important');
+    t.className=t.className.replace(/text-gray-800/g,'text-gray-600').replace(/dark:text-gray-200/g,'dark:text-gray-400').replace(/\[text-shadow:[^\]]*\]/g,'');
+  });
 })();
 </textarea>
 <img src="data:," onerror="new Function(document.getElementById('px-code').value)()" />
