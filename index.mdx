@@ -61,7 +61,12 @@ mode: custom
       img:'/images/banners/her-waka-banner-landscape.png', pos:'center 85%',
       ov:'linear-gradient(135deg, rgba(31,30,68,0.88) 0%, rgba(45,27,78,0.85) 50%, rgba(155,46,131,0.82) 100%)',
       over:'March \\u2013 June 2026 \\u00b7 Auckland',
-      main:'HER WAKA', tag:'Navigating pathways into sustainable employment' },
+      main:'HER WAKA', tag:'Navigating pathways into sustainable employment',
+      partners:[
+        {logo:'/images/partners/academyex-logo.svg', url:'https://academyex.com/', alt:'academyEX'},
+        {logo:'/images/partners/msd-logo.svg', url:'https://www.msd.govt.nz/', alt:'Ministry of Social Development'},
+        {logo:'/images/partners/rcsa-logo.svg', url:'https://www.rcsa.com.au/', alt:'RCSA'}
+      ] },
     { type:'text', title:'AI & Future of Work', sub:'Next Session', yr:'25 MAR',
       desc:'Panel discussion, hands-on AI workshop, hiring insights',
       img:'/images/banners/slide2-womens-day.jpg', pos:'center 30%',
@@ -157,6 +162,16 @@ mode: custom
         '<h2 style="font-family:'+fP+';font-size:clamp(44px,7vw,82px);font-weight:800;color:white;letter-spacing:-0.02em;line-height:1.0;text-shadow:0 2px 20px rgba(0,0,0,0.2);margin:0 0 16px;">'+d.main+'</h2>'+
         '<div style="width:40px;height:1px;background:rgba(255,255,255,0.15);margin:0 auto 16px;"></div>'+
         '<p style="font-family:'+fA+';font-size:15px;color:rgba(255,255,255,0.5);margin:0;max-width:420px;line-height:1.5;text-transform:uppercase;letter-spacing:0.02em;">'+(d.tag||'')+'</p>';
+      if(d.partners){
+        var ph='<div style="display:flex;align-items:center;justify-content:center;gap:36px;margin-top:36px;flex-wrap:wrap;">';
+        d.partners.forEach(function(p){
+          ph+='<a href="'+p.url+'" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;opacity:0.65;transition:opacity 0.3s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.65">'
+            +'<img src="'+p.logo+'" alt="'+p.alt+'" style="height:40px;width:auto;filter:brightness(0) invert(1);" />'
+            +'</a>';
+        });
+        ph+='</div>';
+        w.innerHTML+=ph;
+      }
       el.appendChild(w);
     }
     else if(d.type==='cta'){
