@@ -62,6 +62,22 @@
         ]
       },
       {
+        "tab": "Personal Website Tutorial",
+        "groups": [
+          {
+            "group": "Build Your Personal Website",
+            "pages": [
+              "tutorial/personal-website/overview",
+              "tutorial/personal-website/setup-tools",
+              "tutorial/personal-website/github-account",
+              "tutorial/personal-website/build-website",
+              "tutorial/personal-website/deploy",
+              "tutorial/personal-website/keep-going"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "Resources",
         "groups": [
           {
