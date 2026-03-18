@@ -33,39 +33,44 @@
         ]
       },
       {
-        "tab": "March 2026 Workshop",
+        "tab": "Workshops",
         "groups": [
           {
-            "group": "AI & Future of Work",
+            "group": "Overview",
+            "pages": ["workshop/overview"]
+          },
+          {
+            "group": "Session 1: AI & Future of Work",
             "pages": [
               "workshop/march-2026/overview",
               "workshop/march-2026/ai-tools-intro",
               "workshop/march-2026/hands-on-exercises",
               "workshop/march-2026/resources"
             ]
+          },
+          {
+            "group": "Session 2: Job Readiness",
+            "pages": ["workshop/april-2026/overview"]
+          },
+          {
+            "group": "Session 3: Employment Rights",
+            "pages": ["workshop/may-2026/overview"]
+          },
+          {
+            "group": "Session 4: Networking",
+            "pages": ["workshop/june-2026/overview"]
           }
         ]
       },
       {
-        "tab": "Vibe Coding Tutorial",
+        "tab": "Tutorials",
         "groups": [
           {
-            "group": "Build a daily report bot",
-            "pages": [
-              "workshop/vibe-coding/overview",
-              "workshop/vibe-coding/setup",
-              "workshop/vibe-coding/build-with-claude",
-              "workshop/vibe-coding/deploy-and-test",
-              "workshop/vibe-coding/whats-next"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Personal Website Tutorial",
-        "groups": [
+            "group": "Overview",
+            "pages": ["tutorial/overview"]
+          },
           {
-            "group": "Build Your Personal Website",
+            "group": "Beginner",
             "pages": [
               "tutorial/personal-website/overview",
               "tutorial/personal-website/setup-tools",
@@ -73,6 +78,16 @@
               "tutorial/personal-website/build-website",
               "tutorial/personal-website/deploy",
               "tutorial/personal-website/keep-going"
+            ]
+          },
+          {
+            "group": "Advanced",
+            "pages": [
+              "tutorial/vibe-coding/overview",
+              "tutorial/vibe-coding/setup",
+              "tutorial/vibe-coding/build-with-claude",
+              "tutorial/vibe-coding/deploy-and-test",
+              "tutorial/vibe-coding/whats-next"
             ]
           }
         ]
