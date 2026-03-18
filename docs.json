@@ -43,9 +43,15 @@
             "group": "Session 1: AI & Future of Work",
             "pages": [
               "workshop/march-2026/overview",
-              "workshop/march-2026/ai-tools-intro",
-              "workshop/march-2026/hands-on-exercises",
-              "workshop/march-2026/resources"
+              {
+                "group": "Workshop Materials",
+                "icon": "book-open",
+                "pages": [
+                  "workshop/march-2026/ai-tools-intro",
+                  "workshop/march-2026/hands-on-exercises",
+                  "workshop/march-2026/resources"
+                ]
+              }
             ]
           },
           {
@@ -72,22 +78,34 @@
           {
             "group": "Beginner",
             "pages": [
-              "tutorial/personal-website/overview",
-              "tutorial/personal-website/setup-tools",
-              "tutorial/personal-website/github-account",
-              "tutorial/personal-website/build-website",
-              "tutorial/personal-website/deploy",
-              "tutorial/personal-website/keep-going"
+              {
+                "group": "Build Your Personal Website",
+                "icon": "globe",
+                "pages": [
+                  "tutorial/personal-website/overview",
+                  "tutorial/personal-website/setup-tools",
+                  "tutorial/personal-website/github-account",
+                  "tutorial/personal-website/build-website",
+                  "tutorial/personal-website/deploy",
+                  "tutorial/personal-website/keep-going"
+                ]
+              }
             ]
           },
           {
             "group": "Advanced",
             "pages": [
-              "tutorial/vibe-coding/overview",
-              "tutorial/vibe-coding/setup",
-              "tutorial/vibe-coding/build-with-claude",
-              "tutorial/vibe-coding/deploy-and-test",
-              "tutorial/vibe-coding/whats-next"
+              {
+                "group": "Vibe Coding: Daily Report Bot",
+                "icon": "robot",
+                "pages": [
+                  "tutorial/vibe-coding/overview",
+                  "tutorial/vibe-coding/setup",
+                  "tutorial/vibe-coding/build-with-claude",
+                  "tutorial/vibe-coding/deploy-and-test",
+                  "tutorial/vibe-coding/whats-next"
+                ]
+              }
             ]
           }
         ]
