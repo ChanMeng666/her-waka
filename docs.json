@@ -89,6 +89,17 @@
                   "tutorial/personal-website/deploy",
                   "tutorial/personal-website/keep-going"
                 ]
+              },
+              {
+                "group": "Create Professional PDFs",
+                "icon": "file-pdf",
+                "pages": [
+                  "tutorial/professional-pdf/overview",
+                  "tutorial/professional-pdf/setup",
+                  "tutorial/professional-pdf/build-first-pdf",
+                  "tutorial/professional-pdf/explore-templates",
+                  "tutorial/professional-pdf/keep-going"
+                ]
               }
             ]
           },
