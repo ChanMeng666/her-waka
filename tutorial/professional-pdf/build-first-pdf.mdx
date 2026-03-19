@@ -1,9 +1,9 @@
 ---
 title: "Build Your First PDF"
-description: "Use Gemini CLI to create a professional cover letter PDF — just describe what you want and let AI write the Typst code."
+description: "Use a Typst template and Gemini CLI to create a professional cover letter PDF — start from a template, then customise with AI."
 ---
 
-This is the fun part. You'll describe the cover letter you want, Gemini CLI will write the Typst code, and you'll compile it into a polished PDF. No coding required — just clear descriptions.
+This is the fun part. You'll start from a professionally designed template, use Gemini CLI to customise it, and compile it into a polished PDF. No coding required — just clear descriptions.
 
 ## The Vibe Coding Loop
 
@@ -11,14 +11,14 @@ Every step follows the same pattern:
 
 ```mermaid
 flowchart LR
-    A["You describe\nwhat you want"] -->|"prompt"| B["Gemini CLI\nwrites Typst"]
+    A["Start from\na template"] -->|"prompt"| B["Gemini CLI\ncustomises it"]
     B -->|"compile"| C["Typst creates\nyour PDF"]
     C -->|"review"| D{"Happy?"}
-    D -->|"Not quite"| A
+    D -->|"Not quite"| B
     D -->|"Yes!"| E["Done!"]
 ```
 
-You describe. Gemini CLI writes Typst code. You compile to PDF. Review and repeat until it's perfect.
+Start from a template. Ask Gemini CLI to customise it. Compile to PDF. Review and repeat until it's perfect.
 
 ---
 
@@ -58,8 +58,32 @@ You describe. Gemini CLI writes Typst code. You compile to PDF. Review and repea
     </Tabs>
   </Step>
 
+  <Step title="Initialise a cover letter template">
+    Typst has a library of free, community-made templates called [Typst Universe](https://typst.app/universe). We'll start with **fireside** — a clean, modern cover letter template.
+
+    In your terminal, run:
+
+    ```bash
+    typst init @preview/fireside:1.0.0
+    ```
+
+    This downloads the template and creates a ready-to-use project folder with a `.typ` file inside.
+
+    <Info>
+    **What just happened?** The `typst init` command pulled a professionally designed template from Typst Universe and set up a project folder for you. The template already has a polished layout — you just need to fill in your details.
+    </Info>
+
+    <Accordion title="'typst init' not working?">
+    If you see an error, try these fixes:
+
+    - **"typst: command not found"** — Go back to the [setup page](/tutorial/professional-pdf/setup) and install Typst CLI
+    - **Network error** — Check your internet connection; `typst init` downloads the template from the web
+    - **Permission error** — On Windows, try running PowerShell as Administrator. On macOS, try adding `sudo` before the command
+    </Accordion>
+  </Step>
+
   <Step title="Start Gemini CLI">
-    In your terminal, type:
+    Navigate into the template folder and start Gemini CLI:
 
     ```bash
     gemini
@@ -68,50 +92,49 @@ You describe. Gemini CLI writes Typst code. You compile to PDF. Review and repea
     Press Enter. You should see Gemini CLI start up with a prompt ready for your input.
   </Step>
 
-  <Step title="Create your cover letter">
-    Pick the style that appeals to you and copy the entire prompt into Gemini CLI. The prompts use placeholder content — you'll personalise it later.
+  <Step title="Customise with Gemini CLI">
+    Now ask Gemini CLI to customise the template for you. Pick the style that appeals to you:
 
     <Tabs>
       <Tab title="Simple">
-        ```text title="Copy this prompt — Clean cover letter"
-        Create a professional cover letter as a Typst file called cover-letter.typ.
-        Use a clean, modern layout with:
-        - My name and contact details at the top
+        ```text title="Copy this prompt — Clean customisation"
+        I have a Typst cover letter template (fireside) in this folder.
+        Please customise it with:
+        - Placeholder name and contact details at the top
         - Today's date in NZ format (e.g. 19 March 2026)
-        - A greeting, 3 short paragraphs, and a sign-off
-        - Professional sans-serif font
-        - Generous margins and clean spacing
-        Use placeholder content for the name, address, company, and role.
-        Use NZ English spelling throughout.
+        - A greeting, 3 short paragraphs of placeholder content, and a sign-off
+        - Clean, professional sans-serif font
+        Use NZ English spelling throughout. Keep the template's existing layout
+        but update the content and styling.
+        Then compile it to PDF using typst compile.
         ```
       </Tab>
       <Tab title="Creative">
-        ```text title="Copy this prompt — Bold creative cover letter"
-        Create a bold, creative cover letter as a Typst file called cover-letter.typ.
-        Use an eye-catching design with:
-        - A coloured accent bar or header strip
-        - My name in a large, bold font with contact details below
+        ```text title="Copy this prompt — Bold creative customisation"
+        I have a Typst cover letter template (fireside) in this folder.
+        Please customise it with:
+        - Placeholder name and contact details
         - Today's date in NZ format (e.g. 19 March 2026)
-        - A greeting, 3 short paragraphs, and a sign-off
-        - Thoughtful use of colour — suitable for creative industries
+        - A greeting, 3 short paragraphs of placeholder content, and a sign-off
+        - Bold colour accents — suitable for creative industries
         - Modern typography with contrasting font weights
-        Use placeholder content for the name, address, company, and role.
-        Use NZ English spelling throughout. This is for a creative or design role.
+        Use NZ English spelling throughout. Make it eye-catching while keeping
+        the template's professional structure.
+        Then compile it to PDF using typst compile.
         ```
       </Tab>
       <Tab title="Formal">
-        ```text title="Copy this prompt — Traditional formal cover letter"
-        Create a traditional, formal cover letter as a Typst file called cover-letter.typ.
-        Use a conservative layout with:
-        - My name and contact details at the top, right-aligned
+        ```text title="Copy this prompt — Traditional formal customisation"
+        I have a Typst cover letter template (fireside) in this folder.
+        Please customise it with:
+        - Placeholder name and contact details, right-aligned at the top
         - Recipient's details left-aligned below
         - Today's date in NZ format (e.g. 19 March 2026)
         - "Dear Hiring Manager" greeting
-        - 3 formal paragraphs and "Yours sincerely" sign-off
-        - Serif font (like New Computer Modern or similar)
-        - Traditional spacing and margins
-        Use placeholder content for the name, address, company, and role.
+        - 3 formal paragraphs of placeholder content and "Yours sincerely" sign-off
+        - Traditional serif font and conservative styling
         Use NZ English spelling throughout. This is for a corporate or government role.
+        Then compile it to PDF using typst compile.
         ```
       </Tab>
     </Tabs>
@@ -121,33 +144,11 @@ You describe. Gemini CLI writes Typst code. You compile to PDF. Review and repea
     </Tip>
   </Step>
 
-  <Step title="Compile your PDF">
-    Now turn your Typst file into a PDF.
-
-    <Tabs>
-      <Tab title="Ask Gemini">
-        ```text title="Copy this prompt to compile your PDF"
-        Please compile cover-letter.typ into a PDF using the typst compile command.
-        ```
-      </Tab>
-      <Tab title="Do it yourself">
-        Exit Gemini CLI (type `/quit` or press Ctrl+C), then run:
-
-        ```bash
-        typst compile cover-letter.typ
-        ```
-
-        This creates `cover-letter.pdf` in the same folder. Open it to see your document!
-
-        Then restart Gemini CLI:
-        ```bash
-        gemini
-        ```
-      </Tab>
-    </Tabs>
+  <Step title="Review your PDF">
+    Open the compiled PDF by double-clicking it in your file explorer. It will open in your default PDF viewer.
 
     <Info>
-    Open `cover-letter.pdf` by double-clicking it in your file explorer. It will open in your default PDF viewer.
+    **Starting from a template means your first result already looks professional.** The template handles layout, typography, and spacing — Gemini CLI just customises the content and styling to your taste.
     </Info>
   </Step>
 
@@ -156,29 +157,29 @@ You describe. Gemini CLI writes Typst code. You compile to PDF. Review and repea
 
     ```text title="Change the font"
     Change the font to a modern sans-serif font. Keep everything else the same.
+    Then recompile to PDF.
     ```
 
     ```text title="Add colour"
     Add a subtle colour accent — use a dark teal or navy blue for headings
     and a thin coloured line under my name. Keep the overall design professional.
+    Then recompile to PDF.
     ```
 
     ```text title="Adjust margins and spacing"
     The margins feel too wide. Reduce the margins to 2cm on all sides
     and tighten the line spacing slightly so the letter feels more compact.
+    Then recompile to PDF.
     ```
 
     ```text title="Add a footer"
     Add a small footer at the bottom of the page with "Page 1 of 1" centred
     and my email address on the right side.
-    ```
-
-    ```text title="Compile again"
-    Compile the updated cover-letter.typ to PDF so I can see the changes.
+    Then recompile to PDF.
     ```
 
     <Tip>
-    **The vibe coding loop:** describe → compile → review → refine. Keep going until you love it! You can send as many prompts to Gemini CLI as you want.
+    **The vibe coding loop:** customise → compile → review → refine. Keep going until you love it! You can send as many prompts to Gemini CLI as you want.
     </Tip>
   </Step>
 
@@ -210,12 +211,12 @@ You describe. Gemini CLI writes Typst code. You compile to PDF. Review and repea
 
 Here's what you did, step by step:
 
-1. **You described** a cover letter in plain language
-2. **Gemini CLI wrote** Typst code — a simple text file that defines your document's layout and content
-3. **Typst compiled** that code into a pixel-perfect PDF
+1. **You initialised** a professional template from Typst Universe with `typst init`
+2. **Gemini CLI customised** the template — updating content, fonts, colours, and layout
+3. **Typst compiled** the code into a pixel-perfect PDF
 4. **You iterated** — asking for design changes, recompiling, and reviewing until it looked right
 
-The key insight: you never had to learn Typst syntax. You described what you wanted, and AI handled the technical details. The `.typ` file is just a text file — you can open it in any text editor to see what Gemini wrote.
+The key insight: you started from a professionally designed template instead of a blank page. The template gave you a solid foundation, and AI handled the customisation. You never had to learn Typst syntax — you described what you wanted, and Gemini CLI made it happen.
 
 ## Troubleshooting
 
@@ -223,7 +224,7 @@ The key insight: you never had to learn Typst syntax. You described what you wan
   <Accordion title="The PDF is blank">
     The `.typ` file might be empty or have an error. Ask Gemini CLI:
     ```text
-    The PDF is blank. Can you check cover-letter.typ for errors and fix them?
+    The PDF is blank. Can you check the .typ file for errors and fix them?
     Then recompile it to PDF.
     ```
   </Accordion>
@@ -244,10 +245,14 @@ The key insight: you never had to learn Typst syntax. You described what you wan
     ```
   </Accordion>
   <Accordion title="I want to start over completely">
-    Tell Gemini CLI:
+    You can re-initialise the template:
+    ```bash
+    typst init @preview/fireside:1.0.0
+    ```
+    Or tell Gemini CLI to start from scratch:
     ```text
-    I want to start fresh. Delete cover-letter.typ and create a new cover
-    letter from scratch. [Then describe what you want]
+    I want to start fresh. Create a new cover letter from scratch as a .typ
+    file — don't use the template. [Then describe what you want]
     ```
   </Accordion>
 </AccordionGroup>
