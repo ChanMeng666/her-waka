@@ -167,6 +167,47 @@ flowchart LR
   </Step>
 </Steps>
 
+### Try It: Install the Frontend Design Skill
+
+Now let's install a real skill that will make a noticeable difference in your projects. The **frontend-design** skill teaches Gemini CLI to create distinctive, polished web interfaces instead of generic-looking output. It comes from Anthropic's open-source [skills library](https://github.com/anthropics/skills).
+
+<Steps>
+  <Step title="Install the frontend-design skill">
+    Run this command in your terminal:
+    ```bash
+    gemini skills install https://github.com/anthropics/skills.git --path skills/frontend-design
+    ```
+  </Step>
+  <Step title="Try it out on your website">
+    Now ask Gemini to redesign your personal website using its new skill:
+    ```text title="Copy this prompt to try the skill"
+    Redesign my personal website with a more polished, distinctive look.
+    Use thoughtful typography, a cohesive color palette, subtle animations,
+    and creative spatial composition. Avoid generic or cookie-cutter AI aesthetics.
+    ```
+  </Step>
+</Steps>
+
+<Tip>
+The frontend-design skill focuses on **typography** choices, **color** themes, **motion and animation**, **spatial composition**, and **backgrounds** — guiding Gemini to produce designs that feel intentional and crafted rather than template-driven.
+</Tip>
+
+<Accordion title="What does this skill teach Gemini?">
+  Behind the scenes, the skill provides Gemini with design guidelines including:
+
+  - **Typography** — Use distinctive font pairings instead of defaults; vary weight, size, and spacing for visual hierarchy
+  - **Color** — Build cohesive color themes with purposeful contrast and accent colors, not generic palettes
+  - **Motion & animation** — Add subtle transitions and micro-interactions that feel natural and enhance usability
+  - **Spatial composition** — Use asymmetric layouts, intentional whitespace, and layered depth instead of rigid grids
+  - **Backgrounds & texture** — Incorporate gradients, patterns, or subtle textures to add richness and depth
+
+  These guidelines activate automatically whenever Gemini detects a frontend task.
+</Accordion>
+
+<Info>
+This skill comes from Anthropic's open-source [Agent Skills repository](https://github.com/anthropics/skills) and follows the [Agent Skills open standard](https://agentskills.io). You can browse the repository for more skills or even create your own!
+</Info>
+
 ### Managing Skills
 
 <AccordionGroup>
