@@ -23,11 +23,12 @@
   iframe.title = 'Music Player';
   popup.appendChild(iframe);
 
-  /* Inject into body */
+  /* Inject into <html> — SPA frameworks only replace <body> children,
+     so mounting here prevents flicker during navigation */
+  var root = document.documentElement;
   function attach() {
-    if (!document.body) return;
-    if (!document.body.contains(btn)) document.body.appendChild(btn);
-    if (!document.body.contains(popup)) document.body.appendChild(popup);
+    if (!root.contains(btn)) root.appendChild(btn);
+    if (!root.contains(popup)) root.appendChild(popup);
   }
 
   /* Toggle */
@@ -78,8 +79,4 @@
     boot();
   }
 
-  /* Re-attach if SPA navigation removes elements */
-  new MutationObserver(function () {
-    attach();
-  }).observe(document.documentElement, { childList: true, subtree: true });
 })();
