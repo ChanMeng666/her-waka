@@ -1,5 +1,6 @@
 /* Music Player - Fixed-position Suno embed, works on all pages.
-   Uses a global flag so re-execution during SPA navigation is a no-op. */
+   All styles are inlined so CSS re-loading during SPA navigation
+   cannot cause flicker. Guarded to run only once. */
 if (!window.__musicPlayerInit) {
   window.__musicPlayerInit = true;
 
@@ -7,6 +8,20 @@ if (!window.__musicPlayerInit) {
     var SUNO_URL = 'https://suno.com/embed/e413a5b0-bd59-4dd4-8bd1-03adac146ff6';
     var LS_KEY = 'music-player-open';
     var iframeLoaded = false;
+
+    /* Inject styles once into <head> */
+    var style = document.createElement('style');
+    style.textContent =
+      '.music-player-btn{position:fixed;bottom:24px;right:24px;z-index:99999;width:44px;height:44px;border-radius:50%;border:none;background:#c846ab;color:#fff;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;padding:0;transition:background .2s,box-shadow .2s;box-shadow:0 2px 12px rgba(0,0,0,.25)}' +
+      '.music-player-btn:hover{background:#9b2e83}' +
+      '.music-player-btn svg{width:20px;height:20px;fill:currentColor}' +
+      '.music-player-btn.active{animation:music-pulse 1.8s ease-in-out infinite}' +
+      '@keyframes music-pulse{0%,100%{box-shadow:0 0 4px 0 rgba(200,70,171,.5)}50%{box-shadow:0 0 14px 5px rgba(200,70,171,.45)}}' +
+      '.music-player-popup{position:fixed;bottom:80px;right:24px;z-index:99999;background:#1a1a2e;border:1px solid #c846ab;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.4);padding:12px;width:min(760px,calc(100vw - 24px));opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .25s ease,transform .25s ease}' +
+      '.music-player-popup.open{opacity:1;transform:translateY(0);pointer-events:auto}' +
+      '.music-player-popup iframe{width:100%;height:200px;border:none;border-radius:8px}' +
+      '@media(max-width:768px){.music-player-btn{bottom:20px;right:16px;width:40px;height:40px}.music-player-btn svg{width:18px;height:18px}.music-player-popup{bottom:72px;right:8px;width:calc(100vw - 16px)}}';
+    (document.head || document.documentElement).appendChild(style);
 
     /* Create button */
     var btn = document.createElement('button');
@@ -29,6 +44,7 @@ if (!window.__musicPlayerInit) {
 
     /* Mount on <html> so SPA body swaps don't touch these */
     var root = document.documentElement;
+
     function attach() {
       if (!root.contains(btn)) root.appendChild(btn);
       if (!root.contains(popup)) root.appendChild(popup);
