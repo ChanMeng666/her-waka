@@ -1,15 +1,10 @@
-/* Music Player - Navigation Bar Toggle Button & Popup */
+/* Music Player - Fixed position toggle button & popup */
 
-/* Wrapper positioned in navbar */
-.music-player-wrapper {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  margin-right: 8px;
-}
-
-/* Toggle Button */
 .music-player-btn {
+  position: fixed;
+  top: 14px;
+  right: 160px;
+  z-index: 9999;
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -45,11 +40,11 @@
   50% { box-shadow: 0 0 12px 4px rgba(200, 70, 171, 0.45); }
 }
 
-/* Popup Container */
+/* Popup Container — anchored top-right, opens downward */
 .music-player-popup {
-  position: absolute;
-  top: calc(100% + 10px);
-  right: 0;
+  position: fixed;
+  top: 58px;
+  right: 12px;
   z-index: 9999;
   background: #1a1a2e;
   border: 1px solid #c846ab;
@@ -78,12 +73,10 @@
 }
 
 /* Responsive */
-@media (max-width: 640px) {
-  .music-player-popup {
-    right: -60px;
-  }
-
+@media (max-width: 768px) {
   .music-player-btn {
+    top: 12px;
+    right: 56px;
     width: 32px;
     height: 32px;
   }
@@ -91,5 +84,11 @@
   .music-player-btn svg {
     width: 16px;
     height: 16px;
+  }
+
+  .music-player-popup {
+    top: 52px;
+    right: 8px;
+    width: calc(100vw - 16px);
   }
 }
