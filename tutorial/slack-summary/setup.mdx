@@ -3,6 +3,9 @@ title: "Set up your tools"
 description: "Connect AI to your Slack workspace — choose between Claude Desktop (quick setup) or Gemini CLI with MCP (more hands-on)."
 ---
 
+import InstallNodejs from "/snippets/install-nodejs.mdx";
+import InstallGeminiCli from "/snippets/install-gemini-cli.mdx";
+
 Before we start summarising, let's get your tools connected to Slack. Choose the path that suits you best.
 
 <Warning>
@@ -93,34 +96,7 @@ Before we start summarising, let's get your tools connected to Slack. Choose the
         **Already have Node.js?** If you installed it for a previous tutorial, skip this step. Run `node --version` in your terminal to check — you should see a version number like `v22.x.x`.
         </Info>
 
-        Node.js is a free tool that lets you run Gemini CLI and the Slack MCP server.
-
-        <Tabs>
-          <Tab title="Windows">
-            1. Go to [nodejs.org](https://nodejs.org)
-            2. Click the big green **LTS** button to download the installer
-            3. Open the downloaded `.msi` file
-            4. Click **Next** through all the screens — the default settings are fine
-            5. Click **Install**, then **Finish**
-          </Tab>
-          <Tab title="macOS">
-            1. Go to [nodejs.org](https://nodejs.org)
-            2. Click the big green **LTS** button to download the installer
-            3. Open the downloaded `.pkg` file
-            4. Click **Continue** through all the screens — the default settings are fine
-            5. Click **Install**, then **Close**
-          </Tab>
-        </Tabs>
-
-        <Accordion title="How do I know it worked?">
-        Open your terminal and type:
-
-        ```bash
-        node --version
-        ```
-
-        You should see a version number like `v22.x.x`. If you see an error, try closing and reopening your terminal, then run the command again.
-        </Accordion>
+        <InstallNodejs />
       </Step>
 
       <Step title="Install and test Gemini CLI">
@@ -128,44 +104,9 @@ Before we start summarising, let's get your tools connected to Slack. Choose the
         **Already have Gemini CLI?** If you installed it for a previous tutorial, skip this step. Just run `gemini` in your terminal to check it still works.
         </Info>
 
-        Gemini CLI is Google's free AI assistant that runs in your terminal.
-
-        Open your terminal and type:
-
-        ```bash
-        npm install -g @google/gemini-cli
-        ```
-
-        Wait for the installation to finish. Then start it by typing:
-
-        ```bash
-        gemini
-        ```
-
-        The first time you run it, Gemini CLI will ask you to sign in:
-        - Choose **"Sign in with Google"**
-        - A browser window will open — sign in with your Google account
-        - Come back to the terminal when it says you're connected
-
-        <Info>
-        **Free tier:** 60 requests per minute, 1,000 requests per day — more than enough for this tutorial and everyday use.
-        </Info>
+        <InstallGeminiCli />
 
         Type `/quit` to exit Gemini CLI for now. We will start it again after configuring the Slack connection.
-
-        <Accordion title="'npm' is not recognised">
-        This means Node.js isn't installed correctly. Go back to Step 1 and reinstall Node.js. After reinstalling, **close your terminal completely and open a new one** before trying again.
-        </Accordion>
-
-        <Accordion title="Permission denied error">
-        **Windows:** Close PowerShell and reopen it by right-clicking and choosing **"Run as Administrator"**. Then try the install command again.
-
-        **macOS:** Add `sudo` before the command:
-        ```bash
-        sudo npm install -g @google/gemini-cli
-        ```
-        Enter your computer password when prompted (you won't see characters as you type — that's normal).
-        </Accordion>
       </Step>
 
       <Step title="Create a Slack App">

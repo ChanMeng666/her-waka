@@ -3,6 +3,11 @@ title: "Set Up Your Tools"
 description: "Install Node.js, Gemini CLI, and Typst — everything you need before creating professional PDFs."
 ---
 
+import InstallWisprFlow from "/snippets/install-wispr-flow.mdx";
+import InstallNodejs from "/snippets/install-nodejs.mdx";
+import OpenTerminal from "/snippets/open-terminal.mdx";
+import InstallGeminiCli from "/snippets/install-gemini-cli.mdx";
+
 Before we start building, let's get your tools ready. This page walks you through each step.
 
 <Warning>
@@ -13,130 +18,19 @@ Before we start building, let's get your tools ready. This page walks you throug
 
 <Steps>
   <Step title="Download Wispr Flow (optional)">
-    <Info>
-    **This step is optional.** Wispr Flow lets you speak instead of type — handy if you prefer talking over typing. Skip this step if you'd rather type your prompts.
-    </Info>
-
-    <Tip>
-    **Sign up using this invite link to get a free month of Pro:**
-    [https://wisprflow.ai/r?CHAN115](https://wisprflow.ai/r?CHAN115)
-
-    Both you and the tutorial author benefit — you get a free month of Pro, and they get a free month when you dictate 2,000 words!
-    </Tip>
-
-    1. **Sign up** at [wisprflow.ai/r?CHAN115](https://wisprflow.ai/r?CHAN115)
-    2. **Download and install** the app for your operating system
-    3. **Configure settings** — enable these options for the best experience:
-       - Experimental > **Command Mode** — Enable advanced voice commands
-       - **Press Enter Command** — Automatically press enter when you say "press enter"
-       - **Bulk Import** — Import snippets and dictionary items
-
-    <Accordion title="What is Wispr Flow?">
-    Wispr Flow is a voice-to-text tool that lets you dictate instead of type. It works in any application, including your terminal. Instead of typing a long prompt to Gemini CLI, you can just say it out loud. This is especially useful if you find typing slow or tiring.
-    </Accordion>
+    <InstallWisprFlow />
   </Step>
 
   <Step title="Install Node.js">
-    Node.js is a free tool that lets you run Gemini CLI on your computer.
-
-    <Tabs>
-      <Tab title="Windows">
-        1. Go to [nodejs.org](https://nodejs.org)
-        2. Click the big green **LTS** button to download the installer
-        3. Open the downloaded `.msi` file
-        4. Click **Next** through all the screens — the default settings are fine
-        5. Click **Install**, then **Finish**
-      </Tab>
-      <Tab title="macOS">
-        1. Go to [nodejs.org](https://nodejs.org)
-        2. Click the big green **LTS** button to download the installer
-        3. Open the downloaded `.pkg` file
-        4. Click **Continue** through all the screens — the default settings are fine
-        5. Click **Install**, then **Close**
-      </Tab>
-    </Tabs>
-
-    <Accordion title="How do I know it worked?">
-    Open your terminal (see the next step) and type:
-
-    ```bash
-    node --version
-    ```
-
-    You should see a version number like `v22.x.x`. If you see an error, try closing and reopening your terminal, then run the command again.
-    </Accordion>
+    <InstallNodejs />
   </Step>
 
   <Step title="Learn to open your terminal">
-    The terminal is a program where you type commands. It looks like a dark window with text — this is completely normal. Don't be intimidated!
-
-    <Tabs>
-      <Tab title="Windows">
-        1. Press the **Windows key** on your keyboard
-        2. Type **PowerShell**
-        3. Click **Windows PowerShell** in the search results
-
-        You'll see a dark blue window with a blinking cursor. That's your terminal!
-      </Tab>
-      <Tab title="macOS">
-        1. Press **Cmd + Space** to open Spotlight
-        2. Type **Terminal**
-        3. Press **Enter**
-
-        You'll see a window with a blinking cursor. That's your terminal!
-      </Tab>
-    </Tabs>
-
-    <Tip>
-    The terminal is where you'll type commands to install tools and talk to Gemini CLI. You'll be using it a lot in this tutorial — keep it open!
-    </Tip>
-
-    <Accordion title="How to open a terminal in a specific folder">
-    Later in this tutorial, you'll need to open a terminal inside your project folder. Here's how:
-
-    **Windows:** Open the folder in File Explorer. Click the address bar at the top, type `powershell`, and press Enter. A terminal opens right in that folder.
-
-    **macOS:** Open Finder and navigate to the folder. Right-click the folder and select **"Open Terminal at Folder"**. If you don't see this option, you can open Terminal normally and type `cd ` (with a space), then drag the folder into the Terminal window and press Enter.
-    </Accordion>
+    <OpenTerminal />
   </Step>
 
   <Step title="Install and test Gemini CLI">
-    Gemini CLI is Google's free AI coding assistant. It runs in your terminal and writes code based on your descriptions.
-
-    Open your terminal and type:
-
-    ```bash
-    npm install -g @google/gemini-cli
-    ```
-
-    Wait for the installation to finish. Then start it by typing:
-
-    ```bash
-    gemini
-    ```
-
-    The first time you run it, Gemini CLI will ask you to sign in:
-    - Choose **"Sign in with Google"**
-    - A browser window will open — sign in with your Google account
-    - Come back to the terminal when it says you're connected
-
-    <Info>
-    **Free tier:** 60 requests per minute, 1,000 requests per day — more than enough for this tutorial and everyday use.
-    </Info>
-
-    <Accordion title="'npm' is not recognized">
-    This means Node.js isn't installed correctly. Go back to Step 2 and reinstall Node.js. After reinstalling, **close your terminal completely and open a new one** before trying again.
-    </Accordion>
-
-    <Accordion title="Permission denied error">
-    **Windows:** Close PowerShell and reopen it by right-clicking and choosing **"Run as Administrator"**. Then try the install command again.
-
-    **macOS:** Add `sudo` before the command:
-    ```bash
-    sudo npm install -g @google/gemini-cli
-    ```
-    Enter your computer password when prompted (you won't see characters as you type — that's normal).
-    </Accordion>
+    <InstallGeminiCli />
   </Step>
 
   <Step title="Install Typst CLI">
