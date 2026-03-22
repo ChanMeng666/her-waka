@@ -76,7 +76,32 @@
             "pages": ["tutorial/overview"]
           },
           {
-            "group": "Beginner",
+            "group": "★ Getting Started",
+            "pages": [
+              {
+                "group": "Summarise Gmail with AI",
+                "icon": "envelope",
+                "pages": [
+                  "tutorial/gmail-summary/overview",
+                  "tutorial/gmail-summary/setup",
+                  "tutorial/gmail-summary/summarize",
+                  "tutorial/gmail-summary/keep-going"
+                ]
+              },
+              {
+                "group": "Voice-Control Your Notes",
+                "icon": "microphone",
+                "pages": [
+                  "tutorial/obsidian-daily/overview",
+                  "tutorial/obsidian-daily/setup",
+                  "tutorial/obsidian-daily/capture",
+                  "tutorial/obsidian-daily/keep-going"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "★★ Easy",
             "pages": [
               {
                 "group": "Build Your Personal Website",
@@ -90,6 +115,31 @@
                   "tutorial/personal-website/keep-going"
                 ]
               },
+              {
+                "group": "Smart Commute: Auckland Transport",
+                "icon": "bus",
+                "pages": [
+                  "tutorial/auckland-commute/overview",
+                  "tutorial/auckland-commute/setup",
+                  "tutorial/auckland-commute/check-commute",
+                  "tutorial/auckland-commute/keep-going"
+                ]
+              },
+              {
+                "group": "Organise Notes by Talking to AI",
+                "icon": "comments",
+                "pages": [
+                  "tutorial/obsidian-organise/overview",
+                  "tutorial/obsidian-organise/setup",
+                  "tutorial/obsidian-organise/organise",
+                  "tutorial/obsidian-organise/keep-going"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "★★★ Intermediate",
+            "pages": [
               {
                 "group": "Create Professional PDFs",
                 "icon": "file-pdf",
@@ -110,51 +160,11 @@
                   "tutorial/slack-summary/summarize",
                   "tutorial/slack-summary/keep-going"
                 ]
-              },
-              {
-                "group": "Summarise Gmail with AI",
-                "icon": "envelope",
-                "pages": [
-                  "tutorial/gmail-summary/overview",
-                  "tutorial/gmail-summary/setup",
-                  "tutorial/gmail-summary/summarize",
-                  "tutorial/gmail-summary/keep-going"
-                ]
-              },
-              {
-                "group": "Smart Commute: Auckland Transport",
-                "icon": "bus",
-                "pages": [
-                  "tutorial/auckland-commute/overview",
-                  "tutorial/auckland-commute/setup",
-                  "tutorial/auckland-commute/check-commute",
-                  "tutorial/auckland-commute/keep-going"
-                ]
-              },
-              {
-                "group": "Voice-Control Your Notes",
-                "icon": "microphone",
-                "pages": [
-                  "tutorial/obsidian-daily/overview",
-                  "tutorial/obsidian-daily/setup",
-                  "tutorial/obsidian-daily/capture",
-                  "tutorial/obsidian-daily/keep-going"
-                ]
-              },
-              {
-                "group": "Organise Notes by Talking to AI",
-                "icon": "comments",
-                "pages": [
-                  "tutorial/obsidian-organise/overview",
-                  "tutorial/obsidian-organise/setup",
-                  "tutorial/obsidian-organise/organise",
-                  "tutorial/obsidian-organise/keep-going"
-                ]
               }
             ]
           },
           {
-            "group": "Advanced",
+            "group": "★★★★★ Advanced",
             "pages": [
               {
                 "group": "Vibe Coding: Daily Report Bot",
