@@ -110,6 +110,26 @@
                   "tutorial/slack-summary/summarize",
                   "tutorial/slack-summary/keep-going"
                 ]
+              },
+              {
+                "group": "Summarise Gmail with AI",
+                "icon": "envelope",
+                "pages": [
+                  "tutorial/gmail-summary/overview",
+                  "tutorial/gmail-summary/setup",
+                  "tutorial/gmail-summary/summarize",
+                  "tutorial/gmail-summary/keep-going"
+                ]
+              },
+              {
+                "group": "Smart Commute: Auckland Transport",
+                "icon": "bus",
+                "pages": [
+                  "tutorial/auckland-commute/overview",
+                  "tutorial/auckland-commute/setup",
+                  "tutorial/auckland-commute/check-commute",
+                  "tutorial/auckland-commute/keep-going"
+                ]
               }
             ]
           },
