@@ -1,9 +1,18 @@
 ---
 title: "Build Your Website"
-description: "Use Gemini CLI to design and build your personal website — just describe what you want and let AI write the code."
+description: "Use Gemini CLI to design and build your personal website — just describe what you want by speaking or typing and let AI write the code."
 ---
 
-This is the fun part. You'll describe what you want, and Gemini CLI will build it for you. No coding required — just clear descriptions.
+This is the fun part. You'll describe what you want, and Gemini CLI will build it for you. No coding required — just clear descriptions, spoken or typed.
+
+<Tabs>
+  <Tab title="Voice (Wispr Flow)">
+    With Wispr Flow running, just start speaking. Your words appear as text in Gemini CLI automatically. Say what you need naturally — Gemini understands and writes the code for you.
+  </Tab>
+  <Tab title="Type or paste">
+    Copy any prompt from this page and paste it into Gemini CLI. Or type your own request in natural language. No special syntax needed — just describe what you want.
+  </Tab>
+</Tabs>
 
 ## The Vibe Coding Loop
 
@@ -11,7 +20,7 @@ Every step follows the same pattern:
 
 ```mermaid
 flowchart LR
-    A["You describe\nwhat you want"] -->|"prompt"| B["Gemini CLI\nbuilds it"]
+    A["You describe\nwhat you want"] -->|"speak or type"| B["Gemini CLI\nbuilds it"]
     B -->|"you review"| C{"Happy?"}
     C -->|"Not quite"| A
     C -->|"Yes!"| D["Next step"]
@@ -65,14 +74,18 @@ You describe. Gemini CLI builds. You review. Repeat until it's right, then move 
     ```
 
     Press Enter. You should see Gemini CLI start up with a prompt ready for your input.
+
+    <Tip>
+    **If you have Wispr Flow running**, you can now speak directly into Gemini CLI. Just start talking — your words will appear as text in the terminal.
+    </Tip>
   </Step>
 
   <Step title="Describe your website">
-    Pick the style that appeals to you and copy the entire prompt into Gemini CLI. Replace `[Your Name]` and `[your field]` with your real information before pasting!
+    Pick the style that appeals to you and say or copy the entire prompt into Gemini CLI. Replace `[Your Name]` and `[your field]` with your real information!
 
     <Tabs>
       <Tab title="Simple">
-        ```text title="Copy this prompt — Simple personal website"
+        ```text title="Say this or copy this prompt"
         Create a simple personal website for me. My name is [Your Name].
         I want a clean, modern design with:
         - A hero section with my name and a short tagline
@@ -84,7 +97,7 @@ You describe. Gemini CLI builds. You review. Repeat until it's right, then move 
         ```
       </Tab>
       <Tab title="Creative">
-        ```text title="Copy this prompt — Creative portfolio website"
+        ```text title="Say this or copy this prompt"
         Create a personal portfolio website for me. My name is [Your Name].
         I want a modern, eye-catching design with:
         - A bold hero section with a gradient background and my name
@@ -98,7 +111,7 @@ You describe. Gemini CLI builds. You review. Repeat until it's right, then move 
         ```
       </Tab>
       <Tab title="Professional">
-        ```text title="Copy this prompt — Professional resume website"
+        ```text title="Say this or copy this prompt"
         Create a professional resume-style website. My name is [Your Name].
         I am looking for work in [your field]. Include these sections:
         - Professional header with my name, job title, and a brief summary
@@ -114,18 +127,18 @@ You describe. Gemini CLI builds. You review. Repeat until it's right, then move 
     </Tabs>
 
     <Tip>
-    **Remember to replace `[Your Name]` and `[your field]`** with your actual information before pasting the prompt!
+    **Remember to replace `[Your Name]` and `[your field]`** with your actual information before pasting the prompt! If you are speaking with Wispr Flow, just say your real name and field naturally.
     </Tip>
 
     <Info>
-    Don't like the result? Just tell Gemini what to change — see Step 6 for ready-to-copy follow-up prompts.
+    Don't like the result? Just tell Gemini what to change — see Step 6 for ready-to-use follow-up prompts.
     </Info>
   </Step>
 
   <Step title="Preview your website">
-    Ask Gemini CLI to help you preview your website:
+    Say or type this prompt:
 
-    ```text title="Copy this prompt to preview your website"
+    ```text title="Say this or copy this prompt"
     Can you help me open this website in my browser so I can preview it?
     Please start a local server or just open the index.html file directly.
     ```
@@ -138,33 +151,57 @@ You describe. Gemini CLI builds. You review. Repeat until it's right, then move 
   </Step>
 
   <Step title="Iterate and improve">
-    Not happy with the result? That's normal — and that's the whole point of vibe coding! Copy any of these follow-up prompts into Gemini CLI:
+    Not happy with the result? That's normal — and that's the whole point of vibe coding! Say or copy any of these follow-up prompts into Gemini CLI:
 
-    ```text title="Change colors"
+    ```text title="Say this or copy this prompt"
     Change the color scheme to blue and white. Keep the overall layout the same.
     ```
 
-    ```text title="Add a photo"
+    ```text title="Say this or copy this prompt"
     Add a profile photo section with a round border at the top of the page.
     Use a placeholder image for now.
     ```
 
-    ```text title="Add navigation"
+    ```text title="Say this or copy this prompt"
     Add a sticky navigation bar at the top with links to each section
     of the page. It should stay visible when I scroll down.
     ```
 
-    ```text title="Add dark mode"
+    ```text title="Say this or copy this prompt"
     Add a dark mode toggle button in the top-right corner. When clicked,
     it should switch the entire website between light and dark themes.
     Save the user's preference so it persists when they refresh the page.
     ```
 
     <Tip>
-    **The vibe coding loop:** describe → review → refine. Keep going until you love it! You can send as many prompts to Gemini CLI as you want — there's no limit on iterations.
+    **The vibe coding loop:** describe → review → refine. Keep going until you love it! You can send as many prompts to Gemini CLI as you want — there's no limit on iterations. Speaking your requests often feels faster and more natural than typing them.
     </Tip>
   </Step>
 </Steps>
+
+## Go Further — Try Your Own Requests
+
+The prompts above are just the beginning. Here are some creative requests to show how flexible natural language is:
+
+```text title="Say this or copy this prompt"
+Add a testimonials section with 3 placeholder quotes from colleagues.
+Use a card layout with a subtle shadow on each card.
+```
+
+```text title="Say this or copy this prompt"
+Add a timeline section showing my career journey. Use placeholder
+dates and roles. Make it visually interesting with a vertical line
+connecting each milestone.
+```
+
+```text title="Say this or copy this prompt"
+Make the hero section more dramatic — add a background image with a
+dark overlay and large white text. Use a placeholder image for now.
+```
+
+<Tip>
+**This is the magic of natural language.** You do not need to know HTML or CSS — just describe what you want. If Gemini is not sure what you mean, it will ask you to clarify.
+</Tip>
 
 ## Troubleshooting
 
@@ -185,6 +222,9 @@ You describe. Gemini CLI builds. You review. Repeat until it's right, then move 
     I want to start completely fresh. Delete the current files and create
     a new website from scratch. [Then describe what you want]
     ```
+  </Accordion>
+  <Accordion title="My voice input has errors">
+    Wispr Flow may occasionally mishear technical terms or proper nouns. You can review and correct the text in Gemini CLI before pressing Enter. If voice input is causing too many errors, switch to typing or pasting prompts instead.
   </Accordion>
 </AccordionGroup>
 

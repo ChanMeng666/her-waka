@@ -1,10 +1,11 @@
 ---
 title: "Set up your tools"
-description: "Connect AI to your Slack workspace — choose between Claude Desktop (quick setup) or Gemini CLI with MCP (more hands-on)."
+description: "Connect AI to your Slack workspace — choose between Claude Desktop (quick setup) or Gemini CLI with voice commands (more hands-on)."
 ---
 
 import InstallNodejs from "/snippets/install-nodejs.mdx";
 import InstallGeminiCli from "/snippets/install-gemini-cli.mdx";
+import InstallWisprFlow from "/snippets/install-wispr-flow.mdx";
 
 Before we start summarising, let's get your tools connected to Slack. Choose the path that suits you best.
 
@@ -87,8 +88,8 @@ Before we start summarising, let's get your tools connected to Slack. Choose the
     </Note>
   </Tab>
 
-  <Tab title="Path B: Gemini CLI + MCP">
-    This path gives you more hands-on experience. You will install Gemini CLI, create a Slack App, and configure a Model Context Protocol (MCP) server to connect them. This takes about 30 minutes.
+  <Tab title="Path B: Gemini CLI + Voice">
+    This path gives you a voice-first experience with more control. You will install Gemini CLI, create a Slack App, configure a Model Context Protocol (MCP) server, and optionally set up Wispr Flow for hands-free voice commands. This takes about 30 minutes.
 
     <Steps>
       <Step title="Install Node.js">
@@ -243,6 +244,12 @@ Before we start summarising, let's get your tools connected to Slack. Choose the
         </Accordion>
       </Step>
 
+      <Step title="Install Wispr Flow (optional)">
+        Wispr Flow lets you speak your prompts instead of typing them. It works in any application — including your terminal where Gemini CLI runs.
+
+        <InstallWisprFlow />
+      </Step>
+
       <Step title="Test the connection">
         Open your terminal and start Gemini CLI:
 
@@ -250,13 +257,13 @@ Before we start summarising, let's get your tools connected to Slack. Choose the
         gemini
         ```
 
-        The first time Gemini CLI loads with MCP configured, it may take a moment to connect to the Slack server. Once it's ready, type this test prompt:
+        The first time Gemini CLI loads with MCP configured, it may take a moment to connect to the Slack server. Once it's ready, say (with Wispr Flow) or type this test prompt:
 
-        ```text title="Copy this prompt"
-        Use the Slack tools to list the public channels in my workspace.
+        ```text title="Say this or copy this prompt"
+        Use the Slack tools to check how many messages are in the channel #general.
         ```
 
-        You should see a list of channel names from your Slack workspace. If you do, everything is working.
+        You should see Gemini CLI access your Slack workspace and report the message count. If it works, everything is connected.
 
         <Accordion title="Gemini says it has no Slack tools available">
         Check your `settings.json` file for typos. The most common issues are:
@@ -301,8 +308,11 @@ Before we start summarising, let's get your tools connected to Slack. Choose the
       <Accordion title="Bot added to a channel">
         The bot is a member of at least one channel you want to summarise.
       </Accordion>
+      <Accordion title="Wispr Flow installed (optional)">
+        Wispr Flow is running and you can see the microphone indicator. If you skipped this step, that is perfectly fine — you can type all prompts instead.
+      </Accordion>
       <Accordion title="Connection tested">
-        Gemini CLI can list your Slack channels when you ask.
+        Gemini CLI can access your Slack workspace when you ask.
       </Accordion>
     </AccordionGroup>
 

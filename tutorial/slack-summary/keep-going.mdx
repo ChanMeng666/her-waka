@@ -9,8 +9,8 @@ You built a real workflow for catching up on Slack channels using AI. Let's look
 
 ```mermaid
 flowchart LR
-    A["Connected AI\nto Slack"] --> B["Fetched channel\nmessages"]
-    B --> C["Summarised\nwith AI"]
+    A["You speak\nor type"] --> B["AI reads\nyour Slack"]
+    B --> C["Summarised\nin seconds"]
     C --> D["Asked follow-up\nquestions"]
 ```
 
@@ -18,12 +18,13 @@ flowchart LR
 - Fetched real messages from a real Slack channel
 - Produced structured summaries in multiple formats
 - Used follow-up questions to find specific information
+- Experienced voice-first AI interaction (Path B)
 - All for free, in under 45 minutes
 
 ## What you learned
 
 <Tip>
-**The skill that matters most isn't coding — it's knowing how to connect tools and ask the right questions.** You learned to link an AI assistant to a real service, fetch live data, and turn it into something useful. That is a transferable skill you can use in any job.
+**The skill that matters most isn't coding — it's knowing how to connect tools and ask the right questions.** You learned to link an AI assistant to a real service, fetch live data, and turn it into something useful — whether by speaking or typing. That is a transferable skill you can use in any job.
 </Tip>
 
 - How AI tools connect to external services (connectors and MCP)
@@ -31,15 +32,16 @@ flowchart LR
 - How to customise summary formats for different audiences
 - How to ask follow-up questions to explore data without reading it yourself
 - How to work with AI as a productivity tool — not just a chatbot
+- How voice input can make AI workflows faster and more natural (Path B)
 
 ## Ideas to try
 
 <CardGroup cols={2}>
   <Card title="Summarise multiple channels" icon="layer-group">
-    Fetch summaries from several channels and compare what is happening across your workspace. Try: "Summarise #general, #announcements, and #project-updates from the last week. What are the common themes?"
+    Fetch summaries from several channels and compare what is happening across your workspace.
   </Card>
   <Card title="Weekly digest" icon="calendar-week">
-    Create a weekly summary and share it with your team. Try: "Give me a weekly digest of #channel-name covering Monday to Friday. Format it as a newsletter I could paste into an email."
+    Create a weekly summary and share it with your team. Format it as a newsletter you could paste into an email.
   </Card>
   <Card title="Summarise private channels" icon="lock">
     If you used Path B (Gemini CLI), you can add the `groups:history` and `groups:read` scopes to your Slack App to access private channels you are a member of. Go to your app settings at api.slack.com/apps to add these scopes.
@@ -51,7 +53,7 @@ flowchart LR
 
 <AccordionGroup>
   <Accordion title="Prompt: compare multiple channels">
-    ```text title="Copy this prompt — replace channel names"
+    ```text title="Say this or copy this prompt — replace channel names"
     Summarise these three Slack channels from the last week:
     - #general
     - #announcements
@@ -62,7 +64,7 @@ flowchart LR
     ```
   </Accordion>
   <Accordion title="Prompt: weekly digest email">
-    ```text title="Copy this prompt — replace #channel-name"
+    ```text title="Say this or copy this prompt — replace #channel-name"
     Create a weekly digest for #channel-name covering the last 7 days.
 
     Format it as a short newsletter with:
@@ -75,7 +77,7 @@ flowchart LR
     ```
   </Accordion>
   <Accordion title="Prompt: find unanswered questions">
-    ```text title="Copy this prompt — replace #channel-name"
+    ```text title="Say this or copy this prompt — replace #channel-name"
     Read the recent messages in #channel-name and find any questions
     that were asked but never answered.
 
@@ -93,10 +95,13 @@ flowchart LR
 
 <AccordionGroup>
   <Accordion title="What surprised you about connecting AI to Slack?">
-  Many people are surprised how straightforward it is to connect AI to services they use every day. The technical barrier is much lower than most expect — especially with connectors (Path A) that require no setup at all.
+  Many people are surprised how straightforward it is to connect AI to services they use every day. The technical barrier is much lower than most expect — especially with connectors (Path A) that require no setup at all, or voice commands (Path B) that make the experience feel like talking to a colleague.
   </Accordion>
   <Accordion title="How could this workflow help your work or job search?">
-  Think about: catching up after time off, preparing for meetings by summarising relevant channels, creating weekly reports for your manager, or staying on top of community discussions in job-search groups. The ability to quickly extract information from conversations is valuable in any role.
+  Think about: catching up after time off, preparing for meetings by summarising relevant channels, creating weekly reports for your manager, or staying on top of community discussions in job-search groups. The ability to quickly extract information from conversations is valuable in any role. With voice input, you can get these summaries even while multitasking.
+  </Accordion>
+  <Accordion title="How does voice change the way you interact with AI?">
+  Speaking to AI feels different from typing. It is faster, more natural, and lowers the barrier to asking for help. Many people find they ask more follow-up questions when they can just speak — which means they get more value from the same tool. Think about where else in your workflow voice-first AI could save time.
   </Accordion>
   <Accordion title="What other information would you like AI to summarise?">
   The same approach works for emails, meeting transcripts, documents, news articles, and more. Once you know how to write effective prompts, you can apply this skill to any text-heavy task.
@@ -109,10 +114,11 @@ flowchart LR
 |----------|-------------|------|
 | Claude Desktop | Download Anthropic's AI assistant | [claude.ai/download](https://claude.ai/download) |
 | Gemini CLI | Google's AI assistant for the terminal | [github.com/google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli) |
+| Wispr Flow | Voice input for any application | [wisprflow.ai](https://wisprflow.ai/r?CHAN115) |
 | Slack API docs | Official Slack API documentation | [api.slack.com](https://api.slack.com) |
 | Slack MCP server | The MCP server used in Path B | [npmjs.com/package/@modelcontextprotocol/server-slack](https://www.npmjs.com/package/@modelcontextprotocol/server-slack) |
 | Manage your Slack apps | Create and manage Slack Apps | [api.slack.com/apps](https://api.slack.com/apps) |
 
 <Note>
-Thank you for completing this tutorial! You went from zero to summarising real Slack conversations with AI. The ability to connect tools, fetch data, and extract meaning from it is valuable in any role — take this skill with you.
+Thank you for completing this tutorial! You went from zero to summarising real Slack conversations with AI — whether by speaking or typing. The ability to connect tools, fetch data, and extract meaning from it is valuable in any role — take this skill with you.
 </Note>

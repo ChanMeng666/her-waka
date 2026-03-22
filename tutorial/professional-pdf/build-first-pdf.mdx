@@ -1,9 +1,13 @@
 ---
 title: "Build Your First PDF"
-description: "Use a Typst template and Gemini CLI to create a professional cover letter PDF — start from a template, then customise with AI."
+description: "Use a Typst template and Gemini CLI to create a professional cover letter PDF — describe what you want by speaking or typing, and AI builds it for you."
 ---
 
-This is the fun part. You'll start from a professionally designed template, use Gemini CLI to customise it, and compile it into a polished PDF. No coding required — just clear descriptions.
+This is the fun part. You'll start from a professionally designed template, use Gemini CLI to customise it, and compile it into a polished PDF. No coding required — just clear descriptions, spoken or typed.
+
+<Tip>
+**You can either speak your prompts using Wispr Flow, or type/paste them into Gemini CLI. Both work exactly the same way.** Wispr Flow is optional — it just makes the experience hands-free. Every prompt in this tutorial works whether you speak it or type it.
+</Tip>
 
 ## The Vibe Coding Loop
 
@@ -11,14 +15,14 @@ Every step follows the same pattern:
 
 ```mermaid
 flowchart LR
-    A["Start from\na template"] -->|"prompt"| B["Gemini CLI\ncustomises it"]
+    A["You speak\nor type"] -->|"Wispr Flow\n(optional)"| B["Gemini CLI\ncustomises it"]
     B -->|"compile"| C["Typst creates\nyour PDF"]
     C -->|"review"| D{"Happy?"}
     D -->|"Not quite"| B
     D -->|"Yes!"| E["Done!"]
 ```
 
-Start from a template. Ask Gemini CLI to customise it. Compile to PDF. Review and repeat until it's perfect.
+Describe what you want. Gemini CLI customises the template. Typst compiles it to PDF. Review and repeat until it's perfect.
 
 ---
 
@@ -63,7 +67,7 @@ Start from a template. Ask Gemini CLI to customise it. Compile to PDF. Review an
 
     In your terminal, run:
 
-    ```bash
+    ```bash title="Copy this command"
     typst init @preview/fireside:1.0.0
     ```
 
@@ -85,19 +89,19 @@ Start from a template. Ask Gemini CLI to customise it. Compile to PDF. Review an
   <Step title="Start Gemini CLI">
     Navigate into the template folder and start Gemini CLI:
 
-    ```bash
+    ```bash title="Copy this command"
     gemini
     ```
 
-    Press Enter. You should see Gemini CLI start up with a prompt ready for your input.
+    Press Enter. You should see Gemini CLI start up with a prompt ready for your input. If you have Wispr Flow running, you can speak your prompts directly — otherwise, type or paste them.
   </Step>
 
   <Step title="Customise with Gemini CLI">
-    Now ask Gemini CLI to customise the template for you. Pick the style that appeals to you:
+    Now tell Gemini CLI what you want. Pick the style that appeals to you — say it out loud or copy and paste:
 
     <Tabs>
       <Tab title="Simple">
-        ```text title="Copy this prompt — Clean customisation"
+        ```text title="Say this or copy this prompt"
         I have a Typst cover letter template (fireside) in this folder.
         Please customise it with:
         - Placeholder name and contact details at the top
@@ -110,7 +114,7 @@ Start from a template. Ask Gemini CLI to customise it. Compile to PDF. Review an
         ```
       </Tab>
       <Tab title="Creative">
-        ```text title="Copy this prompt — Bold creative customisation"
+        ```text title="Say this or copy this prompt"
         I have a Typst cover letter template (fireside) in this folder.
         Please customise it with:
         - Placeholder name and contact details
@@ -124,7 +128,7 @@ Start from a template. Ask Gemini CLI to customise it. Compile to PDF. Review an
         ```
       </Tab>
       <Tab title="Formal">
-        ```text title="Copy this prompt — Traditional formal customisation"
+        ```text title="Say this or copy this prompt"
         I have a Typst cover letter template (fireside) in this folder.
         Please customise it with:
         - Placeholder name and contact details, right-aligned at the top
@@ -153,40 +157,40 @@ Start from a template. Ask Gemini CLI to customise it. Compile to PDF. Review an
   </Step>
 
   <Step title="Iterate and improve">
-    Not happy with the result? That's normal — and that's the whole point! Copy any of these follow-up prompts into Gemini CLI:
+    Not happy with the result? That's normal — and that's the whole point! Say or copy any of these follow-up prompts into Gemini CLI:
 
-    ```text title="Change the font"
+    ```text title="Say this or copy this prompt"
     Change the font to a modern sans-serif font. Keep everything else the same.
     Then recompile to PDF.
     ```
 
-    ```text title="Add colour"
+    ```text title="Say this or copy this prompt"
     Add a subtle colour accent — use a dark teal or navy blue for headings
     and a thin coloured line under my name. Keep the overall design professional.
     Then recompile to PDF.
     ```
 
-    ```text title="Adjust margins and spacing"
+    ```text title="Say this or copy this prompt"
     The margins feel too wide. Reduce the margins to 2cm on all sides
     and tighten the line spacing slightly so the letter feels more compact.
     Then recompile to PDF.
     ```
 
-    ```text title="Add a footer"
+    ```text title="Say this or copy this prompt"
     Add a small footer at the bottom of the page with "Page 1 of 1" centred
     and my email address on the right side.
     Then recompile to PDF.
     ```
 
     <Tip>
-    **The vibe coding loop:** customise → compile → review → refine. Keep going until you love it! You can send as many prompts to Gemini CLI as you want.
+    **The vibe coding loop:** describe → compile → review → refine. Keep going until you love it! You can send as many prompts to Gemini CLI as you want — speak them or type them.
     </Tip>
   </Step>
 
   <Step title="Personalise for a real job">
-    Ready to create a real cover letter? Copy this template prompt and fill in your details:
+    Ready to create a real cover letter? Say or copy this template prompt and fill in your details:
 
-    ```text title="Copy this prompt and fill in the [brackets]"
+    ```text title="Say this or copy this prompt"
     Update my cover letter for a real application:
     - My name: [Your Name]
     - My email: [your.email@example.com]
@@ -212,7 +216,7 @@ Start from a template. Ask Gemini CLI to customise it. Compile to PDF. Review an
 Here's what you did, step by step:
 
 1. **You initialised** a professional template from Typst Universe with `typst init`
-2. **Gemini CLI customised** the template — updating content, fonts, colours, and layout
+2. **You described** what you wanted — by speaking or typing — and Gemini CLI customised the template
 3. **Typst compiled** the code into a pixel-perfect PDF
 4. **You iterated** — asking for design changes, recompiling, and reviewing until it looked right
 
@@ -222,23 +226,23 @@ The key insight: you started from a professionally designed template instead of 
 
 <AccordionGroup>
   <Accordion title="The PDF is blank">
-    The `.typ` file might be empty or have an error. Ask Gemini CLI:
-    ```text
+    The `.typ` file might be empty or have an error. Say or type this in Gemini CLI:
+    ```text title="Say this or copy this prompt"
     The PDF is blank. Can you check the .typ file for errors and fix them?
     Then recompile it to PDF.
     ```
   </Accordion>
   <Accordion title="Typst compile error">
     If you see an error when compiling, paste the error message into Gemini CLI:
-    ```text
+    ```text title="Say this or copy this prompt"
     I got this error when compiling: [paste the error message here]
     Can you fix the Typst code and recompile?
     ```
     Typst error messages are clear and specific — they tell you exactly which line has the problem.
   </Accordion>
   <Accordion title="The layout looks wrong">
-    Ask Gemini CLI to fix the layout:
-    ```text
+    Say or type this in Gemini CLI:
+    ```text title="Say this or copy this prompt"
     The layout doesn't look right — [describe what's wrong, e.g. "the text
     is too close to the edges" or "the spacing between paragraphs is too large"].
     Can you fix it and recompile?
@@ -246,14 +250,17 @@ The key insight: you started from a professionally designed template instead of 
   </Accordion>
   <Accordion title="I want to start over completely">
     You can re-initialise the template:
-    ```bash
+    ```bash title="Copy this command"
     typst init @preview/fireside:1.0.0
     ```
     Or tell Gemini CLI to start from scratch:
-    ```text
+    ```text title="Say this or copy this prompt"
     I want to start fresh. Create a new cover letter from scratch as a .typ
     file — don't use the template. [Then describe what you want]
     ```
+  </Accordion>
+  <Accordion title="My voice input has errors">
+    Wispr Flow may occasionally mishear technical terms or proper nouns. You can review and correct the text in Gemini CLI before pressing Enter. If voice input is causing too many errors, switch to typing or pasting prompts instead.
   </Accordion>
 </AccordionGroup>
 

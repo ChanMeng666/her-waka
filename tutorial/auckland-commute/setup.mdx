@@ -1,19 +1,37 @@
 ---
 title: "Set up your tools"
-description: "Register for the free Auckland Transport API and install Gemini CLI — everything you need to start querying real-time commute data."
+description: "Register for the free Auckland Transport API, install Gemini CLI, and optionally set up Wispr Flow — everything you need to start querying real-time commute data by voice or text."
 ---
 
 import InstallNodejs from "/snippets/install-nodejs.mdx";
 import InstallGeminiCli from "/snippets/install-gemini-cli.mdx";
-import OpenTerminal from "/snippets/open-terminal.mdx";
+import InstallWisprFlow from "/snippets/install-wispr-flow.mdx";
 
-Before we start checking commute data, let's get your tools ready. There are two things to set up: your Auckland Transport API key (to access the data) and Gemini CLI (to ask questions about it).
+Before we start checking commute data, let's get your tools ready. There are three things to set up: your Auckland Transport API key (to access the data), Gemini CLI (to ask questions about it), and optionally Wispr Flow (to speak instead of type).
 
 <Warning>
 **You will need:** a laptop with internet access and a Google account (for Gemini CLI). No coding experience is required — we will guide you through every step.
 </Warning>
 
 <Steps>
+  <Step title="Install Node.js">
+    <Info>
+    **Already have Node.js?** If you installed it for a previous tutorial, skip this step. Run `node --version` in your terminal to check — you should see a version number like `v22.x.x`.
+    </Info>
+
+    <InstallNodejs />
+  </Step>
+
+  <Step title="Install Gemini CLI">
+    <Info>
+    **Already have Gemini CLI?** If you installed it for a previous tutorial, skip this step. Just run `gemini` in your terminal to check it still works.
+    </Info>
+
+    <InstallGeminiCli />
+
+    Type `/quit` to exit Gemini CLI for now. We will start it again once everything else is set up.
+  </Step>
+
   <Step title="Register for the Auckland Transport API">
     The Auckland Transport API gives you access to real-time data for every bus, train, and ferry in Auckland. It's free — you just need to register.
 
@@ -44,38 +62,34 @@ Before we start checking commute data, let's get your tools ready. There are two
     </Warning>
   </Step>
 
-  <Step title="Open your terminal">
-    <OpenTerminal />
+  <Step title="Get your API subscription key">
+    Once you have subscribed to the GTFS product, your subscription key will be visible on your profile page. You need this key for every API request.
+
+    1. Go to your **Profile** page on the AT developer portal
+    2. Find your **Primary Key** (or **Subscription Key**)
+    3. Click **Show** to reveal the full key
+    4. Copy it and save it somewhere you can easily access — a text file, a note, or your password manager
+
+    <Tip>
+    **You will paste this key into prompts throughout the tutorial.** Every API URL includes `YOUR_API_KEY` as a placeholder — you will replace it with your actual key each time. Keep it handy.
+    </Tip>
   </Step>
 
-  <Step title="Install Node.js">
-    <Info>
-    **Already have Node.js?** If you installed it for a previous tutorial, skip this step. Run `node --version` in your terminal to check — you should see a version number like `v22.x.x`.
-    </Info>
-
-    <InstallNodejs />
+  <Step title="Install Wispr Flow (optional)">
+    <InstallWisprFlow />
   </Step>
 
-  <Step title="Install and set up Gemini CLI">
-    <Info>
-    **Already have Gemini CLI?** If you installed it for a previous tutorial, skip this step. Just run `gemini` in your terminal to check it still works.
-    </Info>
-
-    <InstallGeminiCli />
-
-    Type `/quit` to exit Gemini CLI for now. We will start it again in the next step.
-  </Step>
-
-  <Step title="Test your API key">
+  <Step title="Test your setup">
     Let's make sure everything works before we move on. Start Gemini CLI:
 
     ```bash
     gemini
     ```
 
-    Then paste this prompt. **Replace `YOUR_API_KEY`** with the subscription key you saved in Step 1.
+    Now say (with Wispr Flow) or type this prompt. **Replace `YOUR_API_KEY`** with the subscription key you saved earlier.
 
-    ```text title="Copy this prompt — replace YOUR_API_KEY"
+    ```text title="Say this or copy this prompt"
+    Can you help me check the Auckland Transport API?
     Fetch this URL and tell me what you get back:
     https://api.at.govt.nz/realtime/legacy/servicealerts?subscription-key=YOUR_API_KEY
 
@@ -84,7 +98,7 @@ Before we start checking commute data, let's get your tools ready. There are two
     ```
 
     <Tip>
-    **Replace `YOUR_API_KEY`** with your actual subscription key. Keep it inside the URL — do not add spaces around the `=` sign.
+    **Replace `YOUR_API_KEY`** with your actual subscription key. If you are using Wispr Flow, speak the description part naturally, then paste the API URL with your key. Keep the key inside the URL — do not add spaces around the `=` sign.
     </Tip>
 
     You should see Gemini describe some current service alerts — for example, "There is a detour on route 123 due to road works near Queen Street." If you see this, your API key is working and you're ready to go.
@@ -110,17 +124,20 @@ Before we start checking commute data, let's get your tools ready. There are two
 ## Verify your setup
 
 <AccordionGroup>
-  <Accordion title="AT API key saved">
-    You have a subscription key from dev-portal.at.govt.nz saved somewhere safe.
-  </Accordion>
   <Accordion title="Node.js installed">
     Run `node --version` in your terminal. You should see a version number.
   </Accordion>
   <Accordion title="Gemini CLI installed and signed in">
     Run `gemini` in your terminal. It starts up and shows a prompt where you can type.
   </Accordion>
+  <Accordion title="AT API key saved">
+    You have a subscription key from dev-portal.at.govt.nz saved somewhere safe.
+  </Accordion>
   <Accordion title="API key tested">
     Gemini CLI successfully fetched and described Auckland Transport service alerts.
+  </Accordion>
+  <Accordion title="Wispr Flow installed (optional)">
+    You can speak into your terminal and see your words appear as text.
   </Accordion>
 </AccordionGroup>
 

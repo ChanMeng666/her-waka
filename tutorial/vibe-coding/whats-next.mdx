@@ -3,22 +3,23 @@ title: "What's Next"
 description: "Recap, extend your bot, learn from common pitfalls, and reflect on your vibe coding experience."
 ---
 
-Congratulations — you built a working Slack bot without writing a single line of code yourself. Let's recap what you achieved, explore where to take it next, and reflect on the experience.
+Congratulations — you built a working Slack bot without writing a single line of code yourself. You described what you wanted — by speaking or typing — and Claude Code turned your words into a fully automated daily report bot. Let's recap what you achieved, explore where to take it next, and reflect on the experience.
 
 ## What You Built
 
 ```mermaid
 flowchart TD
-    A["GitHub Actions triggers at 9 am"] --> B["Script reads git log"]
-    B --> C{"New commits?"}
-    C -->|"Yes"| D["Add to commit bank"]
-    C -->|"No"| E["Use banked commits"]
-    D --> F["Calculate today's batch"]
-    E --> F
-    F --> G["Send batch to OpenAI"]
-    G --> H["OpenAI returns summary"]
-    H --> I["Post to Slack via webhook"]
-    I --> J["Save remaining commits\nto state.json"]
+    A["You spoke or typed\nwhat you wanted"] -->|"Claude Code\nwrote the code"| B["GitHub Actions\ntriggers at 9 am"]
+    B --> C["Script reads git log"]
+    C --> D{"New commits?"}
+    D -->|"Yes"| E["Add to commit bank"]
+    D -->|"No"| F["Use banked commits"]
+    E --> G["Calculate today's batch"]
+    F --> G
+    G --> H["Send batch to OpenAI"]
+    H --> I["OpenAI returns summary"]
+    I --> J["Post to Slack via webhook"]
+    J --> K["Save remaining commits\nto state.json"]
 ```
 
 A daily report bot that:
@@ -34,7 +35,7 @@ A daily report bot that:
 The code is useful, but the real skills you practised are transferable to any project:
 
 <Tip>
-**The skill that matters most isn't coding — it's communication.** You learned to break a problem into steps, describe each step clearly, and iterate until the result is right. These are the same skills that make someone effective working with any AI tool, in any field.
+**The skill that matters most isn't coding — it's communication.** You learned to break a problem into steps, describe each step clearly, and iterate until the result is right. Whether you spoke your prompts through Wispr Flow or typed them, the core skill is the same: explaining what you want so an AI can build it. These are the same skills that make someone effective working with any AI tool, in any field.
 </Tip>
 
 Here's what you practised:
@@ -46,6 +47,7 @@ Here's what you practised:
 - **Building incrementally** — each step builds on the previous one
 - **Requesting testing** — always asking for a safe way to verify before going live
 - **Debugging with AI** — describing errors clearly and letting the AI help diagnose
+- **Using voice as input** — speaking naturally to describe features and requirements
 
 ---
 
@@ -85,6 +87,8 @@ The bank always empties by Friday, so Monday starts fresh.
 
 ## Ideas to Try Next
 
+Use the same approach — speak or type what you want, and let Claude Code build it:
+
 <CardGroup cols={2}>
   <Card title="Add a weekly summary" icon="calendar-week">
     Ask Claude Code to create a separate workflow that runs on Friday and posts a summary of the entire week's work — a "weekly digest" instead of a daily update.
@@ -99,6 +103,15 @@ The bank always empties by Friday, so Monday starts fresh.
     Ask Claude Code to add a random motivational quote at the end of each report. A small touch that makes daily updates more fun.
   </Card>
 </CardGroup>
+
+Here's a prompt to get you started on any of these — say it or paste it into Claude Code:
+
+```text title="Say this or copy this prompt"
+I want to add a weekly summary feature. Every Friday, after the daily
+report, generate a second message that summarises everything posted
+Monday through Friday. Post it to Slack with the header
+"Weekly Summary — [date range]".
+```
 
 ---
 
@@ -132,8 +145,11 @@ Take a few minutes to think about your experience:
   <Accordion title="What surprised you about working with Claude Code?">
     Many people are surprised by how much can be accomplished just by describing what they want clearly. Was there a moment where Claude Code's output exceeded your expectations? What about a moment where you had to refine your prompt?
   </Accordion>
+  <Accordion title="Did speaking your prompts feel different from typing them?">
+    If you used Wispr Flow, you may have noticed that speaking encourages you to explain things more naturally — the way you'd describe something to a colleague. Did voice input change how you communicated with Claude Code? Did it make the process faster or more intuitive?
+  </Accordion>
   <Accordion title="How could you use this approach at work?">
-    Vibe coding isn't just for building bots. Think about repetitive tasks in your job — reports, data formatting, email templates. Could you use Claude Code to automate any of them?
+    Vibe coding isn't just for building bots. Think about repetitive tasks in your job — reports, data formatting, email templates. Could you use Claude Code to automate any of them? Could voice input make it even faster to prototype ideas?
   </Accordion>
   <Accordion title="What would you build next?">
     Now that you know the workflow — describe, build, review, iterate — what else could you create? A Slack bot that answers FAQs? A script that organises your files? A tool that generates meeting notes?
@@ -147,11 +163,12 @@ Take a few minutes to think about your experience:
 | Resource | Description | Link |
 |----------|-------------|------|
 | Claude Code docs | Official documentation for Claude Code | [docs.anthropic.com](https://docs.anthropic.com/en/docs/claude-code) |
+| Wispr Flow | Voice-to-text tool for hands-free input | [wisprflow.ai](https://wisprflow.ai/r?CHAN115) |
 | GitHub Actions docs | Learn more about workflows, triggers, and secrets | [docs.github.com/actions](https://docs.github.com/en/actions) |
 | OpenAI API reference | API documentation for chat completions | [platform.openai.com/docs](https://platform.openai.com/docs) |
 | Slack API — Webhooks | How incoming webhooks work | [api.slack.com/messaging/webhooks](https://api.slack.com/messaging/webhooks) |
 | Crontab Guru | Test and understand cron schedule expressions | [crontab.guru](https://crontab.guru) |
 
 <Note>
-Thank you for completing this tutorial! You've gone from zero to a fully automated daily report bot — and more importantly, you've learned how to communicate effectively with AI tools. Take these skills with you into your next project.
+Thank you for completing this tutorial! You've gone from zero to a fully automated daily report bot — and more importantly, you've learned how to communicate effectively with AI tools, whether by voice or keyboard. Take these skills with you into your next project.
 </Note>

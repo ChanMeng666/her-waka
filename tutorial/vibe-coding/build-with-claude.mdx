@@ -3,19 +3,28 @@ title: Build It with Claude Code
 description: "The core build — six prompts that turn your idea into a working Slack bot, with communication tips for every step."
 ---
 
-This is the heart of the tutorial. You will write six prompts to Claude Code, and by the end, you will have a fully working daily report bot. No coding required — just clear communication.
+This is the heart of the tutorial. You will send six prompts to Claude Code, and by the end, you will have a fully working daily report bot. No coding required — just clear communication.
+
+<Tabs>
+  <Tab title="Voice (Wispr Flow)">
+    With Wispr Flow running, just start speaking. Your words appear as text in Claude Code automatically. Describe what you want naturally — Claude Code understands and writes the code for you. Speaking works especially well for long, descriptive prompts because you can talk through the requirements as if explaining to a colleague.
+  </Tab>
+  <Tab title="Type or paste">
+    Copy any prompt from this page and paste it into Claude Code. Or type your own request in natural language. No special syntax needed — just describe what you want.
+  </Tab>
+</Tabs>
 
 ## How to Talk to Claude Code
 
 <Tip>
-Think of Claude Code as a brilliant colleague who can code anything, but needs you to explain the goal clearly. The better you describe what you want, the better the result.
+Think of Claude Code as a brilliant colleague who can code anything, but needs you to explain the goal clearly. The better you describe what you want, the better the result. Whether you speak or type, the approach is the same — just say what you need.
 </Tip>
 
 The conversation loop is always the same:
 
 ```mermaid
 flowchart LR
-    A["Describe what\nyou want"] -->|"prompt"| B["Claude Code\nbuilds it"]
+    A["Speak or type\nwhat you want"] -->|"prompt"| B["Claude Code\nbuilds it"]
     B -->|"review"| C{"Right?"}
     C -->|"Not quite"| A
     C -->|"Yes!"| D["Move on"]
@@ -29,9 +38,9 @@ Let's start building.
 
 Before writing any code, give Claude Code the big picture. This helps it make better decisions at every step.
 
-**Open your terminal, `cd` into your `daily-report-bot` folder, and type `claude` to start Claude Code. Then send this prompt:**
+**Open your terminal, `cd` into your `daily-report-bot` folder, and type `claude` to start Claude Code. Then say or send this prompt:**
 
-```text title="Your prompt to Claude Code"
+```text title="Say this or copy this prompt"
 I want to build a daily work report bot. Here's what it should do:
 
 1. Run every weekday morning via GitHub Actions
@@ -81,7 +90,7 @@ The exact structure may vary — that's fine. Claude Code is making reasonable d
 
 Now let's build the first real piece — the script that reads your git commits.
 
-```text title="Your prompt to Claude Code"
+```text title="Say this or copy this prompt"
 Now build the commit collector. It should:
 
 1. Use git log to read commits from the last 24 hours (or a configurable time window)
@@ -98,6 +107,10 @@ Export the function so other parts of the project can use it.
 <Tip>
 **Communication skill: Breaking work into steps.** Instead of asking Claude Code to build everything at once, we're doing one piece at a time. This makes each step easier to review, and if something goes wrong, you know exactly where.
 </Tip>
+
+<Note>
+**Speaking technical prompts works well.** Wispr Flow handles technical terms like "git log", "API", and "environment variable" accurately. If it mishears something, you can quickly correct the text before pressing Enter.
+</Note>
 
 <Accordion title="View the generated code">
 ```javascript
@@ -137,7 +150,7 @@ module.exports = { getRecentCommits };
 
 This is the cleverest part of the bot. If you do all your work on Monday, you don't want Tuesday through Friday to report "nothing done." Commit banking spreads your commits across the week.
 
-```text title="Your prompt to Claude Code"
+```text title="Say this or copy this prompt"
 Now build the commit banking feature. Here's how it should work:
 
 - Keep a "bank" of unposted commits in a local JSON file called state.json
@@ -157,7 +170,7 @@ persist it between runs.
 **What happens:** Claude Code creates the banking logic with functions to load, save, and distribute commits across weekdays.
 
 <Tip>
-**Communication skill: Describing business logic in plain language.** You didn't write any algorithm — you described the *behaviour* you wanted. "Divide by remaining weekdays, round up, empty on Friday." Claude Code translates this into working code.
+**Communication skill: Describing business logic in plain language.** You didn't write any algorithm — you described the *behaviour* you wanted. "Divide by remaining weekdays, round up, empty on Friday." Claude Code translates this into working code. This is where voice really shines — just talk through the logic as if explaining it to someone.
 </Tip>
 
 <Accordion title="How commit banking works in practice">
@@ -228,7 +241,7 @@ module.exports = { getTodaysBatch, loadState, saveState };
 
 Now we connect to OpenAI to turn raw commit messages into a friendly daily update.
 
-```text title="Your prompt to Claude Code"
+```text title="Say this or copy this prompt"
 Now build the summariser. It should:
 
 1. Take an array of commit objects (message, author, date)
@@ -306,7 +319,7 @@ module.exports = { summariseCommits };
 
 Time to connect the output to Slack.
 
-```text title="Your prompt to Claude Code"
+```text title="Say this or copy this prompt"
 Now build the Slack posting module. It should:
 
 1. Take the summary text from the summariser
@@ -379,7 +392,7 @@ module.exports = { postToSlack };
 
 The last build step — connect all the pieces and add a dry-run mode for safe testing.
 
-```text title="Your prompt to Claude Code"
+```text title="Say this or copy this prompt"
 Now wire everything together in the main entry point. It should:
 
 1. Collect recent commits using the commit collector
@@ -489,7 +502,7 @@ Sometimes you need to look something up — Slack's webhook format, GitHub Actio
   <Tab title="Apply with Claude Code">
     Take what you learned from your research and feed it back to Claude Code:
 
-    ```text title="Your prompt to Claude Code"
+    ```text title="Say this or copy this prompt"
     I looked up the Slack webhook format. It supports blocks with
     "mrkdwn" type for rich formatting. Can you update the Slack
     module to use blocks instead of a plain text payload?
@@ -509,6 +522,9 @@ Sometimes you need to look something up — Slack's webhook format, GitHub Actio
   </Accordion>
   <Accordion title="Give context about your situation">
     Start with the big picture. Tell Claude Code what the project is, who it's for, and what tools you're using. Context helps it make better decisions about architecture, naming, and dependencies.
+  </Accordion>
+  <Accordion title="Speaking works well for describing features">
+    When using Wispr Flow, don't worry about speaking technical terms — it handles words like "API", "webhook", "JSON", and "environment variable" accurately. Speaking is especially natural for describing business logic and desired behaviour.
   </Accordion>
   <Accordion title="Ask Claude Code to explain what it did">
     If you don't understand the code, ask: *"Can you explain what this function does in plain language?"* Understanding the code helps you spot issues and write better follow-up prompts.

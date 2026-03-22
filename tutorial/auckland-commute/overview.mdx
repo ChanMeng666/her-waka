@@ -1,15 +1,19 @@
 ---
 title: "Smart Commute: Auckland Transport Real-Time Alerts"
-description: "Get personalised commute intelligence for Auckland — use AI to check real-time bus and train delays, service alerts, and route comparisons. No coding required."
+description: "Just ask 'Is my bus running late?' and AI checks the real-time data for you — get personalised commute intelligence for Auckland using voice or text. No coding required."
 ---
 
 <Tip>
 **Difficulty: ★★☆☆☆ Beginner** · Estimated time: ~30–45 minutes
 </Tip>
 
-It's 7:30 AM. You're heading to work in Auckland. Is the Northern Express on time? Is there a disruption on the Western Line? You could open three different apps, scroll through alerts, and piece together an answer — or you could ask AI to check everything and tell you what matters, in plain English.
+It's 7:30 AM. You're heading to work in Auckland. Is the Northern Express on time? Is there a disruption on the Western Line? You could open three different apps, scroll through alerts, and piece together an answer — or you could just say:
 
-**That's what we're building.** A workflow that checks real-time Auckland Transport data and gives you personalised commute advice — instantly.
+> "Is my bus running late? Check the Auckland Transport data and tell me."
+
+And AI checks everything and tells you what matters, in plain English.
+
+**That's what we're building.** A voice-first workflow where you speak a question about your commute, AI fetches real-time Auckland Transport data, and you get personalised advice — instantly.
 
 <Info>
 **Tutorial led by [Chan Meng](https://chanmeng.org/)** — Senior AI/ML Engineer, open-source contributor, and former ByteDance developer. Chan has built 30+ live applications and specialises in AI-powered solutions. She is also a panel speaker at this event and the developer behind this website.
@@ -47,9 +51,9 @@ There are already some great tools for Auckland commuters. Let's be honest about
 |---|---|---|
 | Next bus departure | Yes | Yes |
 | Service alerts | Yes | Yes, with plain-English explanation |
-| "Is route 62 faster than the train today?" | No | Yes |
+| "Is route 62 faster than the train today?" | No | Yes — just ask |
 | "Are there delays on any of my 3 commute routes?" | Check each separately | One question, one answer |
-| "Give me a morning briefing for my commute" | No | Yes |
+| "Give me a morning briefing for my commute" | No | Yes — say it and it happens |
 | Custom logic (e.g. "only tell me if delay > 5 min") | No | Yes |
 
 ## What you will build
@@ -58,10 +62,10 @@ There are already some great tools for Auckland commuters. Let's be honest about
   <Card title="Connect" icon="key">
     Register for the free Auckland Transport API and get your access key
   </Card>
-  <Card title="Query" icon="magnifying-glass">
-    Ask Gemini CLI to fetch real-time bus, train, and alert data
+  <Card title="Ask" icon="microphone">
+    Speak or type commute questions — Gemini CLI fetches real-time data for you
   </Card>
-  <Card title="Interpret" icon="sparkles">
+  <Card title="Understand" icon="sparkles">
     AI analyses the raw data and gives you plain-English commute advice
   </Card>
 </CardGroup>
@@ -70,23 +74,28 @@ There are already some great tools for Auckland commuters. Let's be honest about
 
 ```mermaid
 flowchart LR
-    A["You ask Gemini\na commute question"] -->|"Gemini fetches"| B["Auckland Transport\nReal-Time API"]
-    B -->|"returns data"| C["Gemini interprets\nthe results"]
-    C -->|"plain English"| D["You get\ncommute advice"]
+    A["You ask a\ncommute question"] --> B["Wispr Flow\nconverts to text"]
+    B --> C["Gemini CLI fetches\nAT API data"]
+    C --> D["AI interprets\nand advises"]
 ```
 
-You type a question about your commute in plain English. Gemini CLI fetches live data from Auckland Transport's API, analyses the raw transport data, and gives you a clear, actionable answer.
+You speak a question about your commute (or type it, if you prefer). Wispr Flow converts your voice to text. Gemini CLI fetches live data from Auckland Transport's API, analyses it, and gives you a clear, actionable answer in plain English.
+
+<Tip>
+**You can either speak your prompts using Wispr Flow, or type/paste them into Gemini CLI. Both work exactly the same way.** Wispr Flow is optional — it just makes the experience hands-free. Every prompt in this tutorial works whether you speak it or type it.
+</Tip>
 
 ## What you will learn
 
 - How to register for a free public API and use an API key
 - How AI can fetch and interpret real-time data from the web
 - How to write prompts that combine data from multiple sources
-- How to ask complex commute questions in natural language
+- How to ask complex commute questions using natural language — by voice or text
 - How to work with real-world transport data (GTFS Realtime format)
+- How to use voice input with Wispr Flow for a hands-free workflow
 
 <Note>
-**No coding required.** You will copy-paste prompts into Gemini CLI. The AI handles all the technical work — your job is to ask the right questions about your commute.
+**No coding required.** You will speak or paste prompts into Gemini CLI. The AI handles all the technical work — your job is to ask the right questions about your commute.
 </Note>
 
 ## Tools
@@ -95,11 +104,17 @@ You type a question about your commute in plain English. Gemini CLI fetches live
   <Card title="Gemini CLI" icon="terminal">
     Google's free AI assistant that runs in your terminal. It can fetch web data and interpret results.
   </Card>
+  <Card title="Wispr Flow" icon="microphone">
+    Optional voice input tool — speak instead of type. Works in any application, including your terminal.
+  </Card>
   <Card title="Auckland Transport API" icon="bus">
     Free real-time data for all Auckland buses, trains, and ferries. Updated every 30 seconds.
   </Card>
   <Card title="Node.js" icon="node-js">
     Required to install Gemini CLI. Quick one-time setup.
+  </Card>
+  <Card title="Terminal" icon="square-terminal">
+    The command-line app built into your computer. On macOS it is called Terminal; on Windows it is called PowerShell or Command Prompt.
   </Card>
 </CardGroup>
 
@@ -108,6 +123,7 @@ You type a question about your commute in plain English. Gemini CLI fetches live
 | Tool | Cost |
 |------|------|
 | Gemini CLI | Free (1,000 requests/day) |
+| Wispr Flow | Free trial ([invite link for a free month of Pro](https://wisprflow.ai/r?CHAN115)) |
 | Auckland Transport API | Free (600 calls/min, 35,000/week) |
 | Node.js | Free |
 | **Total** | **$0** |

@@ -7,7 +7,11 @@ description: "Catch up on any Slack channel in seconds — use AI to fetch and s
 **Difficulty: ★★☆☆☆ Beginner** · Estimated time: ~45 minutes
 </Tip>
 
-You open Slack after a long weekend. There are 200 unread messages in #general, 80 in #project-updates, and a thread that somehow turned into 47 replies. You could spend 20 minutes scrolling through it all — or you could ask AI to summarise everything in 30 seconds.
+You open Slack after a long weekend. There are 150 unread messages across 5 channels — project updates you missed, decisions that were made without you, and a thread that somehow turned into 47 replies. You could spend 20 minutes scrolling through it all — or you could just say:
+
+> "Read the recent messages in #general and give me a summary with the main topics, decisions, and action items"
+
+And within seconds, you have a clear, structured catch-up. No scrolling, no skimming, no fear of missing something important.
 
 **That's what we're building.** A workflow that reads your Slack messages and gives you a clear, useful summary — instantly.
 
@@ -37,17 +41,17 @@ This tutorial offers two ways to achieve the same result. Pick the one that suit
   <Card title="Path A: Claude Desktop" icon="message-bot">
     **~10 minutes** · Easiest setup
 
-    Download Claude Desktop, connect your Slack workspace with one click, and start asking for summaries. No terminal or coding involved.
+    Download Claude Desktop, connect your Slack workspace with one click, and start asking for summaries. No terminal or coding involved. A great choice if you are short on time.
   </Card>
-  <Card title="Path B: Gemini CLI + MCP" icon="terminal">
-    **~30 minutes** · More hands-on
+  <Card title="Path B: Gemini CLI + Voice" icon="microphone">
+    **~30 minutes** · Voice-first, more control
 
-    Install Gemini CLI, create a Slack App, and configure a Model Context Protocol (MCP) server. You will learn more about how AI tools connect to services.
+    Install Gemini CLI, create a Slack App, and use voice commands through Wispr Flow to summarise channels from your terminal. You will learn more about how AI tools connect to services — and experience a hands-free workflow.
   </Card>
 </CardGroup>
 
 <Tip>
-**Which path should I choose?** If you are short on time or prefer clicking over typing, choose Path A. If you want to learn more about how AI tools work under the hood, choose Path B. Both paths produce the same result — a useful summary of your Slack messages.
+**Which path should I choose?** If you are short on time or prefer clicking over typing, choose Path A. If you want a voice-first experience with more control over how AI connects to your tools, choose Path B. Both paths produce the same result — a useful summary of your Slack messages.
 </Tip>
 
 ## How it works
@@ -60,15 +64,20 @@ flowchart LR
     B -->|"summarises"| C["You get\na summary"]
 ```
 
-**Path B: Gemini CLI + MCP**
+**Path B: Gemini CLI + Voice**
 
 ```mermaid
 flowchart LR
-    A["You configure\nSlack MCP"] -->|"connect"| B["Gemini CLI reads\nyour messages"]
-    B -->|"summarises"| C["You get\na summary"]
+    A["You speak"] --> B["Wispr Flow\nconverts to text"]
+    B --> C["Gemini CLI\nreads Slack"]
+    C --> D["You get\na summary"]
 ```
 
 Both paths connect an AI assistant to your Slack workspace. The AI reads the messages from your chosen channel, analyses the conversation, and produces a structured summary — all in seconds.
+
+<Tip>
+**You can either speak your prompts using Wispr Flow, or type/paste them into Gemini CLI. Both work exactly the same way.** Wispr Flow is optional — it just makes the experience hands-free. Every prompt in this tutorial works whether you speak it or type it.
+</Tip>
 
 ## What you will learn
 
@@ -77,6 +86,7 @@ Both paths connect an AI assistant to your Slack workspace. The AI reads the mes
 - Customise summary formats for different needs (catch-up, meeting notes, highlights)
 - Ask follow-up questions about conversations you haven't read
 - Work with AI as a productivity tool for everyday tasks
+- Use voice input to interact with AI hands-free (Path B)
 
 <Note>
 **No coding required.** The AI handles everything — your job is to describe what kind of summary you want. If you can explain what you need to a colleague, you can do this.
@@ -84,12 +94,15 @@ Both paths connect an AI assistant to your Slack workspace. The AI reads the mes
 
 ## Tools
 
-<CardGroup cols={2}>
+<CardGroup cols={3}>
   <Card title="Claude Desktop" icon="message-bot">
     Anthropic's free AI assistant app. Connect it to Slack and chat directly. Used in Path A.
   </Card>
   <Card title="Gemini CLI" icon="terminal">
     Google's free AI assistant that runs in your terminal. Supports MCP connections to external services. Used in Path B.
+  </Card>
+  <Card title="Wispr Flow" icon="microphone">
+    Optional voice input tool — speak instead of type. Works in any application, including your terminal. Used in Path B.
   </Card>
   <Card title="Slack API" icon="slack">
     Lets your tools read messages from Slack channels. You will create a simple Slack App with read-only access.
@@ -105,6 +118,7 @@ Both paths connect an AI assistant to your Slack workspace. The AI reads the mes
 |------|------|
 | Claude Desktop | Free |
 | Gemini CLI | Free (1,000 requests/day) |
+| Wispr Flow | Free trial ([invite link for a free month of Pro](https://wisprflow.ai/r?CHAN115)) |
 | Node.js | Free |
 | Slack API | Free |
 | **Total** | **$0** |

@@ -17,9 +17,9 @@ When you push a workflow file (a YAML file in `.github/workflows/`), GitHub watc
 
 ## Prompt 7: Create the GitHub Actions Workflow
 
-Ask Claude Code to create the automation:
+Ask Claude Code to create the automation — say this or paste it:
 
-```text title="Your prompt to Claude Code"
+```text title="Say this or copy this prompt"
 Create a GitHub Actions workflow file at .github/workflows/daily-report.yml
 that:
 
@@ -119,7 +119,7 @@ Your bot needs three secrets. Never commit these to your code — store them in 
   <Tab title="Using the command line (gh CLI)">
     If you have the [GitHub CLI](https://cli.github.com) installed:
 
-    ```bash
+    ```bash title="Copy this command"
     gh secret set OPENAI_API_KEY
     gh secret set SLACK_WEBHOOK_TEST
     gh secret set SLACK_WEBHOOK_PROD
@@ -151,13 +151,13 @@ Your bot needs three secrets. Never commit these to your code — store them in 
 
 <Steps>
   <Step title="Stage and commit your code">
-    ```bash
+    ```bash title="Copy this command"
     git add -A
     git commit -m "feat: add daily report bot"
     ```
   </Step>
   <Step title="Push to GitHub">
-    ```bash
+    ```bash title="Copy this command"
     git push origin main
     ```
   </Step>
@@ -174,7 +174,7 @@ Your bot needs three secrets. Never commit these to your code — store them in 
   <Step title="Dry run (no Slack post)">
     Trigger the workflow manually with a dry run to check everything works without posting to Slack:
 
-    ```bash
+    ```bash title="Copy this command"
     gh workflow run daily-report.yml
     ```
 
@@ -208,7 +208,7 @@ Your bot needs three secrets. Never commit these to your code — store them in 
 
 Things don't always work on the first try. Here's the pattern for debugging with Claude Code:
 
-```text title="Your prompt to Claude Code"
+```text title="Say this or copy this prompt"
 I'm getting this error when the GitHub Actions workflow runs:
 
 [paste the exact error message here]
@@ -219,7 +219,7 @@ and fix it?
 ```
 
 <Tip>
-**Communication skill: Describing errors.** Always paste the exact error message. Tell Claude Code what you expected to happen and what actually happened. The more context, the faster the fix.
+**Communication skill: Describing errors.** Always paste the exact error message. Tell Claude Code what you expected to happen and what actually happened. The more context, the faster the fix. If you're using Wispr Flow, you can speak through the issue — "I'm getting an error that says..." — and then paste the actual error text.
 </Tip>
 
 ### Common Issues
@@ -261,7 +261,7 @@ Once you're happy with the test output, switch to the production channel:
 
 Or ask Claude Code:
 
-```text title="Your prompt to Claude Code"
+```text title="Say this or copy this prompt"
 Change the default Slack channel in the GitHub Actions workflow from
 "test" to "prod" so the daily reports go to the production channel.
 ```

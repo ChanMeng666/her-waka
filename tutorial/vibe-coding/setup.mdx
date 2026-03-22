@@ -3,6 +3,8 @@ title: Set Up Your Tools
 description: "Get all accounts and tools ready before building your daily report bot."
 ---
 
+import InstallWisprFlow from "/snippets/install-wispr-flow.mdx";
+
 Before we start building, let's make sure you have everything you need. This page walks you through each account and tool, step by step.
 
 <Warning>
@@ -29,13 +31,13 @@ Before we start building, let's make sure you have everything you need. This pag
 
     Open your terminal (Terminal on Mac, PowerShell or Git Bash on Windows) and run:
 
-    ```bash
+    ```bash title="Copy this command"
     npm install -g @anthropic-ai/claude-code
     ```
 
     Then start it by typing:
 
-    ```bash
+    ```bash title="Copy this command"
     claude
     ```
 
@@ -117,12 +119,22 @@ Before we start building, let's make sure you have everything you need. This pag
 
     Then clone it to your computer:
 
-    ```bash
+    ```bash title="Copy this command"
     git clone https://github.com/YOUR-USERNAME/daily-report-bot.git
     cd daily-report-bot
     ```
 
     Replace `YOUR-USERNAME` with your actual GitHub username.
+  </Step>
+
+  <Step title="Install Wispr Flow (optional — voice input)">
+    Wispr Flow lets you speak your prompts to Claude Code instead of typing them. Your voice is converted to text that flows directly into the terminal — Claude Code sees it the same way as typed input.
+
+    <InstallWisprFlow />
+
+    <Tip>
+    **Why voice input for coding?** When you're describing features, business logic, or debugging issues to Claude Code, speaking is often faster and more natural than typing. You can talk through what you want as if explaining to a colleague — Wispr Flow handles the transcription, and Claude Code handles the code.
+    </Tip>
   </Step>
 </Steps>
 
@@ -148,6 +160,9 @@ Before moving on, check that everything is ready:
   </Accordion>
   <Accordion title="Repository cloned">
     You have the `daily-report-bot` folder on your computer and can `cd` into it.
+  </Accordion>
+  <Accordion title="Wispr Flow (optional)">
+    Wispr Flow is running and you can see your spoken words appear as text in any application.
   </Accordion>
 </AccordionGroup>
 

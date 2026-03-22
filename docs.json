@@ -130,6 +130,26 @@
                   "tutorial/auckland-commute/check-commute",
                   "tutorial/auckland-commute/keep-going"
                 ]
+              },
+              {
+                "group": "Voice-Control Your Notes",
+                "icon": "microphone",
+                "pages": [
+                  "tutorial/obsidian-daily/overview",
+                  "tutorial/obsidian-daily/setup",
+                  "tutorial/obsidian-daily/capture",
+                  "tutorial/obsidian-daily/keep-going"
+                ]
+              },
+              {
+                "group": "Organise Notes by Talking to AI",
+                "icon": "comments",
+                "pages": [
+                  "tutorial/obsidian-organise/overview",
+                  "tutorial/obsidian-organise/setup",
+                  "tutorial/obsidian-organise/organise",
+                  "tutorial/obsidian-organise/keep-going"
+                ]
               }
             ]
           },
