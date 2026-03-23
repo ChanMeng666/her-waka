@@ -8,10 +8,6 @@
     "dark": "#9b2e83"
   },
   "favicon": "/favicon.svg",
-  "banner": {
-    "content": "March 25, 12–2 pm: AI & The Future of Work at academyEX Pikopiko. [Register now](https://events.humanitix.com/she-sharp-ministry-of-social-development-academyex-her-waka)",
-    "dismissible": true
-  },
   "navigation": {
     "tabs": [
       {
