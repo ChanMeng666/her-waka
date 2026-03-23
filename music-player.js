@@ -1,7 +1,7 @@
 /* Music Player - Fixed-position Suno embed, works on all pages.
    All styles are inlined so CSS re-loading during SPA navigation
    cannot cause flicker. Guarded to run only once. */
-if (!window.__musicPlayerInit) {
+if (typeof window !== 'undefined' && !window.__musicPlayerInit) {
   window.__musicPlayerInit = true;
 
   (function () {
