@@ -34,11 +34,6 @@ The quickest tutorials — minimal setup, immediate results.
 
     Capture thoughts, track tasks, and review your day by speaking naturally — Gemini CLI + Wispr Flow control Obsidian for you.
   </Card>
-  <Card title="AI Morning Briefing" icon="sun" href="/tutorial/morning-briefing/overview" color="#c846ab">
-    **★☆☆☆☆ · ~15–20 minutes**
-
-    One command gives you today's meetings, urgent emails, and a standup-ready summary — powered by Gemini CLI + Google Workspace CLI.
-  </Card>
 </CardGroup>
 
 ## ★★ Easy
@@ -61,15 +56,15 @@ A bit more setup, but still straightforward and beginner-friendly.
 
     Say "find my orphan notes" or "move this note to Archive" — AI searches, audits, and tidies your Obsidian vault.
   </Card>
-  <Card title="Email to Action: Cross-App Workflows" icon="arrows-rotate" href="/tutorial/email-to-action/overview" color="#9b2e83">
-    **★★☆☆☆ · ~30 minutes**
-
-    Tell AI to read an email, create a calendar event, and write notes to Google Docs — all in one command, powered by Google Workspace CLI.
-  </Card>
   <Card title="Meeting Prep with AI" icon="users" href="/tutorial/meeting-prep/overview" color="#9b2e83">
     **★★☆☆☆ · ~25–30 minutes**
 
     AI gathers your calendar agenda, related emails, and shared documents into a single briefing — never walk into a meeting unprepared.
+  </Card>
+  <Card title="AI Morning Briefing" icon="sun" href="/tutorial/morning-briefing/overview" color="#9b2e83">
+    **★★☆☆☆ · ~15–20 minutes**
+
+    One command gives you today's meetings, urgent emails, and a standup-ready summary — powered by Gemini CLI + Google Workspace CLI.
   </Card>
 </CardGroup>
 
@@ -83,8 +78,20 @@ More tools to install and configure, but the AI still does the heavy lifting.
 
     Describe your ideal cover letter, invoice, or report — Gemini CLI + Typst turns your words into a polished PDF.
   </Card>
+  <Card title="Email to Action: Cross-App Workflows" icon="arrows-rotate" href="/tutorial/email-to-action/overview" color="#9b2e83">
+    **★★★☆☆ · ~30 minutes**
+
+    Tell AI to read an email, create a calendar event, and write notes to Google Docs — all in one command, powered by Google Workspace CLI.
+  </Card>
+</CardGroup>
+
+## ★★★★ Challenging
+
+External API tokens, MCP configuration, and more complex setup — building confidence for advanced projects.
+
+<CardGroup cols={2}>
   <Card title="Summarise Slack Channels" icon="slack" href="/tutorial/slack-summary/overview" color="#9b2e83">
-    **★★★☆☆ · ~45 minutes**
+    **★★★★☆ · ~45 minutes**
 
     Say "summarise #general for this week" and AI reads your Slack messages and gives you a clear, useful summary.
   </Card>
@@ -107,8 +114,9 @@ Multiple tools, APIs, and deployment — a real engineering project guided by AI
 ```mermaid
 flowchart LR
     A["★ Getting Started\nGemini CLI basics"] --> B["★★ Easy\nCLI + APIs & tools"]
-    B --> C["★★★ Intermediate\nCLI + MCP"]
-    C --> D["★★★★★ Advanced\nClaude Code"]
+    B --> C["★★★ Intermediate\nCross-app workflows"]
+    C --> D["★★★★ Challenging\nExternal APIs + MCP"]
+    D --> E["★★★★★ Advanced\nClaude Code"]
 ```
 
 Each tutorial builds your CLI skills. By the time you reach Vibe Coding, speaking to an AI in the terminal will feel natural — because you have been doing it since your first tutorial.

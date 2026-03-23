@@ -97,16 +97,6 @@
                   "tutorial/obsidian-daily/capture",
                   "tutorial/obsidian-daily/keep-going"
                 ]
-              },
-              {
-                "group": "AI Morning Briefing",
-                "icon": "sun",
-                "pages": [
-                  "tutorial/morning-briefing/overview",
-                  "tutorial/morning-briefing/setup",
-                  "tutorial/morning-briefing/briefing",
-                  "tutorial/morning-briefing/keep-going"
-                ]
               }
             ]
           },
@@ -146,16 +136,6 @@
                 ]
               },
               {
-                "group": "Email to Action: Cross-App Workflows",
-                "icon": "arrows-rotate",
-                "pages": [
-                  "tutorial/email-to-action/overview",
-                  "tutorial/email-to-action/setup",
-                  "tutorial/email-to-action/automate",
-                  "tutorial/email-to-action/keep-going"
-                ]
-              },
-              {
                 "group": "Meeting Prep with AI",
                 "icon": "users",
                 "pages": [
@@ -163,6 +143,16 @@
                   "tutorial/meeting-prep/setup",
                   "tutorial/meeting-prep/prepare",
                   "tutorial/meeting-prep/keep-going"
+                ]
+              },
+              {
+                "group": "AI Morning Briefing",
+                "icon": "sun",
+                "pages": [
+                  "tutorial/morning-briefing/overview",
+                  "tutorial/morning-briefing/setup",
+                  "tutorial/morning-briefing/briefing",
+                  "tutorial/morning-briefing/keep-going"
                 ]
               }
             ]
@@ -181,6 +171,21 @@
                   "tutorial/professional-pdf/keep-going"
                 ]
               },
+              {
+                "group": "Email to Action: Cross-App Workflows",
+                "icon": "arrows-rotate",
+                "pages": [
+                  "tutorial/email-to-action/overview",
+                  "tutorial/email-to-action/setup",
+                  "tutorial/email-to-action/automate",
+                  "tutorial/email-to-action/keep-going"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "★★★★ Challenging",
+            "pages": [
               {
                 "group": "Summarise Slack Channels",
                 "icon": "slack",
