@@ -36,20 +36,20 @@ You could spend an hour scrolling, skimming, and sorting — or you could ask AI
 This tutorial offers two ways to achieve the same result. Pick the one that suits your situation.
 
 <CardGroup cols={2}>
-  <Card title="Path A: Gemini App" icon="browser">
-    **~5 minutes** · Quickest
-
-    Open Gemini in your browser, turn on the Gmail extension, and start asking for summaries. No installation needed.
-  </Card>
-  <Card title="Path B: Gemini CLI + Voice" icon="microphone">
+  <Card title="Full Tutorial (CLI + Voice)" icon="terminal">
     **~20 minutes** · Recommended
 
-    Install Gemini CLI, add the Google Workspace extension, and speak your prompts with Wispr Flow. A more powerful, voice-first experience you can use every day.
+    Install Gemini CLI, add the Google Workspace extension, and speak your prompts with Wispr Flow. A voice-first experience that builds CLI skills you will use in every tutorial after this one.
+  </Card>
+  <Card title="Quick Preview (browser)" icon="browser">
+    **~5 minutes** · Quickest
+
+    Open Gemini in your browser, turn on the Gmail extension, and start asking for summaries. No installation needed — but you will not learn the CLI skills used in other tutorials.
   </Card>
 </CardGroup>
 
 <Tip>
-**Which path should I choose?** If you just want results as fast as possible, choose **Path A**. If you want a more powerful experience — speaking naturally to your inbox from the terminal — choose **Path B**. Both paths produce the same result: a useful summary of your Gmail messages.
+**Which path should I choose?** We recommend the **Full Tutorial** — it teaches you CLI skills you will use in every tutorial after this one, and prepares you for professional tools like Claude Code. The Quick Preview is available if you only have 5 minutes and want to see what AI can do before committing to the full setup.
 </Tip>
 
 <Tip>
@@ -58,15 +58,7 @@ This tutorial offers two ways to achieve the same result. Pick the one that suit
 
 ## How it works
 
-**Path A: Gemini App (web)**
-
-```mermaid
-flowchart LR
-    A["You enable\nGmail extension"] -->|"one click"| B["Gemini reads\nyour emails"]
-    B -->|"summarises"| C["You get\na summary"]
-```
-
-**Path B: Gemini CLI + Voice**
+**Full Tutorial: Gemini CLI + Voice**
 
 ```mermaid
 flowchart LR
@@ -75,7 +67,15 @@ flowchart LR
     C -->|"summarises"| D["You get\na summary"]
 ```
 
-Both paths connect an AI assistant to your Gmail account. The AI reads your emails, analyses the content, and produces a structured summary — all in seconds. Path B adds voice input so you can speak your requests naturally instead of typing.
+**Quick Preview: Gemini App (web)**
+
+```mermaid
+flowchart LR
+    A["You enable\nGmail extension"] -->|"one click"| B["Gemini reads\nyour emails"]
+    B -->|"summarises"| C["You get\na summary"]
+```
+
+Both paths connect an AI assistant to your Gmail account. The AI reads your emails, analyses the content, and produces a structured summary — all in seconds. The Full Tutorial adds voice input and CLI skills you will reuse in every future tutorial.
 
 ## What you will learn
 
@@ -94,14 +94,14 @@ Both paths connect an AI assistant to your Gmail account. The AI reads your emai
 ## Tools
 
 <CardGroup cols={2}>
-  <Card title="Gemini App" icon="browser">
-    Google's free AI assistant in your browser. Connect it to Gmail and chat with your inbox. Used in Path A.
-  </Card>
   <Card title="Gemini CLI" icon="terminal">
-    Google's free AI assistant that runs in your terminal. Supports extensions for Google Workspace. Used in Path B.
+    Google's free AI assistant that runs in your terminal. Supports extensions for Google Workspace. Used in the Full Tutorial.
   </Card>
   <Card title="Wispr Flow" icon="microphone">
-    Optional voice input tool — speak instead of type. Works in any application, including your terminal. Used in Path B.
+    Optional voice input tool — speak instead of type. Works in any application, including your terminal. Used in the Full Tutorial.
+  </Card>
+  <Card title="Gemini App" icon="browser">
+    Google's free AI assistant in your browser. Connect it to Gmail and chat with your inbox. Used in the Quick Preview only.
   </Card>
   <Card title="Node.js" icon="node-js">
     Required to install Gemini CLI. Only needed for Path B.

@@ -38,39 +38,39 @@ And within seconds, you have a clear, structured catch-up. No scrolling, no skim
 This tutorial offers two ways to achieve the same result. Pick the one that suits you best.
 
 <CardGroup cols={2}>
-  <Card title="Path A: Claude Desktop" icon="message-bot">
-    **~10 minutes** · Easiest setup
+  <Card title="Recommended: CLI + Voice" icon="terminal">
+    **~30 minutes** · Recommended
 
-    Download Claude Desktop, connect your Slack workspace with one click, and start asking for summaries. No terminal or coding involved. A great choice if you are short on time.
+    Install Gemini CLI, create a Slack App, and use voice commands through Wispr Flow to summarise channels from your terminal. You will learn how AI tools connect to services via MCP — the same workflow used by professional tools like Claude Code.
   </Card>
-  <Card title="Path B: Gemini CLI + Voice" icon="microphone">
-    **~30 minutes** · Voice-first, more control
+  <Card title="Alternative: Claude Desktop" icon="message-bot">
+    **~10 minutes** · Quick setup
 
-    Install Gemini CLI, create a Slack App, and use voice commands through Wispr Flow to summarise channels from your terminal. You will learn more about how AI tools connect to services — and experience a hands-free workflow.
+    Download Claude Desktop, connect your Slack workspace with one click, and start asking for summaries. Quick results, but you will not build the CLI skills used in other tutorials. Claude Desktop is made by Anthropic — the same company behind Claude Code.
   </Card>
 </CardGroup>
 
 <Tip>
-**Which path should I choose?** If you are short on time or prefer clicking over typing, choose Path A. If you want a voice-first experience with more control over how AI connects to your tools, choose Path B. Both paths produce the same result — a useful summary of your Slack messages.
+**Which path should I choose?** We recommend **CLI + Voice** — it builds the terminal skills you will use in every tutorial, and prepares you for professional tools like Claude Code. Choose Claude Desktop only if you are short on time and want quick results without terminal setup.
 </Tip>
 
 ## How it works
 
-**Path A: Claude Desktop**
-
-```mermaid
-flowchart LR
-    A["You connect\nSlack to Claude"] -->|"one click"| B["Claude reads\nyour messages"]
-    B -->|"summarises"| C["You get\na summary"]
-```
-
-**Path B: Gemini CLI + Voice**
+**Recommended: Gemini CLI + Voice**
 
 ```mermaid
 flowchart LR
     A["You speak"] --> B["Wispr Flow\nconverts to text"]
     B --> C["Gemini CLI\nreads Slack"]
     C --> D["You get\na summary"]
+```
+
+**Alternative: Claude Desktop**
+
+```mermaid
+flowchart LR
+    A["You connect\nSlack to Claude"] -->|"one click"| B["Claude reads\nyour messages"]
+    B -->|"summarises"| C["You get\na summary"]
 ```
 
 Both paths connect an AI assistant to your Slack workspace. The AI reads the messages from your chosen channel, analyses the conversation, and produces a structured summary — all in seconds.
@@ -95,14 +95,14 @@ Both paths connect an AI assistant to your Slack workspace. The AI reads the mes
 ## Tools
 
 <CardGroup cols={3}>
-  <Card title="Claude Desktop" icon="message-bot">
-    Anthropic's free AI assistant app. Connect it to Slack and chat directly. Used in Path A.
-  </Card>
   <Card title="Gemini CLI" icon="terminal">
-    Google's free AI assistant that runs in your terminal. Supports MCP connections to external services. Used in Path B.
+    Google's free AI assistant that runs in your terminal. Supports MCP connections to external services. Used in the recommended path.
   </Card>
   <Card title="Wispr Flow" icon="microphone">
-    Optional voice input tool — speak instead of type. Works in any application, including your terminal. Used in Path B.
+    Optional voice input tool — speak instead of type. Works in any application, including your terminal. Used in the recommended path.
+  </Card>
+  <Card title="Claude Desktop" icon="message-bot">
+    Anthropic's free AI assistant app. Connect it to Slack and chat directly. Used in the alternative path only.
   </Card>
   <Card title="Slack API" icon="slack">
     Lets your tools read messages from Slack channels. You will create a simple Slack App with read-only access.

@@ -8,7 +8,27 @@ Your AI tool is connected to Slack. Now let's put it to work — ask it to read 
 ## Get your first summary
 
 <Tabs>
-  <Tab title="Path A: Claude Desktop">
+  <Tab title="Recommended: CLI + Voice">
+    Open your terminal and start Gemini CLI:
+
+    ```bash
+    gemini
+    ```
+
+    Now say (with Wispr Flow) or paste this prompt. Replace `#channel-name` with the name of a real channel in your workspace.
+
+    ```text title="Say this or copy this prompt — replace #channel-name"
+    Read the recent messages in the Slack channel #channel-name and give me a summary. Include the main topics discussed, any decisions that were made, action items, and unanswered questions. Keep it to 10 bullet points.
+    ```
+
+    Gemini CLI will use the Slack MCP tools to fetch the messages and return a structured summary.
+
+    <Tip>
+    **Gemini asks for permission?** If Gemini CLI asks to approve a tool call, type `y` and press **Enter**. This is normal — it is asking your permission before accessing Slack.
+    </Tip>
+  </Tab>
+
+  <Tab title="Alternative: Claude Desktop">
     Open Claude Desktop and paste this prompt. Replace `#channel-name` with the name of a real channel in your workspace.
 
     ```text title="Copy this prompt — replace #channel-name"
@@ -29,26 +49,6 @@ Your AI tool is connected to Slack. Now let's put it to work — ask it to read 
     **First time?** If Claude asks which workspace or channel you mean, just clarify. For example: "The #general channel in my SheSharp workspace."
     </Tip>
   </Tab>
-
-  <Tab title="Path B: Gemini CLI + Voice">
-    Open your terminal and start Gemini CLI:
-
-    ```bash
-    gemini
-    ```
-
-    Now say (with Wispr Flow) or paste this prompt. Replace `#channel-name` with the name of a real channel in your workspace.
-
-    ```text title="Say this or copy this prompt — replace #channel-name"
-    Read the recent messages in the Slack channel #channel-name and give me a summary. Include the main topics discussed, any decisions that were made, action items, and unanswered questions. Keep it to 10 bullet points.
-    ```
-
-    Gemini CLI will use the Slack MCP tools to fetch the messages and return a structured summary.
-
-    <Tip>
-    **Gemini asks for permission?** If Gemini CLI asks to approve a tool call, type `y` and press **Enter**. This is normal — it is asking your permission before accessing Slack.
-    </Tip>
-  </Tab>
 </Tabs>
 
 You should see a summary that looks something like this:
@@ -67,7 +67,27 @@ That's it — you just caught up on an entire channel in seconds.
 The first summary is a great start. But depending on your situation, you might want a different format. Try these prompts.
 
 <Tabs>
-  <Tab title="Path A: Claude Desktop">
+  <Tab title="Recommended: CLI + Voice">
+    **Quick catch-up:**
+
+    ```text title="Say this or copy this prompt — replace #channel-name"
+    Summarise #channel-name like a colleague filling me in over coffee. Keep it to 5 sentences.
+    ```
+
+    **Meeting notes:**
+
+    ```text title="Say this or copy this prompt — replace #channel-name"
+    Summarise #channel-name as formal meeting notes I could share with my manager. Include dates, decisions, and action items.
+    ```
+
+    **Key highlights only:**
+
+    ```text title="Say this or copy this prompt — replace #channel-name"
+    Read #channel-name and extract only the important stuff — announcements, deadlines, decisions. Ignore small talk.
+    ```
+  </Tab>
+
+  <Tab title="Alternative: Claude Desktop">
     **Quick catch-up:**
 
     ```text title="Copy this prompt — replace #channel-name"
@@ -100,26 +120,6 @@ The first summary is a great start. But depending on your situation, you might w
 
     Ignore small talk and casual messages.
     List each highlight as a single bullet point.
-    ```
-  </Tab>
-
-  <Tab title="Path B: Gemini CLI + Voice">
-    **Quick catch-up:**
-
-    ```text title="Say this or copy this prompt — replace #channel-name"
-    Summarise #channel-name like a colleague filling me in over coffee. Keep it to 5 sentences.
-    ```
-
-    **Meeting notes:**
-
-    ```text title="Say this or copy this prompt — replace #channel-name"
-    Summarise #channel-name as formal meeting notes I could share with my manager. Include dates, decisions, and action items.
-    ```
-
-    **Key highlights only:**
-
-    ```text title="Say this or copy this prompt — replace #channel-name"
-    Read #channel-name and extract only the important stuff — announcements, deadlines, decisions. Ignore small talk.
     ```
   </Tab>
 </Tabs>
@@ -157,29 +157,7 @@ Were any links shared in #channel-name? List them all.
 The AI remembers the messages it just read. You can ask follow-up questions without fetching the messages again.
 
 <Tabs>
-  <Tab title="Path A: Claude Desktop">
-    ```text title="Search for a topic"
-    Were there any messages about [topic]?
-    ```
-
-    ```text title="Find shared links"
-    Were there any links shared? List them all with a brief description of each.
-    ```
-
-    ```text title="Check who's active"
-    Who was the most active person in the conversation?
-    ```
-
-    ```text title="Filter by time"
-    Summarise only messages from the last 24 hours.
-    ```
-
-    ```text title="Analyse sentiment"
-    What was the overall mood or tone of the conversation?
-    ```
-  </Tab>
-
-  <Tab title="Path B: Gemini CLI + Voice">
+  <Tab title="Recommended: CLI + Voice">
     ```text title="Say this or copy this prompt"
     Were there any messages about [topic]?
     ```
@@ -200,6 +178,28 @@ The AI remembers the messages it just read. You can ask follow-up questions with
     What was the overall mood or tone of the conversation?
     ```
   </Tab>
+
+  <Tab title="Alternative: Claude Desktop">
+    ```text title="Search for a topic"
+    Were there any messages about [topic]?
+    ```
+
+    ```text title="Find shared links"
+    Were there any links shared? List them all with a brief description of each.
+    ```
+
+    ```text title="Check who's active"
+    Who was the most active person in the conversation?
+    ```
+
+    ```text title="Filter by time"
+    Summarise only messages from the last 24 hours.
+    ```
+
+    ```text title="Analyse sentiment"
+    What was the overall mood or tone of the conversation?
+    ```
+  </Tab>
 </Tabs>
 
 <Tip>
@@ -211,12 +211,7 @@ The AI remembers the messages it just read. You can ask follow-up questions with
 Want to keep a copy of your summary? Here's how.
 
 <Tabs>
-  <Tab title="Path A: Claude Desktop">
-    - **Copy and paste:** Select the summary text and paste it into a document, email, or notes app
-    - **Download:** Click the **copy** icon at the top of Claude's response to copy the entire message
-  </Tab>
-
-  <Tab title="Path B: Gemini CLI + Voice">
+  <Tab title="Recommended: CLI + Voice">
     Say or type:
 
     ```text title="Say this or copy this prompt"
@@ -224,6 +219,11 @@ Want to keep a copy of your summary? Here's how.
     ```
 
     The summary is now saved as a text file on your computer.
+  </Tab>
+
+  <Tab title="Alternative: Claude Desktop">
+    - **Copy and paste:** Select the summary text and paste it into a document, email, or notes app
+    - **Download:** Click the **copy** icon at the top of Claude's response to copy the entire message
   </Tab>
 </Tabs>
 

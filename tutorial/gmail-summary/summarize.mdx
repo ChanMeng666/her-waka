@@ -8,7 +8,25 @@ Your AI tool is connected to Gmail. Now let's put it to work — ask it to read 
 ## Get your first summary
 
 <Tabs>
-  <Tab title="Path A: Gemini App">
+  <Tab title="Full Tutorial (CLI + Voice)">
+    Make sure Gemini CLI is running in your terminal. Then say (with Wispr Flow) or type this prompt:
+
+    ```text title="Say this or copy this prompt"
+    Check my Gmail and summarise all my unread emails. Include the main topics, any action items I need to take, and flag anything urgent.
+    ```
+
+    Gemini CLI will use the Gmail tools to fetch your emails and return a structured summary.
+
+    <Tip>
+    **Gemini asks for permission?** If Gemini CLI asks to approve a tool call, type `y` and press **Enter**.
+    </Tip>
+
+    <Tip>
+    **Voice or typing — both work.** If you have Wispr Flow running, just start speaking. Otherwise, copy and paste the prompt or type your own request. Gemini understands natural language either way.
+    </Tip>
+  </Tab>
+
+  <Tab title="Quick Preview (browser)">
     Open [gemini.google.com](https://gemini.google.com) and paste this prompt:
 
     ```text title="Copy this prompt"
@@ -27,24 +45,6 @@ Your AI tool is connected to Gmail. Now let's put it to work — ask it to read 
 
     <Tip>
     **First time?** Gemini may ask you to confirm Gmail access. Click **Allow** when prompted.
-    </Tip>
-  </Tab>
-
-  <Tab title="Path B: Gemini CLI + Voice">
-    Make sure Gemini CLI is running in your terminal. Then say (with Wispr Flow) or type this prompt:
-
-    ```text title="Say this or copy this prompt"
-    Check my Gmail and summarise all my unread emails. Include the main topics, any action items I need to take, and flag anything urgent.
-    ```
-
-    Gemini CLI will use the Gmail tools to fetch your emails and return a structured summary.
-
-    <Tip>
-    **Gemini asks for permission?** If Gemini CLI asks to approve a tool call, type `y` and press **Enter**.
-    </Tip>
-
-    <Tip>
-    **Voice or typing — both work.** If you have Wispr Flow running, just start speaking. Otherwise, copy and paste the prompt or type your own request. Gemini understands natural language either way.
     </Tip>
   </Tab>
 </Tabs>
@@ -72,7 +72,13 @@ That's it — you just caught up on your entire inbox in seconds.
 Want to see everything from a specific person? Try this prompt.
 
 <Tabs>
-  <Tab title="Path A: Gemini App">
+  <Tab title="Full Tutorial (CLI + Voice)">
+    ```text title="Say this or copy this prompt"
+    Find all emails from [person's name] in the last 30 days and give me a summary of what they've been writing about.
+    ```
+  </Tab>
+
+  <Tab title="Quick Preview (browser)">
     ```text title="Copy this prompt — replace the name"
     Find all emails from [person's name or email address] in the last 30 days
     and summarise them.
@@ -84,12 +90,6 @@ Want to see everything from a specific person? Try this prompt.
     - Any action items or requests directed at me
 
     Put the most recent emails first.
-    ```
-  </Tab>
-
-  <Tab title="Path B: Gemini CLI + Voice">
-    ```text title="Say this or copy this prompt"
-    Find all emails from [person's name] in the last 30 days and give me a summary of what they've been writing about.
     ```
   </Tab>
 </Tabs>
@@ -105,7 +105,13 @@ The first summary is a great start. But depending on your situation, you might w
 <Tabs>
   <Tab title="Quick catch-up">
     <Tabs>
-      <Tab title="Path A: Gemini App">
+      <Tab title="Full Tutorial (CLI + Voice)">
+        ```text title="Say this or copy this prompt"
+        Give me a quick casual catch-up on my unread emails, like a colleague filling me in over coffee. Keep it to five sentences maximum.
+        ```
+      </Tab>
+
+      <Tab title="Quick Preview (browser)">
         ```text title="Copy this prompt"
         Summarise my unread emails as a quick catch-up for someone who's been
         away for a few days.
@@ -114,18 +120,18 @@ The first summary is a great start. But depending on your situation, you might w
         over coffee. Keep it to 5 sentences maximum.
         ```
       </Tab>
-
-      <Tab title="Path B: Gemini CLI + Voice">
-        ```text title="Say this or copy this prompt"
-        Give me a quick casual catch-up on my unread emails, like a colleague filling me in over coffee. Keep it to five sentences maximum.
-        ```
-      </Tab>
     </Tabs>
   </Tab>
 
   <Tab title="Executive briefing">
     <Tabs>
-      <Tab title="Path A: Gemini App">
+      <Tab title="Full Tutorial (CLI + Voice)">
+        ```text title="Say this or copy this prompt"
+        Summarise my unread emails as a professional executive briefing I could forward to my manager. Include key decisions needed, action items with deadlines, and any risks.
+        ```
+      </Tab>
+
+      <Tab title="Quick Preview (browser)">
         ```text title="Copy this prompt"
         Summarise my unread emails as a professional executive briefing.
 
@@ -138,18 +144,18 @@ The first summary is a great start. But depending on your situation, you might w
         Format it as a document I could forward to my manager.
         ```
       </Tab>
-
-      <Tab title="Path B: Gemini CLI + Voice">
-        ```text title="Say this or copy this prompt"
-        Summarise my unread emails as a professional executive briefing I could forward to my manager. Include key decisions needed, action items with deadlines, and any risks.
-        ```
-      </Tab>
     </Tabs>
   </Tab>
 
   <Tab title="Action items only">
     <Tabs>
-      <Tab title="Path A: Gemini App">
+      <Tab title="Full Tutorial (CLI + Voice)">
+        ```text title="Say this or copy this prompt"
+        Go through my Gmail and extract only action items — things people are asking me to do or deadlines I need to meet. Ignore newsletters and promotions.
+        ```
+      </Tab>
+
+      <Tab title="Quick Preview (browser)">
         ```text title="Copy this prompt"
         Read my unread emails and extract only the action items —
         things I need to do, respond to, or follow up on.
@@ -159,18 +165,18 @@ The first summary is a great start. But depending on your situation, you might w
         and the deadline (if mentioned).
         ```
       </Tab>
-
-      <Tab title="Path B: Gemini CLI + Voice">
-        ```text title="Say this or copy this prompt"
-        Go through my Gmail and extract only action items — things people are asking me to do or deadlines I need to meet. Ignore newsletters and promotions.
-        ```
-      </Tab>
     </Tabs>
   </Tab>
 
   <Tab title="Meeting invites">
     <Tabs>
-      <Tab title="Path A: Gemini App">
+      <Tab title="Full Tutorial (CLI + Voice)">
+        ```text title="Say this or copy this prompt"
+        Check my Gmail for any meeting invitations I haven't responded to. List the date, time, and topic for each one.
+        ```
+      </Tab>
+
+      <Tab title="Quick Preview (browser)">
         ```text title="Copy this prompt"
         Check my Gmail for any meeting invitations or calendar-related emails.
 
@@ -178,29 +184,23 @@ The first summary is a great start. But depending on your situation, you might w
         Tell me which ones I haven't responded to yet.
         ```
       </Tab>
-
-      <Tab title="Path B: Gemini CLI + Voice">
-        ```text title="Say this or copy this prompt"
-        Check my Gmail for any meeting invitations I haven't responded to. List the date, time, and topic for each one.
-        ```
-      </Tab>
     </Tabs>
   </Tab>
 
   <Tab title="By topic">
     <Tabs>
-      <Tab title="Path A: Gemini App">
+      <Tab title="Full Tutorial (CLI + Voice)">
+        ```text title="Say this or copy this prompt"
+        Search my emails for anything related to [topic or project name] and summarise what's been discussed, what was decided, and what's still pending.
+        ```
+      </Tab>
+
+      <Tab title="Quick Preview (browser)">
         ```text title="Copy this prompt — replace the topic"
         Search my recent emails for anything related to [topic or project name].
 
         Summarise what's been discussed, any decisions made, and what's
         still pending. Include who's involved in each thread.
-        ```
-      </Tab>
-
-      <Tab title="Path B: Gemini CLI + Voice">
-        ```text title="Say this or copy this prompt"
-        Search my emails for anything related to [topic or project name] and summarise what's been discussed, what was decided, and what's still pending.
         ```
       </Tab>
     </Tabs>
@@ -268,12 +268,7 @@ Draft a short, professional reply to [sender's name]'s email about [topic].
 Want to keep a copy of your summary? Here's how.
 
 <Tabs>
-  <Tab title="Path A: Gemini App">
-    - **Copy and paste:** Select the summary text and paste it into a document, email, or notes app
-    - **Share:** Click the **share** icon on Gemini's response to get a shareable link
-  </Tab>
-
-  <Tab title="Path B: Gemini CLI + Voice">
+  <Tab title="Full Tutorial (CLI + Voice)">
     Ask Gemini CLI to save it to a file:
 
     ```text title="Say this or copy this prompt"
@@ -281,6 +276,11 @@ Want to keep a copy of your summary? Here's how.
     ```
 
     The summary is now saved as a text file on your computer.
+  </Tab>
+
+  <Tab title="Quick Preview (browser)">
+    - **Copy and paste:** Select the summary text and paste it into a document, email, or notes app
+    - **Share:** Click the **share** icon on Gemini's response to get a shareable link
   </Tab>
 </Tabs>
 

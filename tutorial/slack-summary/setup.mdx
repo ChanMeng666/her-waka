@@ -1,6 +1,6 @@
 ---
 title: "Set up your tools"
-description: "Connect AI to your Slack workspace — choose between Claude Desktop (quick setup) or Gemini CLI with voice commands (more hands-on)."
+description: "Connect AI to your Slack workspace — install Gemini CLI with voice commands (recommended) or try the quick Claude Desktop alternative."
 ---
 
 import InstallNodejs from "/snippets/install-nodejs.mdx";
@@ -16,79 +16,7 @@ Before we start summarising, let's get your tools connected to Slack. Choose the
 ## Choose your path
 
 <Tabs>
-  <Tab title="Path A: Claude Desktop">
-    This is the fastest way to get started. You will download Claude Desktop, connect it to Slack, and be ready to summarise in about 10 minutes.
-
-    <Steps>
-      <Step title="Download Claude Desktop">
-        1. Go to [claude.ai/download](https://claude.ai/download)
-        2. Download the app for your operating system (Windows or macOS)
-        3. Install it by opening the downloaded file and following the prompts
-        4. Open Claude Desktop and create a free account (or sign in if you already have one)
-
-        <Accordion title="Do I need a paid plan?">
-        No. The free plan includes access to Slack connectors. You can start summarising channels right away without paying anything.
-        </Accordion>
-      </Step>
-
-      <Step title="Connect Slack">
-        1. In Claude Desktop, click your **profile icon** in the bottom-left corner
-        2. Click **Customize**
-        3. Click **Connectors**
-        4. Click the **+** button to add a new connector
-        5. Find **Slack** in the list and click it
-        6. A browser window will open — sign in to your Slack workspace
-        7. Review the permissions and click **Allow**
-        8. Return to Claude Desktop — Slack is now connected
-
-        <Info>
-        **What does the connector do?** It gives Claude secure, read-only access to your Slack messages. Claude can search and read messages in channels you have access to, but it cannot post, delete, or modify anything.
-        </Info>
-
-        <Accordion title="I don't see the Connectors option">
-        Make sure you are using the latest version of Claude Desktop. Go to **Help** → **Check for Updates** and install any available updates. If you still don't see it, try signing out and signing back in.
-        </Accordion>
-
-        <Accordion title="The Slack authorisation window won't open">
-        Check that your browser is not blocking pop-ups. Try a different browser if the window still won't appear. You can also try copying the authorisation URL and pasting it directly into your browser.
-        </Accordion>
-      </Step>
-
-      <Step title="Test the connection">
-        In the Claude Desktop chat, type this prompt:
-
-        ```text title="Copy this prompt"
-        List the Slack channels you can see in my workspace.
-        ```
-
-        You should see a list of channel names from your Slack workspace. If you do, the connection is working.
-
-        <Accordion title="Claude says it cannot access Slack">
-        Go back to **Customize** → **Connectors** and check that Slack shows as connected. If it shows an error, remove the connector and add it again. Make sure you authorise the correct workspace.
-        </Accordion>
-      </Step>
-    </Steps>
-
-    ## Verify your setup
-
-    <AccordionGroup>
-      <Accordion title="Claude Desktop installed">
-        The app opens and you can type messages.
-      </Accordion>
-      <Accordion title="Slack connected">
-        The Slack connector shows as active in **Customize** → **Connectors**.
-      </Accordion>
-      <Accordion title="Connection tested">
-        Claude can list your Slack channels when you ask.
-      </Accordion>
-    </AccordionGroup>
-
-    <Note>
-    All set? Head to [Summarise your Slack channels](/tutorial/slack-summary/summarize) to get your first AI-powered summary.
-    </Note>
-  </Tab>
-
-  <Tab title="Path B: Gemini CLI + Voice">
+  <Tab title="Recommended: CLI + Voice">
     This path gives you a voice-first experience with more control. You will install Gemini CLI, create a Slack App, configure a Model Context Protocol (MCP) server, and optionally set up Wispr Flow for hands-free voice commands. This takes about 30 minutes.
 
     <Steps>
@@ -313,6 +241,82 @@ Before we start summarising, let's get your tools connected to Slack. Choose the
       </Accordion>
       <Accordion title="Connection tested">
         Gemini CLI can access your Slack workspace when you ask.
+      </Accordion>
+    </AccordionGroup>
+
+    <Note>
+    All set? Head to [Summarise your Slack channels](/tutorial/slack-summary/summarize) to get your first AI-powered summary.
+    </Note>
+  </Tab>
+
+  <Tab title="Alternative: Claude Desktop">
+    <Info>
+    **Quick alternative.** This path gets you results in 10 minutes, but skips the CLI skills used in other tutorials. Claude Desktop is made by Anthropic — the same company behind Claude Code, which you will use in the advanced Vibe Coding tutorial. For the full learning experience, we recommend the **Recommended: CLI + Voice** tab.
+    </Info>
+
+    This is the fastest way to get started. You will download Claude Desktop, connect it to Slack, and be ready to summarise in about 10 minutes.
+
+    <Steps>
+      <Step title="Download Claude Desktop">
+        1. Go to [claude.ai/download](https://claude.ai/download)
+        2. Download the app for your operating system (Windows or macOS)
+        3. Install it by opening the downloaded file and following the prompts
+        4. Open Claude Desktop and create a free account (or sign in if you already have one)
+
+        <Accordion title="Do I need a paid plan?">
+        No. The free plan includes access to Slack connectors. You can start summarising channels right away without paying anything.
+        </Accordion>
+      </Step>
+
+      <Step title="Connect Slack">
+        1. In Claude Desktop, click your **profile icon** in the bottom-left corner
+        2. Click **Customize**
+        3. Click **Connectors**
+        4. Click the **+** button to add a new connector
+        5. Find **Slack** in the list and click it
+        6. A browser window will open — sign in to your Slack workspace
+        7. Review the permissions and click **Allow**
+        8. Return to Claude Desktop — Slack is now connected
+
+        <Info>
+        **What does the connector do?** It gives Claude secure, read-only access to your Slack messages. Claude can search and read messages in channels you have access to, but it cannot post, delete, or modify anything.
+        </Info>
+
+        <Accordion title="I don't see the Connectors option">
+        Make sure you are using the latest version of Claude Desktop. Go to **Help** → **Check for Updates** and install any available updates. If you still don't see it, try signing out and signing back in.
+        </Accordion>
+
+        <Accordion title="The Slack authorisation window won't open">
+        Check that your browser is not blocking pop-ups. Try a different browser if the window still won't appear. You can also try copying the authorisation URL and pasting it directly into your browser.
+        </Accordion>
+      </Step>
+
+      <Step title="Test the connection">
+        In the Claude Desktop chat, type this prompt:
+
+        ```text title="Copy this prompt"
+        List the Slack channels you can see in my workspace.
+        ```
+
+        You should see a list of channel names from your Slack workspace. If you do, the connection is working.
+
+        <Accordion title="Claude says it cannot access Slack">
+        Go back to **Customize** → **Connectors** and check that Slack shows as connected. If it shows an error, remove the connector and add it again. Make sure you authorise the correct workspace.
+        </Accordion>
+      </Step>
+    </Steps>
+
+    ## Verify your setup
+
+    <AccordionGroup>
+      <Accordion title="Claude Desktop installed">
+        The app opens and you can type messages.
+      </Accordion>
+      <Accordion title="Slack connected">
+        The Slack connector shows as active in **Customize** → **Connectors**.
+      </Accordion>
+      <Accordion title="Connection tested">
+        Claude can list your Slack channels when you ask.
       </Accordion>
     </AccordionGroup>
 
