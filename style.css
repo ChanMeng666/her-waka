@@ -1,8 +1,27 @@
-/* Fix: Mintlify AI assistant floating input intercepts touch events on iOS WebKit.
-   The assistant container has pointer-events-none + invisible, but its inner child
-   re-enables pointer-events-auto. iOS WebKit has a known bug where visibility:hidden
-   ancestors don't properly block touch events from pointer-events-auto descendants.
-   Force-hide the entire assistant overlay when closed to prevent iOS touch blocking. */
+/* =============================================================
+   Mobile compatibility fixes for Mintlify framework
+   ============================================================= */
+
+/* Fix 1: Phantom banner height.
+   Mintlify sets data-banner-state="visible" on <html> even when
+   no banner is configured, which sets --banner-height: 2.5rem
+   and offsets layout elements. Force it to zero. */
+:root {
+  --banner-height: 0px !important;
+}
+
+/* Fix 2: AI assistant floating overlay blocks touch events.
+   The assistant container uses pointer-events-none + invisible,
+   but its inner child re-enables pointer-events-auto. On iOS
+   WebKit and some Android browsers, this invisible element still
+   intercepts touch events. Force-hide the entire overlay. */
 [data-assistant-state="closed"] .chat-assistant-floating-input {
   display: none !important;
+}
+
+/* Also force the outer sticky wrapper to not intercept events */
+[data-assistant-state="closed"] .chat-assistant-floating-input,
+[data-assistant-state="closed"] .chat-assistant-floating-input * {
+  pointer-events: none !important;
+  visibility: hidden !important;
 }
