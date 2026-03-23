@@ -4,198 +4,21 @@ description: "HER WAKA — Navigating pathways into sustainable employment. Empl
 mode: custom
 ---
 
-<style>{`
-  @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&family=Playfair+Display:wght@700;800;900&display=swap');
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  .hero-root {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    background: #0a0920;
-    position: relative;
-    overflow: hidden;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .hero-bg {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-  }
-  .hero-bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 85%;
-    display: block;
-  }
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(31,30,68,0.88) 0%, rgba(45,27,78,0.85) 50%, rgba(155,46,131,0.82) 100%);
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 80px 24px 48px;
-    text-align: center;
-  }
-
-  .hero-overline {
-    font-family: 'Inter', -apple-system, sans-serif;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    color: rgba(255,255,255,0.35);
-    text-transform: uppercase;
-    margin: 0 0 20px;
-  }
-
-  .hero-title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(44px, 7vw, 82px);
-    font-weight: 800;
-    color: white;
-    letter-spacing: -0.02em;
-    line-height: 1.0;
-    text-shadow: 0 2px 20px rgba(0,0,0,0.2);
-    margin: 0 0 16px;
-  }
-
-  .hero-divider {
-    width: 40px;
-    height: 1px;
-    background: rgba(255,255,255,0.15);
-    margin: 0 auto 16px;
-  }
-
-  .hero-tagline {
-    font-family: 'Anton', sans-serif;
-    font-size: 15px;
-    color: rgba(255,255,255,0.5);
-    margin: 0 0 8px;
-    max-width: 420px;
-    line-height: 1.5;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
-  }
-
-  .hero-partners {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 36px;
-    margin-top: 36px;
-    flex-wrap: wrap;
-  }
-  .hero-partners a {
-    display: inline-flex;
-    align-items: center;
-    opacity: 0.65;
-    transition: opacity 0.3s;
-  }
-  .hero-partners a:hover {
-    opacity: 1;
-  }
-  .hero-partners img {
-    height: 40px;
-    width: auto;
-    filter: brightness(0) invert(1);
-  }
-
-  .hero-cta-section {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    padding: 0 24px 48px;
-  }
-
-  .hero-cta-btn {
-    font-family: 'Inter', -apple-system, sans-serif;
-    display: inline-block;
-    background: white;
-    color: #9b2e83;
-    padding: 14px 40px;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 15px;
-    text-decoration: none;
-    box-shadow: 0 2px 20px rgba(200,70,171,0.25);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  .hero-cta-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 28px rgba(200,70,171,0.35);
-  }
-
-  .hero-session {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    padding: 48px 24px;
-    background: rgba(255,255,255,0.03);
-    border-top: 1px solid rgba(255,255,255,0.06);
-  }
-  .hero-session-overline {
-    font-family: 'Inter', -apple-system, sans-serif;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    color: rgba(255,255,255,0.3);
-    text-transform: uppercase;
-    margin: 0 0 12px;
-  }
-  .hero-session-title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(24px, 4vw, 36px);
-    font-weight: 800;
-    color: white;
-    margin: 0 0 8px;
-  }
-  .hero-session-desc {
-    font-family: 'Inter', -apple-system, sans-serif;
-    font-size: 14px;
-    color: rgba(255,255,255,0.45);
-    margin: 0;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* Hide Mintlify default content wrapper padding */
-  .px-content-wrapper { padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
-
-  @media (max-width: 768px) {
-    .hero-content { padding: 60px 20px 36px; }
-    .hero-partners { gap: 24px; margin-top: 28px; }
-    .hero-partners img { height: 32px; }
-    .hero-cta-btn { padding: 12px 32px; font-size: 14px; }
-    .hero-session { padding: 36px 20px; }
-  }
-`}</style>
-
-<h1 style={{ position: 'absolute', width: '1px', height: '1px', overflow: 'hidden', clip: 'rect(0,0,0,0)', whiteSpace: 'nowrap' }}>
-  HER WAKA — Navigating pathways into sustainable employment
-</h1>
-
-<div className="hero-root">
+<div className="hero">
   <div className="hero-bg">
-    <img src="/images/banners/her-waka-banner-landscape.jpg" alt="HER WAKA programme banner" loading="eager" />
-    <div className="hero-overlay" />
+    <img src="/images/banners/her-waka-banner-landscape.jpg" alt="HER WAKA programme" />
   </div>
 
-  <div className="hero-content">
+  <div className="hero-body">
     <p className="hero-overline">March – June 2026 · Auckland</p>
-    <h2 className="hero-title">HER WAKA</h2>
-    <div className="hero-divider" />
-    <p className="hero-tagline">Navigating pathways into sustainable employment</p>
+    <h1 className="hero-title">HER WAKA</h1>
+    <hr className="hero-divider" />
+    <p className="hero-tagline">Navigating pathways into sustainable employment — workshops for women, delivered by SheSharp</p>
+    <a className="hero-cta" href="https://events.humanitix.com/she-sharp-ministry-of-social-development-academyex-her-waka">
+      Register on Humanitix
+    </a>
 
     <div className="hero-partners">
       <a href="https://academyex.com/" target="_blank" rel="noopener noreferrer">
@@ -209,16 +32,61 @@ mode: custom
       </a>
     </div>
   </div>
+</div>
 
-  <div className="hero-cta-section">
-    <a className="hero-cta-btn" href="https://events.humanitix.com/she-sharp-ministry-of-social-development-academyex-her-waka">
-      Register on Humanitix
+<div className="next-session">
+  <div className="next-session-inner">
+    <div className="next-session-text">
+      <p className="next-session-label">Next Session · 25 March 2026</p>
+      <h2 className="next-session-title">AI & Future of Work</h2>
+      <p className="next-session-desc">Panel discussion, hands-on AI workshop, and tech hiring insights at academyEX Pikopiko · 12–2 pm</p>
+    </div>
+    <a className="next-session-action" href="/workshop/march-2026/overview">
+      View Details →
     </a>
   </div>
+</div>
 
-  <div className="hero-session">
-    <p className="hero-session-overline">Next Session · 25 March 2026</p>
-    <h3 className="hero-session-title">AI & Future of Work</h3>
-    <p className="hero-session-desc">Panel discussion, hands-on AI workshop, hiring insights</p>
-  </div>
+<div className="home-section">
+
+<h2 className="home-section-title">Explore</h2>
+<p className="home-section-desc">Everything you need to get the most from HER WAKA.</p>
+
+<CardGroup cols={2}>
+  <Card title="About the Programme" icon="compass" href="/programme/about-her-waka" color="#c846ab">
+    Learn about HER WAKA's mission, who it's for, and what you can expect from the programme.
+  </Card>
+  <Card title="Workshop Schedule" icon="calendar" href="/programme/schedule" color="#8982ff">
+    Four sessions from March to June 2026 — dates, times, venue, and what to bring.
+  </Card>
+  <Card title="Hands-On Tutorials" icon="laptop-code" href="/tutorial/overview" color="#c846ab">
+    Step-by-step guides to practise the skills covered in each workshop, from AI tools to vibe coding.
+  </Card>
+  <Card title="Career Resources" icon="briefcase" href="/resources/employment-rights" color="#8982ff">
+    Employment rights, job readiness, AI tools, networking, and tech communities in Aotearoa.
+  </Card>
+</CardGroup>
+
+</div>
+
+<div className="home-section">
+
+<h2 className="home-section-title">Workshop Sessions</h2>
+<p className="home-section-desc">Four in-person sessions at academyEX Pikopiko, Auckland.</p>
+
+<CardGroup cols={2}>
+  <Card title="AI & Future of Work" icon="robot" href="/workshop/march-2026/overview">
+    **25 March** · AI panel, hands-on workshop, RCSA hiring insights
+  </Card>
+  <Card title="#IAmRemarkable & Vibe Coding" icon="star" href="/workshop/april-2026/overview">
+    **7 April** · Celebrate achievements, build your website, job market insights
+  </Card>
+  <Card title="Employment Rights" icon="scale-balanced" href="/workshop/may-2026/overview">
+    **5 May** · Know your rights, recruitment landscape with RCSA
+  </Card>
+  <Card title="Networking & Connections" icon="handshake" href="/workshop/june-2026/overview">
+    **2 June** · Professional networking, career connections in NZ tech
+  </Card>
+</CardGroup>
+
 </div>
