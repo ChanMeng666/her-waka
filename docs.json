@@ -15,11 +15,6 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Home",
-        "hidden": true,
-        "pages": ["index"]
-      },
-      {
         "tab": "Programme",
         "groups": [
           {
