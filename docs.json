@@ -211,13 +211,21 @@
         "tab": "Resources",
         "groups": [
           {
-            "group": "Career Resources",
+            "group": "Job Search",
             "pages": [
-              "resources/employment-rights",
+              "resources/nz-it-market",
+              "resources/job-search-platforms",
+              "resources/recruitment-agencies",
               "resources/job-readiness",
-              "resources/ai-tools-learning",
+              "resources/ai-tools-learning"
+            ]
+          },
+          {
+            "group": "Community & Rights",
+            "pages": [
               "resources/networking-guide",
-              "resources/tech-communities"
+              "resources/tech-communities",
+              "resources/employment-rights"
             ]
           }
         ]
