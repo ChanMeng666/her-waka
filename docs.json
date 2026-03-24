@@ -186,6 +186,16 @@
                   "tutorial/slack-summary/summarize",
                   "tutorial/slack-summary/keep-going"
                 ]
+              },
+              {
+                "group": "Create AI Promo Videos",
+                "icon": "video",
+                "pages": [
+                  "tutorial/promo-video/overview",
+                  "tutorial/promo-video/setup",
+                  "tutorial/promo-video/create-video",
+                  "tutorial/promo-video/keep-going"
+                ]
               }
             ]
           },
