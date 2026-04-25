@@ -50,11 +50,11 @@
             "pages": ["workshop/april-2026/overview"]
           },
           {
-            "group": "Session 3: Employment Rights",
+            "group": "Session 3: Cybersecurity",
             "pages": ["workshop/may-2026/overview"]
           },
           {
-            "group": "Session 4: Networking",
+            "group": "Session 4: Personal Branding",
             "pages": ["workshop/june-2026/overview"]
           }
         ]
@@ -256,7 +256,7 @@
     "primary": {
       "type": "button",
       "label": "Register",
-      "href": "https://events.humanitix.com/she-sharp-ministry-of-social-development-academyex-her-waka-april-2026"
+      "href": "https://events.humanitix.com/she-sharp-ministry-of-social-development-academyex-her-waka-may-2026"
     }
   },
   "footer": {
