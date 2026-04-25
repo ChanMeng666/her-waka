@@ -1,0 +1,60 @@
+---
+title: "Week 7 — Real-Time Slack Notifications"
+description: "Build a contact form that writes to Neon and fires a Slack webhook in one server action. Your first taste of notification-as-observability — how senior engineers actually monitor small products."
+---
+
+<Tip>
+**Multi-week series · Week 7 of 8** · ~2 hours of class + lab
+</Tip>
+
+By the end of class your live site has a *Contact* page with a form. When someone submits it, the message is saved to Neon *and* a real-time Slack message arrives in a `#my-site-contact` channel in your own Slack workspace — within two seconds, with the sender's name, email, and message.
+
+<CardGroup cols={3}>
+  <Card title="Slack App + webhook" icon="slack" color="#c846ab">
+    Create a Slack App, activate Incoming Webhooks, get your webhook URL — the only manual step.
+  </Card>
+  <Card title="Form + server action" icon="paper-plane" color="#c846ab">
+    Validated input writes to Neon and POSTs to Slack in one server action. AI writes both.
+  </Card>
+  <Card title="Spam defences" icon="shield" color="#c846ab">
+    Honeypot field, rate limit per IP hash, duplicate-content drop — friction for bots, not humans.
+  </Card>
+</CardGroup>
+
+## Learning objectives
+
+By the end of this session, you should be able to:
+
+- **Create a Slack App and obtain an incoming webhook URL** — the minimum human work — then hand everything else to Cursor.
+- **Build a contact form that writes to Neon and fires a Slack webhook in one server action**, through a single prompt describing the feature end-to-end.
+- **Think about notification-as-observability**: why a tiny Slack ping on every real event is how senior engineers *actually* monitor small products in production.
+
+## Core topics
+
+- Slack Apps, Incoming Webhooks, and why this is the cheapest real-time pipe in the world.
+- Server actions as the right "trust boundary" for webhook calls — the webhook URL is a secret.
+- Fan-out pattern: one event, two destinations (database + Slack). What happens when one of them fails and how to decide whether to retry, log, or drop.
+- Spam defence: rate limiting, honeypot fields, content filtering — protecting your Slack from getting pinged 400 times by a bored bot.
+
+## Tools introduced this week
+
+| Tool | Role this week |
+|---|---|
+| **Slack** | Where notifications land — your own workspace |
+| **Slack Incoming Webhooks** | The simplest HTTP-POST-to-Slack mechanism |
+| **Next.js server actions** | Where the form handler lives; server-only secrets |
+| **Drizzle + Neon** | New `contact_submissions` table persists every form |
+| **`@upstash/ratelimit`** (optional) | Sliding-window rate limit for the form |
+
+<Note>
+**Prerequisites:** Complete [Week 6 — Add a Blog System](/tutorial/ai-bootcamp/week-06-blog-system) first. You need an existing Neon database and signed-in users from Week 4 still wired up.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Download Week 7 PDF" icon="file-pdf" href="/curriculum-pdfs/week-07-slack-notifications.pdf" color="#c846ab">
+    **Full lecture · 672 KB** — Session plan, hands-on lab steps, webhook + spam-defence troubleshooting.
+  </Card>
+  <Card title="Continue to Week 8" icon="arrow-right" href="/tutorial/ai-bootcamp/week-08-typst-cv">
+    Typst PDF automation for job applications
+  </Card>
+</CardGroup>

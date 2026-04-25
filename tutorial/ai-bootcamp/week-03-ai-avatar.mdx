@@ -1,0 +1,60 @@
+---
+title: "Week 3 — Add an AI Clone of Yourself"
+description: "Integrate Gemini 2.5 Flash as a floating chat widget on your portfolio. Write a persona system prompt that makes the AI answer in your voice. Ship a streaming chat experience to production."
+---
+
+<Tip>
+**Multi-week series · Week 3 of 8** · ~2 hours of class + lab
+</Tip>
+
+By the end of class your portfolio site will have a floating chat widget in the bottom-right corner. Anyone can open it and ask "tell me about yourself" — the answer arrives streaming, in your voice, grounded in your real background.
+
+<CardGroup cols={3}>
+  <Card title="API key, the human moment" icon="key" color="#c846ab">
+    Get a free Gemini API key from Google AI Studio — the only manual step. AI does the env-var plumbing.
+  </Card>
+  <Card title="Write your persona" icon="user-pen" color="#c846ab">
+    Your first serious prompt-engineering task: a `persona.md` system prompt that defines voice and constraints.
+  </Card>
+  <Card title="Streaming chat UI" icon="comments" color="#c846ab">
+    Floating chat widget with token-by-token streaming, mobile-friendly layout, persistent session.
+  </Card>
+</CardGroup>
+
+## Learning objectives
+
+By the end of this session, you should be able to:
+
+- **Obtain an API key from Google AI Studio and wire it into both local `.env.local` and Vercel's production env** — with the AI doing the plumbing and you doing only the human-only OAuth moment.
+- **Write a persona system prompt** that makes Gemini 2.5 Flash answer as *you*, in your voice, with your background — your first serious piece of prompt engineering.
+- **Describe a streaming chat UI in English** and have Cursor implement it using the Vercel AI SDK, with no hand-written React.
+
+## Core topics
+
+- System prompts vs user prompts: why the *invisible* instructions matter more than the visible ones.
+- Streaming responses — why "tokens arrive one by one" is the default mode for modern chat UIs.
+- Secret management: where API keys go, where they *don't* go, and how the AI helps you not commit them.
+- The "persona file" pattern — keeping your AI-self definition in one editable Markdown file.
+
+## Tools introduced this week
+
+| Tool | Role this week |
+|---|---|
+| **Cursor** | Where you talk; AI writes the chat component |
+| **Gemini 2.5 Flash** | The model answering as your AI clone. Fast, cheap, good enough |
+| **Google AI Studio** | Where you fetch the free API key. One manual moment |
+| **Vercel AI SDK** | Abstracts streaming, state, and provider differences |
+| **`.env.local` + Vercel env** | Two places your API key lives — both set by AI via CLI |
+
+<Note>
+**Prerequisites:** Complete [Week 2 — Deploy Your Personal Website](/tutorial/ai-bootcamp/week-02-portfolio-deploy) first. You need a deployed `yourname-portfolio.vercel.app` to graft the chat widget onto.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Download Week 3 PDF" icon="file-pdf" href="/curriculum-pdfs/week-03-ai-avatar.pdf" color="#c846ab">
+    **Full lecture · 647 KB** — Session plan, hands-on lab steps, troubleshooting.
+  </Card>
+  <Card title="Continue to Week 4" icon="arrow-right" href="/tutorial/ai-bootcamp/week-04-fullstack-neon">
+    Go full-stack with Neon and auth
+  </Card>
+</CardGroup>

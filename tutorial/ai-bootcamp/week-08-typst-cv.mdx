@@ -1,0 +1,65 @@
+---
+title: "Week 8 — Typst PDF Automation for Job Applications"
+description: "Use the Typst skill in Claude Code to turn your Neon profile into a pixel-perfect CV PDF. Paste a job description, get a tailored cover letter — generated in your voice, sourced from your real profile data."
+---
+
+<Tip>
+**Multi-week series · Week 8 of 8** · ~2 hours of class + lab · The grand finale
+</Tip>
+
+By the end of class your portfolio site has two new buttons: *Download CV* (produces a polished one-page CV from your Neon profile data) and *Generate cover letter* (paste a job description, get a custom PDF). Both compile via the Typst skill. From this week onward, every real job application takes you 10 minutes, not 60.
+
+<CardGroup cols={3}>
+  <Card title="Profile in Postgres" icon="database" color="#c846ab">
+    Your CV lives as structured data in Neon — education, experience, projects, skills. One source of truth.
+  </Card>
+  <Card title="Typst skill in Claude Code" icon="file-pdf" color="#c846ab">
+    The skill writes the `.typ` template, runs the CLI, returns a pixel-perfect PDF. You don't write any Typst by hand.
+  </Card>
+  <Card title="Tailored cover letters" icon="envelope-open-text" color="#c846ab">
+    Paste a JD, click Generate. Claude writes in your voice, citing only real items from your profile.
+  </Card>
+</CardGroup>
+
+## Learning objectives
+
+By the end of this session, you should be able to:
+
+- **Invoke the Typst skill through Claude Code** to turn structured profile data in Neon into a pixel-perfect, downloadable PDF — without writing a single line of Typst by hand.
+- **Unify one data source (Neon `profile`) across two outputs** — the portfolio site and the CV / cover letter PDFs — proving that *data first, documents later* is a senior engineering habit.
+- **Ship one-click "Download CV" and "Generate cover letter for [job description]" buttons** on your live portfolio that produce custom PDFs on demand.
+
+## Core topics
+
+- Typst, in one paragraph: think "Markdown with superpowers that compiles to PDF". Same tool this lecture handout is compiled with.
+- Skills in Claude Code — the Typst skill is shipped by Anthropic and knows how to generate common documents from structured input.
+- Data-driven documents: why storing your CV fields in Neon (not Google Docs) makes the CV AI-editable forever.
+- Cover letters are the perfect LLM task: structured input (your profile + a job description) + structured output (a formatted PDF).
+- The meta moment: this lecture and your CV are both made with the same tool.
+
+## Tools introduced this week
+
+| Tool | Role this week |
+|---|---|
+| **Typst CLI** | Compiles `.typ` files to PDFs — fast and deterministic |
+| **Typst skill** (Claude Code) | AI writes the `.typ` template and drives the compile |
+| **Neon Postgres + Drizzle** | Stores your `profile` row: one source of truth |
+| **Claude API** (optional) | Generates tailored cover-letter prose from a JD |
+| **Vercel serverless function** | Runs Typst compilation on demand and streams PDF |
+
+<Note>
+**Prerequisites:** Complete [Week 7 — Real-Time Slack Notifications](/tutorial/ai-bootcamp/week-07-slack-notifications) first. You need the auth, database, and rate-limit patterns from Weeks 4 and 7 in place.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Download Week 8 PDF" icon="file-pdf" href="/curriculum-pdfs/week-08-typst-cv.pdf" color="#c846ab">
+    **Full lecture · 676 KB** — Session plan, hands-on lab steps, Typst-on-Vercel deployment patterns.
+  </Card>
+  <Card title="Continue to the Capstone" icon="arrow-right" href="/tutorial/ai-bootcamp/capstone">
+    Weeks 9–12: team project
+  </Card>
+</CardGroup>
+
+## Looking for the lighter version?
+
+If a one-off polished PDF is all you need (cover letter, invoice, report) — without the database back-end — try the standalone [Create Professional PDFs tutorial](/tutorial/professional-pdf/overview). Same Typst skill, single-task scope, ~1.5 hours.

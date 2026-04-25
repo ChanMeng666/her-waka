@@ -1,0 +1,61 @@
+---
+title: "Week 4 — Go Full-Stack: Neon + Auth"
+description: "Provision a real Postgres database and Google sign-in by prompt. Add a guestbook where signed-in visitors leave messages. The hinge class — after this week you ship actual products, not static sites."
+---
+
+<Tip>
+**Multi-week series · Week 4 of 8** · ~2 hours of class + lab · The hinge class of the series
+</Tip>
+
+By the end of class your site has a guestbook. Visitors click *Sign in with Google*, write a message, and see it appear (with their name + avatar) instantly on your About page. Refresh — the messages persist. This is a full-stack feature: database, auth, server action, UI — and the OAuth consent screen is the only step you do with your own hands.
+
+<CardGroup cols={3}>
+  <Card title="Postgres by prompt" icon="database" color="#c846ab">
+    Neon MCP provisions a real database. Drizzle ORM owns the schema. AI runs the migration.
+  </Card>
+  <Card title="Google sign-in" icon="user-check" color="#c846ab">
+    Neon Auth wires Google as the provider. The OAuth consent screen is your one human moment.
+  </Card>
+  <Card title="A real full-stack feature" icon="comments" color="#c846ab">
+    A guestbook with sign-in, server actions, optimistic UI, and revalidation — built end-to-end in one class.
+  </Card>
+</CardGroup>
+
+## Learning objectives
+
+By the end of this session, you should be able to:
+
+- **Provision a production Postgres database and an auth system by prompt** — Neon MCP creates the DB, Drizzle defines the schema, and Neon Auth wires Google login, all through one conversation.
+- **Recognise and execute the OAuth-consent manual moment** — the one step the AI cannot do for you — without panicking or skipping ahead.
+- **Ship a full-stack feature end-to-end** (signed-in visitors leaving messages on your site) in a single 2-hour class, even though you've written zero lines of server code.
+
+## Core topics
+
+- What "going full-stack" actually means when AI writes the stack: a database, an auth layer, server actions, and a UI — all at once.
+- Drizzle ORM as a type-safe schema definition the AI can reason about.
+- Neon Auth — why it exists and why it's the fastest path from "no login" to "signed-in users" for beginners.
+- Env-var plumbing across three environments (local, preview, production) and why AI doing this is a superpower.
+- The OAuth trust dance: why Google requires human consent and where the callback URL must match.
+
+## Tools introduced this week
+
+| Tool | Role this week |
+|---|---|
+| **Neon Postgres** (via MCP) | Serverless Postgres; AI provisions via Neon MCP |
+| **Neon Auth** | Drop-in auth with Google provider; AI wires it |
+| **Drizzle ORM** | Type-safe schema definition AI reads and extends |
+| **Vercel CLI** | Syncs env vars between Neon → local → production |
+| **Google Cloud Console** | The one place a human opens the OAuth consent screen |
+
+<Note>
+**Prerequisites:** Complete [Week 3 — Add an AI Clone](/tutorial/ai-bootcamp/week-03-ai-avatar) first. The guestbook lives on the same `my-portfolio` site you've been growing since Week 2.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Download Week 4 PDF" icon="file-pdf" href="/curriculum-pdfs/week-04-fullstack-neon.pdf" color="#c846ab">
+    **Full lecture · 679 KB** — Session plan, hands-on lab steps, OAuth troubleshooting.
+  </Card>
+  <Card title="Continue to Week 5" icon="arrow-right" href="/tutorial/ai-bootcamp/week-05-vercel-blob">
+    Image uploads with Vercel Blob
+  </Card>
+</CardGroup>

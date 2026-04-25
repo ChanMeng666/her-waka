@@ -1,0 +1,61 @@
+---
+title: "Week 2 — Deploy Your Personal Website"
+description: "Fork the Magic Portfolio template through conversation, customise the content in plain English, and ship to Vercel via AI-invoked CLI. By the end of class you have a yourname-portfolio-*.vercel.app URL."
+---
+
+<Tip>
+**Multi-week series · Week 2 of 8** · ~2 hours of class + lab
+</Tip>
+
+By the end of class you should have a `yourname-portfolio-*.vercel.app` URL that features your photo, short bio, two real projects (or study projects), and your email — all on a responsive, dark-mode-capable site. You will not write a single line of code by hand.
+
+<CardGroup cols={3}>
+  <Card title="Fork through chat" icon="code-fork" color="#c846ab">
+    Ask Cursor to fork the Magic Portfolio Vercel template — no `git clone`, no manual setup.
+  </Card>
+  <Card title="Describe, don't code" icon="comments" color="#c846ab">
+    Bio, accent colour, project cards — describe each in plain English, watch AI write the MDX/TSX.
+  </Card>
+  <Card title="Deploy by prompt" icon="rocket" color="#c846ab">
+    AI invokes the Vercel CLI; you get a production URL and read build logs through chat when something fails.
+  </Card>
+</CardGroup>
+
+## Learning objectives
+
+By the end of this session, you should be able to:
+
+- **Fork a production-ready Vercel template through natural-language requests**, without ever cloning a repo with your own hands or running `git clone`.
+- **Describe website content in plain English** — bio, projects, links, theme — and watch Cursor translate that description into clean, committed source changes.
+- **Trigger a Vercel deploy by prompt**, read the deployment's build log when something goes wrong, and recover by describing the failure to the AI.
+
+## Core topics
+
+- How a Vercel template becomes your own site in one conversation.
+- The "describe content in English, let AI write the MDX/TSX" pattern that powers Weeks 2–6.
+- The deploy-preview loop: every commit triggers a preview URL you can review before promoting to production.
+- Why the first site deploy should be boring on purpose — we'll add the exciting AI bits next week.
+
+## Tools introduced this week
+
+| Tool | Role this week |
+|---|---|
+| **Cursor** | The one chat window where everything happens |
+| **Vercel MCP** | AI creates the project, deploys, reads logs, sets env vars |
+| **GitHub** | Every commit pushes; Vercel rebuilds automatically |
+| **Next.js 14** | The framework the Magic Portfolio template ships on |
+| **Tailwind CSS** | Styling; AI edits classes when you describe visual changes |
+| **Magic Portfolio** | [Vercel template](https://vercel.com/templates/next.js/magic-portfolio) we fork as the starting point |
+
+<Note>
+**Prerequisites:** Complete [Week 1 — AI Developer Toolkit](/tutorial/ai-bootcamp/week-01-dev-tools) first. You need Cursor signed in, the Vercel MCP installed, and GitHub connected before this lab will work.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Download Week 2 PDF" icon="file-pdf" href="/curriculum-pdfs/week-02-portfolio-deploy.pdf" color="#c846ab">
+    **Full lecture · 629 KB** — Session plan, hands-on lab steps, troubleshooting.
+  </Card>
+  <Card title="Continue to Week 3" icon="arrow-right" href="/tutorial/ai-bootcamp/week-03-ai-avatar">
+    Add an AI clone of yourself
+  </Card>
+</CardGroup>

@@ -1,0 +1,58 @@
+---
+title: "Week 5 — Image Uploads with Vercel Blob"
+description: "Extend the guestbook so visitors can attach images. Direct-to-CDN uploads with signed tokens, content-type validation, and client-side compression — the same pattern Figma and Linear use in production."
+---
+
+<Tip>
+**Multi-week series · Week 5 of 8** · ~2 hours of class + lab
+</Tip>
+
+By the end of class a signed-in visitor can attach an image to their guestbook message. Photos show up inline above the text, clicking opens full size, and your Vercel Blob dashboard shows each upload. This is the *direct-to-bucket* pattern — image bytes never traverse your Next.js server.
+
+<CardGroup cols={3}>
+  <Card title="Blob store, by prompt" icon="cloud-arrow-up" color="#c846ab">
+    Vercel Blob enabled and wired in one conversation, with the upload token plumbed across all three envs.
+  </Card>
+  <Card title="Signed upload tokens" icon="shield-check" color="#c846ab">
+    Server issues short-lived tokens; browser uploads directly to Blob. Content-type and size enforced server-side.
+  </Card>
+  <Card title="Client-side compression" icon="image" color="#c846ab">
+    A 20 MB phone photo compresses to ~1 MB in the browser before upload. Real-world UX, no extra cost.
+  </Card>
+</CardGroup>
+
+## Learning objectives
+
+By the end of this session, you should be able to:
+
+- **Provision a Vercel Blob store by prompt** and have the AI wire it into an existing Next.js app end-to-end, including server-only upload tokens.
+- **Describe a file-upload UX in English** — drag-and-drop, preview, size cap, content-type filter — and get a working implementation back.
+- **Verify a binary round-trip** (pick a file → upload → persist URL in Neon → render from Vercel Blob CDN) as a first-class engineering skill.
+
+## Core topics
+
+- What blob storage is, at the level a beginner needs: URLs that point to files, not to HTML.
+- Why you never let the browser upload directly to your server (memory cost + attack surface) — and why signed upload tokens solve both.
+- The one-week-ahead mental model: by Week 7 your guestbook entries will trigger Slack notifications. Keeping the schema clean today pays off then.
+
+## Tools introduced this week
+
+| Tool | Role this week |
+|---|---|
+| **Vercel Blob** | File storage; CDN-backed URLs; free tier is generous |
+| **`@vercel/blob` SDK** | What your server action uses to issue upload tokens |
+| **Drizzle ORM** | Adds a new `image_url` column to existing `guestbook_messages` |
+| **Cursor** | Writes everything; you describe + verify |
+
+<Note>
+**Prerequisites:** Complete [Week 4 — Go Full-Stack: Neon + Auth](/tutorial/ai-bootcamp/week-04-fullstack-neon) first. You need the working guestbook from Week 4 to extend.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Download Week 5 PDF" icon="file-pdf" href="/curriculum-pdfs/week-05-vercel-blob.pdf" color="#c846ab">
+    **Full lecture · 649 KB** — Session plan, hands-on lab steps, EXIF and content-type troubleshooting.
+  </Card>
+  <Card title="Continue to Week 6" icon="arrow-right" href="/tutorial/ai-bootcamp/week-06-blog-system">
+    Add a blog system with RSS
+  </Card>
+</CardGroup>

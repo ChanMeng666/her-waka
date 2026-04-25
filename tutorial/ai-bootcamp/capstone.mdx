@@ -1,0 +1,119 @@
+---
+title: "Capstone Project (Weeks 9–12)"
+description: "Form a team of 2–4. Evolve your Week-8 codebase into a deployed multi-user AI SaaS MVP. Pick one of three tracks: Campus Life, Personal Growth, or Creative Tools. Demo Day at Week 12."
+---
+
+<Tip>
+**Multi-week series · Capstone · Weeks 9–12** · Team project (2–4 people)
+</Tip>
+
+Your Week-8 site had exactly one user: *you*. Your capstone must work for strangers, end-to-end. Sign-up (not just sign-in), onboarding, data isolation per user, thoughtful empty states, and a reason for a stranger to come back tomorrow. The capstone is the bridge between "I can ship a personal site" and "I can ship something strangers would use."
+
+<CardGroup cols={3}>
+  <Card title="2–4 person teams" icon="users" color="#c846ab">
+    Groups of 3 work best. Roles are soft — every member commits code. No "non-technical" seats.
+  </Card>
+  <Card title="Pick one track" icon="map" color="#c846ab">
+    Campus Life, Personal Growth, or Creative Tools. The team may combine elements but the spine should be one theme.
+  </Card>
+  <Card title="Demo Day at Week 12" icon="presentation-screen" color="#c846ab">
+    Five-minute live demo, three-minute Q&A. Public — invited employers, alumni, career-services team.
+  </Card>
+</CardGroup>
+
+## The three tracks
+
+<CardGroup cols={1}>
+  <Card title="Campus Life" icon="building-columns" color="#c846ab">
+    Products that serve daily university life. Low friction to get classmates to try it — real user feedback within 4 weeks. *Examples:* lecture-note swap with AI summaries, roommate matcher, campus event radar with a personalised weekly digest, dorm chore-and-bill splitter.
+  </Card>
+  <Card title="Personal Growth" icon="seedling" color="#9b2e83">
+    Products where the user's *state* matters — logs, history, streaks. Teaches teams about private data, consent, and longitudinal UX. *Examples:* AI habit coach with weekly LLM-authored reviews, reading companion with spaced repetition, journaling assistant with monthly reflections, workout planner with volume-progression tracking.
+  </Card>
+  <Card title="Creative Tools" icon="palette" color="#8982ff">
+    Generative products with a clear loop: input → AI output → user iterates. Most visually demo-able at the showcase. *Examples:* AI short-story studio with branch/merge narrative choices, music-prompt playground with shareable rooms, comic-panel generator with PDF export, resume-video script maker.
+  </Card>
+</CardGroup>
+
+## Project requirements (non-negotiable)
+
+Every capstone, regardless of track, must include:
+
+- **Authentication** — multiple real human users, not a demo account. Use Neon Auth or equivalent.
+- **Persistent state per user** — Neon Postgres as primary store; per-user data isolation verified.
+- **At least one AI feature in the critical path** — removing the AI should break the core value. No "AI-washing".
+- **Real-time notification** — Slack or email, triggered by a user action.
+- **Deployment to Vercel** on a shared team repo. Merge via pull request; no direct-to-main.
+- **A one-page landing page** explaining the product to a stranger in under 30 seconds — hero, problem, demo video, sign-up.
+- **A working `/feedback` form** that persists to Neon and pings the team's Slack.
+
+## Default stack
+
+Unless a track strongly demands otherwise, teams ship on the same stack you learned across Weeks 1–8:
+
+| Layer | Default |
+|---|---|
+| Framework | Next.js 14 App Router + Tailwind |
+| Hosting | Vercel |
+| Database + ORM | Neon Postgres + Drizzle |
+| Auth | Neon Auth (Google + GitHub providers) |
+| File storage | Vercel Blob |
+| LLM in product | Gemini 2.5 Flash for cheap calls; Claude for reasoning / agents |
+| Notifications | Slack Incoming Webhooks or Resend for email |
+| PDF / docs | Typst via skill (where applicable) |
+
+Teams may deviate only with written instructor approval and a clear reason ("we need vector search → add pgvector"; "we need realtime → add Supabase Realtime").
+
+## Timeline
+
+| Week | Focus |
+|---|---|
+| **Week 9** | Kickoff, scope, repo. By Day 3: core data model + auth + one end-to-end vertical slice deployed. |
+| **Week 10** | Build the critical path. AI-in-the-critical-path feature working end-to-end. First *external* user test logged in `RESEARCH.md`. |
+| **Week 11** | Harden, polish, market. Landing page, onboarding, accessibility pass, five real users signed up. |
+| **Week 12** | Demo Day. 5-minute live demo per team, 3-minute Q&A with instructor + invited guests. |
+
+## Demo Day requirements
+
+At Demo Day every team presents in this order, in roughly five minutes:
+
+1. **Problem statement** — 30 seconds. Who hurts? How often?
+2. **Solution** — 30 seconds. The product in one sentence.
+3. **Tech stack** — 30 seconds. What from Weeks 1–8 did you reuse; what's new.
+4. **Live demo** — 3 minutes. Sign up a fresh user on stage; walk through the critical path; land the notification moment.
+5. **Challenges faced** — 1 minute. One technical, one team, one user.
+6. **What's next** — 30 seconds. Honest: is this worth keeping alive past Week 12?
+
+## Evaluation
+
+| Dimension | Weight | What "excellent" looks like |
+|---|---|---|
+| Functionality | 30% | Every promised feature works end-to-end on the live site during the demo. Real external users ran the critical path at least 5 times pre-demo. |
+| AI in critical path | 20% | The AI feature cannot be removed without the product losing core value. Thoughtful prompt design, visible in the repo as files. |
+| Code quality + collaboration | 15% | Healthy commit history; every member shipped real features; PR reviews happened; no secrets in git. |
+| UI / UX | 15% | Mobile works. Empty states exist. Error messages are in human language. Onboarding surfaces value in <2 minutes. |
+| Deployment + reliability | 10% | No 500s during demo. Vercel logs are clean. Secrets only in env vars. Migrations documented and reversible. |
+| Presentation | 10% | All team members speak. Problem lands in the first 30 seconds. Demo is rehearsed. Post-mortem is candid, not marketing. |
+
+## Deliverables checklist
+
+- Live URL (Vercel production domain).
+- Public GitHub team repo with README + setup instructions.
+- Landing page with problem + solution + demo video.
+- 2-minute demo recording (unlisted YouTube / Vimeo / self-hosted fine).
+- 1-page post-mortem (what went well, what hurt, what you'd cut).
+- List of five external users (with permission to cite first names).
+- Five-minute live demo on Demo Day.
+
+<Note>
+**Prerequisites:** Complete [Week 8 — Typst PDF Automation](/tutorial/ai-bootcamp/week-08-typst-cv) first. The capstone assumes you own the Week-1-to-8 stack and can extend it. If you've never shipped a Vercel deploy through AI before, start at [Week 1](/tutorial/ai-bootcamp/week-01-dev-tools).
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Download Capstone PDF" icon="file-pdf" href="/curriculum-pdfs/capstone.pdf" color="#c846ab">
+    **Full spec · 604 KB** — Track examples, week-by-week timeline, full evaluation rubric, instructor guidance.
+  </Card>
+  <Card title="Back to series overview" icon="arrow-left" href="/tutorial/ai-bootcamp/overview">
+    Build a Full-Stack AI Site
+  </Card>
+</CardGroup>

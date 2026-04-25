@@ -1,0 +1,61 @@
+---
+title: "Week 6 — Add a Blog System"
+description: "Graft a /blog section onto your site using a Vercel template as reference. MDX posts with syntax-highlighted code, a valid RSS feed, and your first first-person recap of weeks 1–5."
+---
+
+<Tip>
+**Multi-week series · Week 6 of 8** · ~2 hours of class + lab
+</Tip>
+
+By the end of class your site has `/blog` with at least one published post — your own first-person recap of weeks 1–5 — plus an RSS feed at `/feed.xml` that validates clean against the W3C feed validator.
+
+<CardGroup cols={3}>
+  <Card title="Reference-template prompting" icon="book-open" color="#c846ab">
+    Point Cursor at the Vercel Blog Starter — AI consumes its patterns rather than re-inventing from scratch.
+  </Card>
+  <Card title="MDX posts" icon="newspaper" color="#c846ab">
+    Markdown plus React components. Syntax highlighting via `rehype-pretty-code`, OG metadata, reading time.
+  </Card>
+  <Card title="A valid RSS feed" icon="rss" color="#c846ab">
+    `/feed.xml` generated from MDX at build time, with autodiscovery `<link>` in the head. Subscribers welcome.
+  </Card>
+</CardGroup>
+
+## Learning objectives
+
+By the end of this session, you should be able to:
+
+- **Graft a real blog onto an existing Next.js app** by describing the feature to Cursor and pointing it at a reference template — without ever hand-editing route files.
+- **Write and publish your first MDX post** so that it renders on your live site with proper typography, a cover image, and a working permalink.
+- **Ship a valid RSS feed** that a feed reader can subscribe to, because shipping a blog without an RSS feed is shipping half a blog.
+
+## Core topics
+
+- MDX = Markdown + React components. Why this is the right content format for a developer blog.
+- Routing: how `app/blog/[slug]/page.tsx` maps to a URL.
+- Metadata patterns: frontmatter, OG images, canonical URLs, reading time.
+- RSS in 2026: still the cleanest way to be findable and syndicated.
+- The "reference-template" prompt pattern: teaching Cursor from an existing good example instead of re-inventing from scratch.
+
+## Tools introduced this week
+
+| Tool | Role this week |
+|---|---|
+| **Vercel Blog Starter** | The reference template we point Cursor at |
+| **MDX** | Your post files — Markdown + React components |
+| **`remark-gfm` + `rehype-pretty-code`** | Syntax-highlighted code blocks in posts |
+| **`reading-time` + `gray-matter`** | Frontmatter + reading-time utilities |
+| **`feed` (npm)** | Generates valid RSS 2.0 / Atom feeds at build time |
+
+<Note>
+**Prerequisites:** Complete [Week 5 — Image Uploads with Vercel Blob](/tutorial/ai-bootcamp/week-05-vercel-blob) first. The blog grafts onto your existing portfolio repo.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Download Week 6 PDF" icon="file-pdf" href="/curriculum-pdfs/week-06-blog-system.pdf" color="#c846ab">
+    **Full lecture · 656 KB** — Session plan, hands-on lab steps, MDX + RSS troubleshooting.
+  </Card>
+  <Card title="Continue to Week 7" icon="arrow-right" href="/tutorial/ai-bootcamp/week-07-slack-notifications">
+    Real-time Slack notifications
+  </Card>
+</CardGroup>

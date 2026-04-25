@@ -214,6 +214,21 @@
                 ]
               }
             ]
+          },
+          {
+            "group": "Build a Full-Stack AI Site (8 Weeks)",
+            "pages": [
+              "tutorial/ai-bootcamp/overview",
+              "tutorial/ai-bootcamp/week-01-dev-tools",
+              "tutorial/ai-bootcamp/week-02-portfolio-deploy",
+              "tutorial/ai-bootcamp/week-03-ai-avatar",
+              "tutorial/ai-bootcamp/week-04-fullstack-neon",
+              "tutorial/ai-bootcamp/week-05-vercel-blob",
+              "tutorial/ai-bootcamp/week-06-blog-system",
+              "tutorial/ai-bootcamp/week-07-slack-notifications",
+              "tutorial/ai-bootcamp/week-08-typst-cv",
+              "tutorial/ai-bootcamp/capstone"
+            ]
           }
         ]
       },

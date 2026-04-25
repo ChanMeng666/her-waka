@@ -1,0 +1,64 @@
+---
+title: "Week 1 — AI Developer Toolkit Setup"
+description: "Install Cursor, Claude Code, and Gemini CLI. Add MCP servers and skills. By the end of the session, your AI assistant has deployed an empty Next.js site to Vercel — and you watched it happen."
+---
+
+<Tip>
+**Multi-week series · Week 1 of 8** · ~2 hours of class + lab
+</Tip>
+
+This is the only lecture with heavier-than-usual manual setup — from Week 2 onwards, almost every step is a single spoken prompt. The goal of the lab is to get from "no dev tools installed" to "Cursor just deployed an empty Next.js site to Vercel under my account, and I watched it happen."
+
+<CardGroup cols={3}>
+  <Card title="Three AI environments" icon="screwdriver-wrench" color="#c846ab">
+    Cursor (primary IDE), Claude Code (terminal-native), Gemini CLI (free-tier scripting).
+  </Card>
+  <Card title="MCP + skills" icon="puzzle-piece" color="#c846ab">
+    Install a Skill and an MCP server; turn an AI chat into a tool-using agent.
+  </Card>
+  <Card title="First AI deploy" icon="rocket" color="#c846ab">
+    Watch Cursor call the Vercel CLI on your behalf and return a live `*.vercel.app` URL.
+  </Card>
+</CardGroup>
+
+## Learning objectives
+
+By the end of this session, you should be able to:
+
+- **Install and sign into the three AI coding environments we use all term** — Cursor, Claude Code, and Gemini CLI — and know when to reach for each one.
+- **Install a Skill and an MCP server into Claude Code / Cursor** and describe, in one sentence, what each extension lets the AI do on your behalf.
+- **Recognise and apply the delegation rules** — know which operations to hand off to AI through a CLI or MCP server, and which (OAuth, DNS, provider-side credentials) you must do with your own hands.
+
+## Core topics
+
+- Why "natural language is the source code" — the doctrine that runs through every later week.
+- The three AI environments — Cursor, Claude Code, Gemini CLI — when to use each.
+- What MCP servers and Skills are, and how they turn an AI chat into a tool-using agent.
+- Voice-first prompting with Wispr Flow (optional but strongly recommended).
+- GitHub as the source-of-truth layer that every later week's deploy flow depends on.
+
+## Tools introduced this week
+
+| Tool | Purpose |
+|---|---|
+| **Cursor** | Primary IDE; built-in AI chat; all weekly work lives here |
+| **Claude Code** | Terminal-native AI with MCP + Skills; preferred for the Week 8 PDF flow |
+| **Gemini CLI** | Free-tier AI for throwaway scripts and quick explorations |
+| **Wispr Flow** | Voice-to-text; dictate long prompts without typing |
+| **GitHub** | Source of truth; auto-triggers every Vercel deploy |
+| **Vercel CLI** | AI invokes it to deploy, read logs, manage env vars |
+| **Neon CLI + Neon MCP** | AI invokes them to provision databases and auth (from Week 4) |
+| **Typst skill** | AI invokes it to generate pixel-perfect PDFs (used in Week 8) |
+
+<Note>
+**No prerequisites.** This is the entry point. If you can install software on your laptop and sign in with a Google or GitHub account, you have everything you need.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Download Week 1 PDF" icon="file-pdf" href="/curriculum-pdfs/week-01-dev-tools-setup.pdf" color="#c846ab">
+    **Full lecture · 623 KB** — Session plan, hands-on lab steps, troubleshooting.
+  </Card>
+  <Card title="Continue to Week 2" icon="arrow-right" href="/tutorial/ai-bootcamp/week-02-portfolio-deploy">
+    Deploy your personal website
+  </Card>
+</CardGroup>
