@@ -282,6 +282,21 @@
       "x": "https://x.com/shesharpnz",
       "youtube": "https://www.youtube.com/channel/UCfNDV1btAhwWwEXSyxNd5_Q",
       "website": "https://www.shesharp.org.nz"
-    }
+    },
+    "links": [
+      {
+        "header": "Developer",
+        "items": [
+          {
+            "label": "Built by Chan Meng",
+            "href": "https://github.com/ChanMeng666"
+          },
+          {
+            "label": "Need a custom app? chanmeng.dev@gmail.com",
+            "href": "mailto:chanmeng.dev@gmail.com"
+          }
+        ]
+      }
+    ]
   }
 }
